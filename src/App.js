@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Layout, Typography, Row, Col, Button, Input } from 'antd'
-import { UserOutlined, HeartOutlined, ShoppingCartOutlined, WechatWorkOutlined, SketchOutlined} from '@ant-design/icons'
+import { UserOutlined, HeartOutlined, ShoppingCartOutlined, WechatWorkOutlined, SketchOutlined, MessageOutlined } from '@ant-design/icons'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -92,18 +92,19 @@ function App() {
         </Row>
       </Header>
       <Content style={{ padding: '16px 16px 70px 16px', display: 'flex', flexDirection: 'column'}}>
-        <Text type="secondary">Настроение дня: </Text><br/>
+        <Text type="secondary"><MessageOutlined /> Настроение дня: </Text>
         <div 
           style={{
             border: '1px solid #f0f0f0',
             borderRadius: '8px',
             backgroundColor: 'white',
+            marginTop: '8px',
             padding: '16px 16px 0',
           }}
         >
           <Title level={4}>песня Lana Del Ray - Gods & Monsters</Title>
         </div><br/>
-        <Text type="secondary">Подборки для вашего настроения: </Text>
+        <Text type="secondary"><SketchOutlined /> Подборки для вашего настроения: </Text>
         <div >
           <Swiper
             spaceBetween={50}
@@ -136,7 +137,7 @@ function App() {
                     padding: '8px 16px 0',
                   }}
                 >
-                  <Title level={4}><SketchOutlined /> Королева декаданса</Title>
+                  <Title level={4}>Королева декаданса</Title>
                 </div>}
                 dataSource={data}
                 renderItem={(item) => (
@@ -175,7 +176,7 @@ function App() {
                     padding: '8px 16px 0',
                   }}
                 >
-                  <Title level={4}><SketchOutlined /> Готическая принцесса</Title>
+                  <Title level={4}>Готическая принцесса</Title>
                 </div>}
                 dataSource={data}
                 renderItem={(item) => (
@@ -214,7 +215,7 @@ function App() {
                     padding: '8px 16px 0',
                   }}
                 >
-                  <Title level={4}><SketchOutlined /> Ещё один образ</Title>
+                  <Title level={4}>Ещё один образ</Title>
                 </div>}
                 dataSource={data}
                 renderItem={(item) => (
