@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Layout, Typography, Row, Col, Button, Input } from 'antd'
-import { MenuOutlined, UserOutlined, HeartOutlined, ShoppingCartOutlined, StarOutlined, LikeOutlined } from '@ant-design/icons'
+import { UserOutlined, HeartOutlined, ShoppingCartOutlined, WechatWorkOutlined, SketchOutlined} from '@ant-design/icons'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css'
 
-import { Avatar, List, Space, Card, Segmented } from 'antd'
+import { List, Space, Segmented } from 'antd'
 
 import Img1 from './pics/1.png'
 import Img2 from './pics/2.png'
@@ -92,7 +92,7 @@ function App() {
         </Row>
       </Header>
       <Content style={{ padding: '16px 16px 70px 16px', display: 'flex', flexDirection: 'column'}}>
-        <Text type="secondary">Настроение дня: </Text>
+        <Text type="secondary">Настроение дня: </Text><br/>
         <div 
           style={{
             border: '1px solid #f0f0f0',
@@ -136,7 +136,7 @@ function App() {
                     padding: '8px 16px 0',
                   }}
                 >
-                  <Title level={4}>1. Королева декаданса</Title>
+                  <Title level={4}><SketchOutlined /> Королева декаданса</Title>
                 </div>}
                 dataSource={data}
                 renderItem={(item) => (
@@ -175,7 +175,7 @@ function App() {
                     padding: '8px 16px 0',
                   }}
                 >
-                  <Title level={4}>2. Готическая принцесса</Title>
+                  <Title level={4}><SketchOutlined /> Готическая принцесса</Title>
                 </div>}
                 dataSource={data}
                 renderItem={(item) => (
@@ -214,7 +214,7 @@ function App() {
                     padding: '8px 16px 0',
                   }}
                 >
-                  <Title level={4}>3. Ещё один образ</Title>
+                  <Title level={4}><SketchOutlined /> Ещё один образ</Title>
                 </div>}
                 dataSource={data}
                 renderItem={(item) => (
@@ -241,11 +241,21 @@ function App() {
         </div>
       </Content>
       <Footer>
-        <Segmented
+        {/*<Segmented
           options={[
             { value: '1', icon: <UserOutlined />},
             { value: '2', icon: <HeartOutlined /> },
             { value: '3', icon: <ShoppingCartOutlined /> },
+          ]}
+        />*/}
+        <Segmented
+          size={'large'}
+          shape="round"
+          options={[
+            { value: '1', icon:<WechatWorkOutlined />, label: 'Подборки' },
+            { value: '2', icon: <UserOutlined /> },
+            { value: '3', icon: <HeartOutlined /> },
+            { value: '4', icon: <ShoppingCartOutlined /> },
           ]}
         />
       </Footer>
