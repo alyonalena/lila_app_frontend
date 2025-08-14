@@ -38,7 +38,6 @@ const IconText = ({ icon, text }) => (
 
 function App() {
 
-
   return (
     <Layout style={{ minHeight: '100vh' }}>
 	<ConfigProvider
@@ -64,9 +63,8 @@ function App() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-		<Card title="Скоро! Дегустация Marie-Courtin" extra={<Button type='primary'>Принять участие</Button>}>
-			<Space direction='horizontal'>
-				<div style={{width: '30%'}} ><img src={Img1}/></div>
+		<Card title="Дегустация Marie-Courtin" extra={<Button type='primary'>Иду!</Button>}>
+			<img src={Img1}/>
 			<Descriptions >
 				<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
 				<Descriptions.Item label="Город">Москва</Descriptions.Item>
@@ -74,19 +72,16 @@ function App() {
 				<Descriptions.Item label="Стоимость">25 000 руб.</Descriptions.Item>
 				<Descriptions.Item label="Осталось мест">2</Descriptions.Item>
 			</Descriptions>			
-			</Space>
 		</Card><br/>
-		<Card title="Скоро! Дегустация Marie-Courtin" extra={<Button type='primary'>Принять участие</Button>}>
-			<Space direction='horizontal'>
-			<div style={{width: '20%'}} ><img src={Img2}/></div>
-				<Descriptions>
-					<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
-					<Descriptions.Item label="Город">Москва</Descriptions.Item>
-					<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
-					<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
-					<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
-				</Descriptions>
-			</Space>
+		<Card title="Дегустация Marie-Courtin" extra={<Button type='primary'>Иду!</Button>}>
+			<img src={Img2}/>
+			<Descriptions>
+				<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
+				<Descriptions.Item label="Город">Москва</Descriptions.Item>
+				<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
+				<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
+				<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
+			</Descriptions>
 		</Card><br/>
       </Content>
 	  <Footer style={{
