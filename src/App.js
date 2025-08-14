@@ -101,7 +101,7 @@ function App() {
 						tabPosition={'top'}
 						items={[
 							{
-								label: 'Информация',
+								label: 'Общая информация',
 								key: 1,
 								children: <Descriptions >
 									<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
@@ -115,13 +115,13 @@ function App() {
 								label: `Винный сет`,
 								key: 2,
 								children: <div >
-									<Text italic>RESONANCE EXTRA BRUT 2016</Text><br/>
-									<Text italic>EFFLORESCENCE EXTRA 2016</Text><br/>
-									<Text italic>PRESENCE BLANC DE BLANCS EXTRA BRUT 2015</Text><br/>
-									<Text italic>INDULGENCE ROSE EXTRA BRUT 2015</Text><br/>
-									<Text italic>COTEAUX CHAMPENOIS LE BLANC DU TREMBLE 2016</Text><br/>
-									<Text italic>MARIE-COURTIN CONCORDANCE 2018</Text><br/>
-									<Text italic>MARIE-COURTIN BLANC DE BLANCS AMPHORA 2020</Text><br/>
+									<Text italic>RESONANCE EXTRA BRUT 2016</Text><hr/>
+									<Text italic>EFFLORESCENCE EXTRA 2016</Text><hr/>
+									<Text italic>PRESENCE BLANC DE BLANCS EXTRA BRUT 2015</Text><hr/>
+									<Text italic>INDULGENCE ROSE EXTRA BRUT 2015</Text><hr/>
+									<Text italic>COTEAUX CHAMPENOIS LE BLANC DU TREMBLE 2016</Text><hr/>
+									<Text italic>MARIE-COURTIN CONCORDANCE 2018</Text><hr/>
+									<Text italic>MARIE-COURTIN BLANC DE BLANCS AMPHORA 2020</Text><hr/>
 									<Text italic>MARIE-COURTIN CHAMPANGE BLANC DE NOIRS AMPHORES EXTRA BRUT 2020</Text><br/>
 								</div>,
 							}
@@ -139,13 +139,12 @@ function App() {
 			<Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
 				<Title level={3}>Дегустация "Сет Мечты!"</Title>
 				<Button type='primary'>Иду!</Button>
-			</Flex>
-			
+			</Flex>			
 			<Tabs
 				tabPosition={'top'}
 				items={[
 					{
-						label: 'Информация',
+						label: 'Общая информация',
 						key: 1,
 						children: <Descriptions>
 						<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
@@ -159,12 +158,12 @@ function App() {
 						label: `Винный сет`,
 						key: 2,
 						children: <div >
-							<Text italic>Cuvee № 747</Text><br/>
-							<Text italic>Cuvee № 743</Text><br/>
-							<Text italic>Dizy Terres Rouges 2015</Text><br/>
-							<Text italic>Avize Champ Terme 2009</Text><br/>
-							<Text italic>"Ay" Vauzelle Terme 2009</Text><br/>
-							<Text italic>Dizy Corne Bautray 2004</Text><br/>
+							<Text italic>Cuvee № 747</Text><hr/>
+							<Text italic>Cuvee № 743</Text><hr/>
+							<Text italic>Dizy Terres Rouges 2015</Text><hr/>
+							<Text italic>Avize Champ Terme 2009</Text><hr/>
+							<Text italic>"Ay" Vauzelle Terme 2009</Text><hr/>
+							<Text italic>Dizy Corne Bautray 2004</Text><hr/>
 							<Text italic>Millesime Degorgement Tardif 2002</Text><br/>
 						</div>,
 					}
@@ -176,7 +175,7 @@ function App() {
 		display: 'flex', 
 		flexDirection: 'column',
 	  }}>
-		<Button size='large' type='primary'>Прошедшие дегустации (32)</Button><br/>
+		<Button size='large' type='primary'>История дегустаций</Button><br/>
 		<Button size='large' type='primary'>Доступные вина</Button><br/>
 	  </Footer>	
 	  </ConfigProvider>
