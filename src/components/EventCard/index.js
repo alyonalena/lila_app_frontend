@@ -6,7 +6,7 @@ const { Text, Title } = Typography
 
 
 function EventCard({event}) {
-console.info(event.wineList)
+
     const getEventCard = () => (
         <Card
             hoverable
@@ -15,7 +15,7 @@ console.info(event.wineList)
         >
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
                 <Title level={3}>{event.name}</Title>
-                <Button type="primary">Иду!</Button>
+                { event.inFuture && (<Button type="primary">Иду!</Button>) }
             </Flex><br /><br />
             <Tabs
                 tabPosition={'top'}

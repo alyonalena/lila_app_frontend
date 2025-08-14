@@ -2,12 +2,12 @@ import React from 'react'
 
 import EventCard from '../../EventCard'
 
-import { events } from '../../../data'
+import { upcomingEvents } from '../../../data'
 
 
 function UpcomingEventsPage(){
 
-    return events.map((event) => (<EventCard event={event} />))
+    return upcomingEvents.map((event) => (<EventCard event={{...event, inFuture: true}}/>))
 }
 
 export default UpcomingEventsPage
