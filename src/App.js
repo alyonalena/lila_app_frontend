@@ -4,7 +4,7 @@ import React, {
 } from 'react'
 
 
-import { Layout, Typography, Row, Col, Button, ConfigProvider, Card, Descriptions } from 'antd'
+import { Layout, Typography, Row, Col, Button, ConfigProvider, Card, Descriptions, Tabs, Flex } from 'antd'
 import { UserOutlined, HeartOutlined, ShoppingCartOutlined, WechatWorkOutlined } from '@ant-design/icons'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -86,43 +86,62 @@ function App() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-
-			<Card
-				hoverable
-				style={{ width: '100%' }}
-				cover={<img alt="example" src={Img1} />}
-			>
-				<Space direction='horizontal'>
-					<Meta title="Дегустация Marie-Courtin"/>
-					<Button type='primary'>Иду!</Button>
-				</Space>
-				<Descriptions>
-					<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
-					<Descriptions.Item label="Город">Москва</Descriptions.Item>
-					<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
-					<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
-					<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
-				</Descriptions>
-			</Card>
-			<br />
-			<Card
-				hoverable
-				style={{ width: '100%' }}
-				cover={<img alt="example" src={Img2} />}
-			>
-				<Space direction='horizontal'>
-					<Meta title='Дегустация "Сет Мечты!"'/>
-					<Button type='primary'>Иду!</Button>
-				</Space>
-				
-				<Descriptions >
-					<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
-					<Descriptions.Item label="Город">Москва</Descriptions.Item>
-					<Descriptions.Item label="Место">The Nappe Bistro (Скатерный пер., 13)</Descriptions.Item>
-					<Descriptions.Item label="Стоимость">25 000 руб.</Descriptions.Item>
-					<Descriptions.Item label="Осталось мест">2</Descriptions.Item>
-				</Descriptions>			
-			</Card><br/>
+		<Card
+			hoverable
+			style={{ width: '100%' }}
+			cover={<img alt="example" src={Img1} />}
+		>
+			<Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+				<Title level={3}>Дегустация Marie-Courtin</Title>
+				<Button type="primary">Иду!</Button>
+			</Flex><br /><br />
+			<Tabs
+				tabPosition={'left'}
+				items={[
+					{
+						label: 'Информация',
+						key: 1,
+						children: <Descriptions>
+							<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
+							<Descriptions.Item label="Город">Москва</Descriptions.Item>
+							<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
+							<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
+							<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
+						</Descriptions>,
+					},
+					{
+						label: `Винный сет`,
+						key: 2,
+						children: <Descriptions>
+							<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
+							<Descriptions.Item label="Город">Москва</Descriptions.Item>
+							<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
+							<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
+							<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
+						</Descriptions>,
+					}
+				]}
+			/>
+		</Card>
+		<br />
+		<Card
+			hoverable
+			style={{ width: '100%' }}
+			cover={<img alt="example" src={Img2} />}
+		>
+			<Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+				<Title level={3}>Дегустация "Сет Мечты!"</Title>
+				<Button type='primary'>Иду!</Button>
+			</Flex>
+			
+			<Descriptions >
+				<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
+				<Descriptions.Item label="Город">Москва</Descriptions.Item>
+				<Descriptions.Item label="Место">The Nappe Bistro (Скатерный пер., 13)</Descriptions.Item>
+				<Descriptions.Item label="Стоимость">25 000 руб.</Descriptions.Item>
+				<Descriptions.Item label="Осталось мест">2</Descriptions.Item>
+			</Descriptions>			
+		</Card><br/>
       </Content>
 	  <Footer style={{
 		display: 'flex', 
