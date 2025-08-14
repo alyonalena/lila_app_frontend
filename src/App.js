@@ -98,7 +98,7 @@ function App() {
 						<Button type="primary">Иду!</Button>
 					</Flex><br /><br />
 					<Tabs
-						tabPosition={'left'}
+						tabPosition={'top'}
 						items={[
 							{
 								label: 'Информация',
@@ -142,7 +142,7 @@ function App() {
 			</Flex>
 			
 			<Tabs
-				tabPosition={'left'}
+				tabPosition={'top'}
 				items={[
 					{
 						label: 'Информация',
