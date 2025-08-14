@@ -4,7 +4,7 @@ import React, {
 } from 'react'
 
 
-import { Layout, Typography, Row, Col, Button, ConfigProvider, Card, Descriptions, Tabs, Flex } from 'antd'
+import { Layout, Typography, Row, Col, Button, ConfigProvider, Card, Descriptions, Tabs, Flex, Badge } from 'antd'
 import { UserOutlined, HeartOutlined, ShoppingCartOutlined, WechatWorkOutlined } from '@ant-design/icons'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -86,43 +86,50 @@ function App() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-		<Card
-			hoverable
-			style={{ width: '100%' }}
-			cover={<img alt="example" src={Img1} />}
-		>
-			<Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
-				<Title level={3}>Дегустация Marie-Courtin</Title>
-				<Button type="primary">Иду!</Button>
-			</Flex><br /><br />
-			<Tabs
-				tabPosition={'left'}
-				items={[
-					{
-						label: 'Информация',
-						key: 1,
-						children: <Descriptions>
-							<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
-							<Descriptions.Item label="Город">Москва</Descriptions.Item>
-							<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
-							<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
-							<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
-						</Descriptions>,
-					},
-					{
-						label: `Винный сет`,
-						key: 2,
-						children: <Descriptions>
-							<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
-							<Descriptions.Item label="Город">Москва</Descriptions.Item>
-							<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
-							<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
-							<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
-						</Descriptions>,
-					}
-				]}
-			/>
-		</Card>
+		<Space direction="vertical" size="middle" style={{ width: '100%' }}>
+			<Badge.Ribbon text="СКОРО!" color="red">
+				<Card
+					hoverable
+					style={{ width: '100%' }}
+					cover={<img alt="example" src={Img1} />}
+				>
+					<Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+						<Title level={3}>Дегустация Marie-Courtin</Title>
+						<Button type="primary">Иду!</Button>
+					</Flex><br /><br />
+					<Tabs
+						tabPosition={'left'}
+						items={[
+							{
+								label: 'Информация',
+								key: 1,
+								children: <Descriptions >
+									<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
+									<Descriptions.Item label="Город">Москва</Descriptions.Item>
+									<Descriptions.Item label="Место">The Nappe Bistro (Скатерный пер., 13)</Descriptions.Item>
+									<Descriptions.Item label="Стоимость">25 000 руб.</Descriptions.Item>
+									<Descriptions.Item label="Осталось мест">2</Descriptions.Item>
+								</Descriptions>,
+							},
+							{
+								label: `Винный сет`,
+								key: 2,
+								children: <div >
+									<Text italic>RESONANCE EXTRA BRUT 2016</Text><br/>
+									<Text italic>EFFLORESCENCE EXTRA 2016</Text><br/>
+									<Text italic>PRESENCE BLANC DE BLANCS EXTRA BRUT 2015</Text><br/>
+									<Text italic>INDULGENCE ROSE EXTRA BRUT 2015</Text><br/>
+									<Text italic>COTEAUX CHAMPENOIS LE BLANC DU TREMBLE 2016</Text><br/>
+									<Text italic>MARIE-COURTIN CONCORDANCE 2018</Text><br/>
+									<Text italic>MARIE-COURTIN BLANC DE BLANCS AMPHORA 2020</Text><br/>
+									<Text italic>MARIE-COURTIN CHAMPANGE BLANC DE NOIRS AMPHORES EXTRA BRUT 2020</Text><br/>
+								</div>,
+							}
+						]}
+					/>
+				</Card>
+			</Badge.Ribbon>
+		</Space>
 		<br />
 		<Card
 			hoverable
@@ -134,13 +141,35 @@ function App() {
 				<Button type='primary'>Иду!</Button>
 			</Flex>
 			
-			<Descriptions >
-				<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
-				<Descriptions.Item label="Город">Москва</Descriptions.Item>
-				<Descriptions.Item label="Место">The Nappe Bistro (Скатерный пер., 13)</Descriptions.Item>
-				<Descriptions.Item label="Стоимость">25 000 руб.</Descriptions.Item>
-				<Descriptions.Item label="Осталось мест">2</Descriptions.Item>
-			</Descriptions>			
+			<Tabs
+				tabPosition={'left'}
+				items={[
+					{
+						label: 'Информация',
+						key: 1,
+						children: <Descriptions>
+						<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
+						<Descriptions.Item label="Город">Москва</Descriptions.Item>
+						<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
+						<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
+						<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
+					</Descriptions>,
+					},
+					{
+						label: `Винный сет`,
+						key: 2,
+						children: <div >
+							<Text italic>Cuvee № 747</Text><br/>
+							<Text italic>Cuvee № 743</Text><br/>
+							<Text italic>Dizy Terres Rouges 2015</Text><br/>
+							<Text italic>Avize Champ Terme 2009</Text><br/>
+							<Text italic>"Ay" Vauzelle Terme 2009</Text><br/>
+							<Text italic>Dizy Corne Bautray 2004</Text><br/>
+							<Text italic>Millesime Degorgement Tardif 2002</Text><br/>
+						</div>,
+					}
+				]}
+			/>
 		</Card><br/>
       </Content>
 	  <Footer style={{
