@@ -1,6 +1,6 @@
 import React, {
   useEffect,
-  useRef,
+  useState,
 } from 'react'
 
 
@@ -28,6 +28,7 @@ const { Header, Footer, Content } = Layout
 const { Text, Title } = Typography
 
 
+const { Meta } = Card;
 
 const IconText = ({ icon, text }) => (
   <Space>
@@ -37,6 +38,28 @@ const IconText = ({ icon, text }) => (
 )
 
 function App() {
+
+	const tabList = [
+		{
+		  key: 'tab1',
+		  tab: 'tab1',
+		},
+		{
+		  key: 'tab2',
+		  tab: 'tab2',
+		},
+	  ];
+	  
+	  const contentList = {
+		tab1: <p>content1</p>,
+		tab2: <p>content2</p>,
+	  };
+
+	const [activeTabKey1, setActiveTabKey1] = useState('tab1');
+
+	const onTab1Change = (key) => {
+		setActiveTabKey1(key);
+	};
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -63,26 +86,43 @@ function App() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-		<Card title="Дегустация Marie-Courtin" extra={<Button type='primary'>Иду!</Button>}>
-			<img src={Img1}/>
-			<Descriptions >
-				<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
-				<Descriptions.Item label="Город">Москва</Descriptions.Item>
-				<Descriptions.Item label="Место">The Nappe Bistro (Скатерный пер., 13)</Descriptions.Item>
-				<Descriptions.Item label="Стоимость">25 000 руб.</Descriptions.Item>
-				<Descriptions.Item label="Осталось мест">2</Descriptions.Item>
-			</Descriptions>			
-		</Card><br/>
-		<Card title="Дегустация Marie-Courtin" extra={<Button type='primary'>Иду!</Button>}>
-			<img src={Img2}/>
-			<Descriptions>
-				<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
-				<Descriptions.Item label="Город">Москва</Descriptions.Item>
-				<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
-				<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
-				<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
-			</Descriptions>
-		</Card><br/>
+
+			<Card
+				hoverable
+				style={{ width: '100%' }}
+				cover={<img alt="example" src={Img1} />}
+			>
+				<Space direction='horizontal'>
+					<Meta title="Дегустация Marie-Courtin"/>
+					<Button type='primary'>Иду!</Button>
+				</Space>
+				<Descriptions>
+					<Descriptions.Item label="Дата">12 сентября 2025</Descriptions.Item>
+					<Descriptions.Item label="Город">Москва</Descriptions.Item>
+					<Descriptions.Item label="Место">Уточняется...</Descriptions.Item>
+					<Descriptions.Item label="Стоимость">45 000 руб.</Descriptions.Item>
+					<Descriptions.Item label="Осталось мест">7</Descriptions.Item>
+				</Descriptions>
+			</Card>
+			<br />
+			<Card
+				hoverable
+				style={{ width: '100%' }}
+				cover={<img alt="example" src={Img2} />}
+			>
+				<Space direction='horizontal'>
+					<Meta title='Дегустация "Сет Мечты!"'/>
+					<Button type='primary'>Иду!</Button>
+				</Space>
+				
+				<Descriptions >
+					<Descriptions.Item label="Дата">22 августа 2025</Descriptions.Item>
+					<Descriptions.Item label="Город">Москва</Descriptions.Item>
+					<Descriptions.Item label="Место">The Nappe Bistro (Скатерный пер., 13)</Descriptions.Item>
+					<Descriptions.Item label="Стоимость">25 000 руб.</Descriptions.Item>
+					<Descriptions.Item label="Осталось мест">2</Descriptions.Item>
+				</Descriptions>			
+			</Card><br/>
       </Content>
 	  <Footer style={{
 		display: 'flex', 
