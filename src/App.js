@@ -87,7 +87,7 @@ function App() {
         backgroundRepeat: 'no-repeat'
       }}>
 		<Space direction="vertical" size="middle" style={{ width: '100%' }}>
-			<Badge.Ribbon text="СКОРО!" color="red">
+			<Badge.Ribbon text="ЧЕРЕЗ НЕДЕЛЮ!" color="red">
 				<Card
 					hoverable
 					style={{ width: '100%' }}
