@@ -84,7 +84,18 @@ input[type="text"] {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: rgb(0, 0, 0, 0.4) !important;
+  background: rgb(63, 47, 44, 0.4) !important;
+  padding: 15px;
+  text-align: center;
+  z-index: 100;
+}
+
+.ant-layout-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(63, 47, 44, 0.4) !important;
   padding: 15px;
   text-align: center;
   z-index: 100;
