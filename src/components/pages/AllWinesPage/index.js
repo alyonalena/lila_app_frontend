@@ -5,7 +5,7 @@ import { FR, IT, ES } from 'country-flag-icons/react/3x2'
 import WineShortInfoList from '../../WineShortInfoList'
 import { allWines } from '../../../data'
 
-const { Text } = Typography
+const { Text, Title } = Typography
 
 function AllWinesPage() {
 
@@ -14,6 +14,10 @@ function AllWinesPage() {
             <Divider>
                 <Avatar shape="square" src={<FR title="France" className="..."/>} />
             </Divider>
+            <Divider orientation="left">
+                <Title level={5}>CÔTE DES BAR</Title>
+            </Divider>
+            
             <WineShortInfoList wineList={allWines} readOnly={false}/>
             <Divider>
                 <Avatar shape="square" src={<IT title="Italy" className="..."/>} />
