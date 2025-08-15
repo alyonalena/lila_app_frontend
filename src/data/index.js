@@ -1,6 +1,9 @@
 import Img1 from '../pics/image1.png'
 import Img2 from '../pics/image2.png'
 import Img3 from '../pics/image3.png'
+import Wine1 from '../pics/wine1.png'
+import Wine2 from '../pics/wine2.png'
+import Wine3 from '../pics/wine3.png'
 
 
 export const emotions = "Святость / Грех / Икона / Разрушение / Бархат / Золото / Тьма / Слезы / Вино / Голливудские холмы / Отчаянная красота / Увядание / Эротика / Меланхолия / Театральность"
@@ -137,17 +140,23 @@ export const allWines = [
     {
         id: 0,
         name: 'RESONANCE EXTRA BRUT 2016',
-        description: 'Дополнительная информация о данном вине'
+        description: 'Дополнительная информация о данном вине',
+        img: Wine1,
+        saved: true,
     },
     {
         id: 1, 
         name: 'EFFLORESCENCE EXTRA 2016',
-        description: 'Дополнительная информация о данном вине'
+        description: 'Дополнительная информация о данном вине',
+        img: Wine2,
+        saved: true,
     },
     {
         id: 2, 
         name: 'PRESENCE BLANC DE BLANCS EXTRA BRUT 2015', 
-        description: 'Дополнительная информация о данном вине'
+        description: 'Дополнительная информация о данном вине',
+        img: Wine3,
+        saved: true,
     },
     {
         id: 3, 

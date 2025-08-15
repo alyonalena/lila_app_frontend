@@ -3,11 +3,14 @@ import React from 'react'
 import { Tabs, Card, Avatar, Descriptions, List } from 'antd'
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
 
-import { upcomingEvents, pastEvents } from '../../../data'
+import { upcomingEvents, pastEvents, allWines } from '../../../data'
 
 const { Meta } = Card
 
 function UserAccountPage() {
+
+    const myWines = allWines.filter(item => item.saved)
+
     return (
         <>
             <Card
@@ -43,13 +46,13 @@ function UserAccountPage() {
                                     <List
                                         dataSource={upcomingEvents}
                                         renderItem={(item, index) => (
-                                        <List.Item>
-                                            <List.Item.Meta
-                                                avatar={<Avatar src={item.img} />}
-                                                title={item.name}
-                                                description={`${item.city}, ${item.date}`}
-                                            />
-                                        </List.Item>
+                                            <List.Item>
+                                                <List.Item.Meta
+                                                    avatar={<Avatar size="large" src={item.img} />}
+                                                    title={item.name}
+                                                    description={`${item.city}, ${item.date}`}
+                                                />
+                                            </List.Item>
                                         )}
                                     />
                                 </div>
@@ -60,7 +63,19 @@ function UserAccountPage() {
                             key: 2,
                             children: (
                                 <div>
-                                    Недавно вы обратили внимание на следующие вина
+                                    Недавно вы обратили внимание на следующие вина<br/><br/>
+                                    <List
+                                        dataSource={myWines}
+                                        renderItem={(item, index) => (
+                                            <List.Item>
+                                                <List.Item.Meta
+                                                    avatar={<Avatar size="large" src={item.img} />}
+                                                    title={item.name}
+                                                    description={item.description}
+                                                />
+                                            </List.Item>
+                                        )}
+                                    />
                                 </div>
                             ),
                         },
@@ -73,13 +88,13 @@ function UserAccountPage() {
                                     <List
                                         dataSource={pastEvents}
                                         renderItem={(item, index) => (
-                                        <List.Item>
-                                            <List.Item.Meta
-                                                avatar={<Avatar src={item.img} />}
-                                                title={item.name}
-                                                description={`${item.city}, ${item.date}`}
-                                            />
-                                        </List.Item>
+                                            <List.Item>
+                                                <List.Item.Meta
+                                                    avatar={<Avatar size="large" src={item.img} />}
+                                                    title={item.name}
+                                                    description={`${item.city}, ${item.date}`}
+                                                />
+                                            </List.Item>
                                         )}
                                     />
                                 </div>
