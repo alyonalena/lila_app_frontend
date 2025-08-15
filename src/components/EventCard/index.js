@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge} from 'antd'
+import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar, Tooltip} from 'antd'
+import { AntDesignOutlined, UserOutlined } from '@ant-design/icons'
 
 const { Text, Title } = Typography
 
@@ -16,7 +17,7 @@ function EventCard({event}) {
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
                 <Title level={3}>{event.name}</Title>
                 { event.inFuture && (<Button type="primary">Иду!</Button>) }
-            </Flex><br /><br />
+            </Flex><br />            
             <Tabs
                 tabPosition={'top'}
                 items={[
@@ -29,6 +30,18 @@ function EventCard({event}) {
                             <Descriptions.Item label="Место">{event.place}</Descriptions.Item>
                             <Descriptions.Item label="Стоимость">{event.price}</Descriptions.Item>
                             <Descriptions.Item label="Осталось мест">{event.available}</Descriptions.Item>
+                            <Descriptions.Item label="Участники">
+                                <Avatar.Group>
+                                    <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+                                    <a href="https://ant.design">
+                                        <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
+                                    </a>
+                                    <Tooltip title="Ant User" placement="top">
+                                        <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
+                                    </Tooltip>
+                                    <Avatar style={{ backgroundColor: '#1677ff' }} icon={<AntDesignOutlined />} />
+                                </Avatar.Group>
+                            </Descriptions.Item>
                         </Descriptions>,
                     },
                     {
@@ -58,7 +71,7 @@ function EventCard({event}) {
                     getEventCard()
                 )
             }
-            <br/>
+            <br/><br/><br/>
         </>
     )
 }

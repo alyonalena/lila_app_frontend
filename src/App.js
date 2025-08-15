@@ -6,6 +6,7 @@ import AppHeader from './components/AppHeader'
 import UpcomingEventsPage from './components/pages/UpcomingEventsPage'
 import HistoryPage from './components/pages/HistoryPage'
 import AllWinesPage from './components/pages/AllWinesPage'
+import UserAccountPage from './components/pages/UserAccountPage'
 
 import 'antd/dist/reset.css'
 import './App.css'
@@ -34,7 +35,7 @@ function App() {
 			>
 				<AppHeader />
 				<Content style={{ 
-					padding: '86px 16px 150px 16px', 
+					padding: '86px 16px 170px 16px', 
 					display: 'flex', 
 					flexDirection: 'column',
 					backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,
@@ -45,6 +46,7 @@ function App() {
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
 					{activeTabKey === 2 && (<AllWinesPage />)}
+					{activeTabKey === 3 && (<UserAccountPage />)}
 				</Content>
 				<Footer style={{
 					display: 'flex', 
@@ -85,7 +87,19 @@ function App() {
 								Доступные вина
 							</Button><br/>
 						</>
-					)}					
+					)}				
+					{ activeTabKey !== 3 && (
+						<>
+							<Button 
+								visible={activeTabKey !== 3} 
+								size='large' 
+								type='primary'
+								onClick={() => onMenuButtonClick(3)}
+							>
+								Личный кабинет
+							</Button><br/>
+						</>
+					)}		
 				</Footer>
 			</ConfigProvider>
 		</Layout>
