@@ -1,12 +1,17 @@
 import React from 'react'
 
-import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar, Tooltip} from 'antd'
+import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar } from 'antd'
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons'
+import WineShortInfoList from '../WineShortInfoList'
+import { allWines } from '../../data'
 
-const { Text, Title } = Typography
+
+const { Title } = Typography
 
 
 function EventCard({event}) {
+
+    const wineList = event.wineList.map(id => allWines.find(i => i.id === id))
 
     const getEventCard = () => (
         <Card
@@ -33,12 +38,8 @@ function EventCard({event}) {
                             <Descriptions.Item label="Участники">
                                 <Avatar.Group>
                                     <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-                                    <a href="https://ant.design">
-                                        <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-                                    </a>
-                                    <Tooltip title="Ant User" placement="top">
-                                        <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
-                                    </Tooltip>
+                                    <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
+                                    <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
                                     <Avatar style={{ backgroundColor: '#1677ff' }} icon={<AntDesignOutlined />} />
                                 </Avatar.Group>
                             </Descriptions.Item>
@@ -49,7 +50,7 @@ function EventCard({event}) {
                         key: 2,
                         children: (
                             <div>
-                                {event.wineList.map((item) => (<><Text italic>{item.name}</Text><hr/></>))}
+                                <WineShortInfoList wineList={wineList} readOnly={true}/>
                             </div>
                         ),
                     }

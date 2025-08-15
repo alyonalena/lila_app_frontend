@@ -3,6 +3,7 @@ import React from 'react'
 import { Tabs, Card, Avatar, Descriptions, List } from 'antd'
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
 
+import WineShortInfoList from '../../WineShortInfoList'
 import { upcomingEvents, pastEvents, allWines } from '../../../data'
 
 const { Meta } = Card
@@ -64,18 +65,7 @@ function UserAccountPage() {
                             children: (
                                 <div>
                                     Недавно вы обратили внимание на следующие вина<br/><br/>
-                                    <List
-                                        dataSource={myWines}
-                                        renderItem={(item, index) => (
-                                            <List.Item>
-                                                <List.Item.Meta
-                                                    avatar={<Avatar size="large" src={item.img} />}
-                                                    title={item.name}
-                                                    description={item.description}
-                                                />
-                                            </List.Item>
-                                        )}
-                                    />
+                                    <WineShortInfoList wineList={myWines}/>
                                 </div>
                             ),
                         },

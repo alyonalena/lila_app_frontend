@@ -18,40 +18,7 @@ export const upcomingEvents = [
     available: 2,
     hint: 'УЖЕ ЧЕРЕЗ НЕДЕЛЮ!',
     img: Img1,
-    wineList: [
-        {
-            id: 0, 
-            name: 'RESONANCE EXTRA BRUT 2016'
-        },
-        {
-            id: 1, 
-            name: 'EFFLORESCENCE EXTRA 2016'
-        },
-        {
-            id: 2, 
-            name: 'PRESENCE BLANC DE BLANCS EXTRA BRUT 2015'
-        },
-        {
-            id: 3, 
-            name: 'INDULGENCE ROSE EXTRA BRUT 2015'
-        },
-        {
-            id: 4, 
-            name: 'COTEAUX CHAMPENOIS LE BLANC DU TREMBLE 2016'
-        },
-        {
-            id: 5, 
-            name: 'MARIE-COURTIN CONCORDANCE 2018'
-        },
-        {
-            id: 6, 
-            name: 'MARIE-COURTIN BLANC DE BLANCS AMPHORA 2020'
-        },
-        {
-            id: 7, 
-            name: 'MARIE-COURTIN CHAMPANGE BLANC DE NOIRS AMPHORES EXTRA BRUT 2020'
-        },
-    ]
+    wineList: [ 0,1,2,3,4,5,6,7 ]
   },
   {
     name: 'Дегустация "Сет Мечты!"',
@@ -61,36 +28,7 @@ export const upcomingEvents = [
     price: '45 000 руб.',
     available: 7,
     img: Img2,
-    wineList: [
-        {
-            id: 8, 
-            name: 'Cuvee № 747'
-        },
-        {
-            id: 9, 
-            name: 'Cuvee № 743'
-        },
-        {
-            id: 10, 
-            name: 'Dizy Terres Rouges 2015'
-        },
-        {
-            id: 11, 
-            name: 'Avize Champ Terme 2009'
-        },
-        {
-            id: 12, 
-            name: '"Ay" Vauzelle Terme 2009'
-        },
-        {
-            id: 13, 
-            name: 'Dizy Corne Bautray 2004'
-        },
-        {
-            id: 14, 
-            name: 'Millesime Degorgement Tardif 2002'
-        },
-    ]
+    wineList: [ 8,9,10,11,12,13,14 ]
   }
 ]
 
