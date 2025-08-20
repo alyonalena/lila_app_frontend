@@ -10,6 +10,8 @@ const { Text, Title } = Typography
 function AllWinesPage() {
 
     return (
+        <>
+        <Title level={3} style={{ margin: 0, color: 'black', lineHeight: '72px' }}>Каталог </Title>
         <Card>
             <Divider>
                 <Avatar shape="square" src={<FR title="France" className="..."/>} />
@@ -28,6 +30,7 @@ function AllWinesPage() {
             </Divider>
             <Text>Данные не загружены</Text>
         </Card>
+        </>
     )
 }
 

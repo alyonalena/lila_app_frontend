@@ -21,7 +21,7 @@ function EventCard({event}) {
         >
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
                 <Title level={5}>{event.name}</Title>
-                { event.inFuture && (<Button type="primary">Иду!</Button>) }
+                { event.inFuture && (<Button type="primary" size="large">Иду!</Button>) }
             </Flex><br />            
             <Tabs
                 tabPosition={'top'}

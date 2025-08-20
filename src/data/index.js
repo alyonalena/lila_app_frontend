@@ -7,27 +7,27 @@ import Wine3 from '../pics/wine3.png'
 
 
 export const upcomingEvents = [
-  {
-    name: 'Дегустация Marie-Courtin',
-    date: '22 августа 2025',
-    city: 'Москва',
-    place: 'The Nappe Bistro (Скатерный пер., 13)',
-    price: '25 000 руб.',
-    available: 2,
-    hint: 'УЖЕ ЧЕРЕЗ НЕДЕЛЮ!',
-    img: Img1,
-    wineList: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
-  },
-  {
-    name: 'Дегустация "Сет Мечты!"',
-    date: '12 сентября 2025',
-    city: 'Москва',
-    place: 'Уточняется...',
-    price: '45 000 руб.',
-    available: 7,
-    img: Img2,
-    wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
-  }
+    {
+        name: 'Дегустация "Сет Мечты"',
+        date: '12 сентября 2025',
+        city: 'Москва',
+        place: 'Уточняется...',
+        price: '45 000 руб.',
+        available: 7,
+        img: Img2,
+        wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
+    },
+    {
+        name: 'Дегустация Marie-Courtin',
+        date: '22 августа 2025',
+        city: 'Москва',
+        place: 'The Nappe Bistro (Скатерный пер., 13)',
+        price: '25 000 руб.',
+        available: 2,
+        hint: 'УЖЕ ЧЕРЕЗ НЕДЕЛЮ!',
+        img: Img1,
+        wineList: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+    }
 ]
 
 export const pastEvents = [
@@ -50,6 +50,22 @@ export const allWines = [
         description: 'Дополнительная информация о данном вине',
         img: Wine1,
         saved: true,
+        category: "Игристое",
+        country: "Франция",
+        region: "Шампань",
+        grape_variety: "Шардоне",
+        volume: "0,75",
+        available_number: 3,
+        producer: "Marie-Courtin",
+        price: "По запросу",
+        ground_type: "известняк, глина",
+        process: "9 месяцев в дубовой бочке",
+        vinification: "",
+        wine_aging: "",
+        vineyard: "",
+        sulfites: "",
+        production_area: "",
+        description: "",
     },
     {
         id: 1, 

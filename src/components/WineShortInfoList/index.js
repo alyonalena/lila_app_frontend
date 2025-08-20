@@ -18,18 +18,17 @@ function WineShortInfoList({wineList, readOnly}) {
     const getWineShortCardList = () => (
         <List
             dataSource={wineList}
-            renderItem={(item, index) => (
+            renderItem={(item) => (
                 <List.Item
                     actions={!readOnly && [
                         <IconText icon={item.saved ? HeartFilled : HeartOutlined } text={''} key="list-vertical-star-o" />,
                     ]}
                 >
                     <List.Item.Meta
-                        avatar={<Avatar size="large" style={{ backgroundColor: '#F7EBD5' }} icon={<QuestionCircleOutlined />} src={item.img} />}
+                        avatar={<Avatar size="large" style={{ backgroundColor: '#E0DDD4' }} icon={<QuestionCircleOutlined />} src={item.img} />}
                         title={<Text italic>{item.name}</Text>}
                         description={item.description}
-                    />
-                    
+                    />                    
                 </List.Item>
             )}
         />

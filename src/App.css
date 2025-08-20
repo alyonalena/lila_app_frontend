@@ -24,7 +24,7 @@ body, .App, .ant-typography, .ant-layout, .ant-layout-header, .ant-layout-footer
   top: 0;
   left: 0;
   width: 100%;
-  background: rgb(0, 0, 0, 0.4) !important;
+  background: rgb(31, 47, 2, 0.5) !important;
   color: black;
   z-index: 100;
 }
@@ -34,7 +34,7 @@ body, .App, .ant-typography, .ant-layout, .ant-layout-header, .ant-layout-footer
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: rgb(31, 47, 2,  0.5);
   z-index: 100;
 }
 
@@ -84,7 +84,7 @@ input[type="text"] {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: rgb(63, 47, 44, 0.4) !important;
+  background: rgb(1, 36, 23, 0.4) !important;
   padding: 15px;
   text-align: center;
   z-index: 100;
@@ -95,7 +95,7 @@ input[type="text"] {
   left: 0;
   top: 0;
   width: 100%;
-  background: rgb(63, 47, 44, 0.4) !important;
+  background: rgb(1, 36, 23, 0.4) !important;
   padding: 15px;
   text-align: center;
   z-index: 100;

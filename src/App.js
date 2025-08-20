@@ -11,13 +11,12 @@ import UserAccountPage from './components/pages/UserAccountPage'
 import 'antd/dist/reset.css'
 import './App.css'
 
-import champMap from './pics/champMap.png'
-
 const { Footer, Content } = Layout
-
 
 function App() {
 
+	const user = window.Telegram.WebApp.initDataUnsafe.user
+console.info(user)
 	const [activeTabKey, setActiveTabKey] = useState(0)
 
 	const onMenuButtonClick = (key) => {
@@ -29,25 +28,25 @@ function App() {
 			<ConfigProvider
 				theme={{
 					token: {
-						colorPrimary: '#3F2F2C'
+						colorPrimary: '#032F17',
+						fontFamily: "Mulish",
+						borderRadius: 0,
 					}
 				}}
 			>
 				<AppHeader />
 				<Content style={{ 
-					padding: '72px 8px 220px 8px', 
+					padding: '72px 16px 220px 16px', 
 					display: 'flex', 
 					flexDirection: 'column',
 					//backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,
 					backgroundSize: 'cover',
-					backgroundColor:'rgb(247,235,213)',
 					backgroundPosition: 'center',
-					backgroundRepeat: 'no-repeat'
 				}}>
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
 					{activeTabKey === 2 && (<AllWinesPage />)}
-					{activeTabKey === 3 && (<UserAccountPage />)}
+					{/*activeTabKey === 3 && (<UserAccountPage />)*/}
 				</Content>
 				<Footer style={{
 					display: 'flex', 
@@ -86,22 +85,10 @@ function App() {
 								type='primary'
 								onClick={() => onMenuButtonClick(2)}
 							>
-								Доступные вина
+								Каталог вин
 							</Button>
 						</>
 					)}				
-					{ activeTabKey !== 3 && (
-						<>
-							<Button 
-								visible={activeTabKey !== 3} 
-								size='large' 
-								type='primary'
-								onClick={() => onMenuButtonClick(3)}
-							>
-								Личный кабинет
-							</Button>
-						</>
-					)}		
 				</Footer>
 			</ConfigProvider>
 		</Layout>
