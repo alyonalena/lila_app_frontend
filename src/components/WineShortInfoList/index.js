@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { FR } from 'country-flag-icons/react/3x2'
 
-import { Typography, Space, Avatar, List, Drawer, Button, Descriptions } from 'antd'
+import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Image } from 'antd'
 import { HeartFilled, HeartOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined } from '@ant-design/icons'
 
-const { Text } = Typography
+const { Text, Title } = Typography
 
-
-function WineShortInfoList({wineList, readOnly}) {
+function WineShortInfoList({ wineList, readOnly }) {
 
     const [openId, setOpenId] = useState(-1)
     const [selectedWine, setSelectedWine] = useState(null)
@@ -25,15 +25,22 @@ function WineShortInfoList({wineList, readOnly}) {
     const getWineShortCardList = () => (
         <>
             <Drawer 
-                title={selectedWine?.name}
+                title={''}
                 placement={"right"} 
                 width={'100vw'} 
                 onClose={onClose} 
                 open={openId >= 0} 
                 extra={ 
-                    <Space> 
-                        <Button type="primary" onClick={onClose}> В Избранное </Button>
+                    <Space>
+                        <Avatar shape="square" src={<FR title="France" className="..."/>} />
+                        <Text>CÔTE DES BAR</Text>
                     </Space>
+                }
+                footer={
+                    <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+                        <Button type='default' onClick={onClose}>{'<< В каталог'}</Button>
+                        <Button type='primary'>Добавить в избранное</Button>
+                    </Flex>
                 }
             >
                 {
@@ -64,6 +71,8 @@ function WineShortInfoList({wineList, readOnly}) {
                 }
                 */
                 }
+                <Image preview={false} width={'100%'} src={selectedWine?.img}/>
+                <Title>{selectedWine?.name}</Title>
                 <Descriptions>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Страна">{selectedWine?.country || '-'}</Descriptions.Item>
@@ -78,6 +87,7 @@ function WineShortInfoList({wineList, readOnly}) {
                     <Descriptions.Item label="Сульфиты">{selectedWine?.sulfites || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Зона производства">{selectedWine?.production_area || '-'}</Descriptions.Item>
                 </Descriptions>
+
             </Drawer>
             <List
                 dataSource={wineList}

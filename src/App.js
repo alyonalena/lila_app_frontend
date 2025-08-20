@@ -85,7 +85,7 @@ function App() {
 								type='primary'
 								onClick={() => onMenuButtonClick(2)}
 							>
-								Каталог вин
+								Каталог
 							</Button>
 						</>
 					)}				

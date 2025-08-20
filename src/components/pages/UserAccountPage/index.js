@@ -28,15 +28,14 @@ function UserAccountPage() {
                 <Card
                     style={{ width: '100%' }}
                     actions={[
-                    <SettingOutlined key="setting" />,
-                    <EditOutlined key="edit" />,
-                    <EllipsisOutlined key="ellipsis" />
+                        <SettingOutlined key="setting" />,
+                        <EditOutlined key="edit" />,
+                        <EllipsisOutlined key="ellipsis" />
                     ]}
                 >
                     <Meta
                         avatar={<Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>}
-                        title={`${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name}` }
-                        
+                        title={`${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name}` }                        
                         description={`Настоящий ценитель (${launchParams.tgWebAppData?.user?.username})`}
                     />
                     <br />
