@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Tabs, Card, Avatar, Descriptions, List, Typography } from 'antd'
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
+import { useLaunchParams } from '@telegram-apps/sdk-react'
 
 import WineShortInfoList from '../../WineShortInfoList'
 import { upcomingEvents, pastEvents, allWines } from '../../../data'
@@ -12,6 +13,7 @@ const { Title } = Typography
 function UserAccountPage() {
 
     const myWines = allWines.filter(item => item.saved)
+    const launchParams = useLaunchParams()
 
     return (
         <>
@@ -32,9 +34,10 @@ function UserAccountPage() {
                     ]}
                 >
                     <Meta
-                        avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8"/>}
-                        title="Данил"
-                        description="Настоящий ценитель"
+                        avatar={<Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>}
+                        title={`${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name}` }
+                        
+                        description={`Настоящий ценитель (${launchParams.tgWebAppData?.user?.username})`}
                     />
                     <br />
                     <Descriptions>

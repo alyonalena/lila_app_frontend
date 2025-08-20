@@ -16,7 +16,6 @@ function AppHeader() {
                     <Title level={1} style={{ margin: 0, color: '#F5F5F5', lineHeight: '72px' }}>SX Wine</Title>
                 </Col>
                 <Col flex="auto" style={{ textAlign: 'right' }}>
-                    <Button level={1} >Личный кабинет</Button>
                     <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
                 </Col>
             </Row>
