@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 
 import { init, miniApp } from '@telegram-apps/sdk'
-
+/*
 const initializeTelegramSDK = async () => {
   try {
     await init()
@@ -20,7 +20,7 @@ const initializeTelegramSDK = async () => {
 }
 
 initializeTelegramSDK()
-
+*/
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

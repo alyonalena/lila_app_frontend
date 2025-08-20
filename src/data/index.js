@@ -51,6 +51,7 @@ export const allWines = [
         img: Wine1,
         saved: true,
         category: "Игристое",
+        sugar: "Сухое",
         country: "Франция",
         region: "Шампань",
         grape_variety: "Шардоне",
@@ -65,7 +66,7 @@ export const allWines = [
         vineyard: "",
         sulfites: "",
         production_area: "",
-        description: "",
+        description: "Цветочные ноты, апельсин, лимон",
     },
     {
         id: 1, 
