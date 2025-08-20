@@ -22,7 +22,6 @@ function App() {
 		setActiveTabKey(key)
 	}
 
-	console.info(launchParams)
 	return (
 		<Layout style={{ minHeight: '100vh' }}>
 			<ConfigProvider
