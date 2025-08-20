@@ -16,17 +16,6 @@ const { Footer, Content } = Layout
 
 function App() {
 
-	const launchParams = useLaunchParams()
-	const [count, setCount] = useState(0)
-  
-	const handleButtonClick = () => {
-	  setCount(count + 1)
-	  // Example: Show an alert using Telegram's WebApp API
-	  if (window.Telegram?.WebApp) {
-		window.Telegram.WebApp.showAlert(`Count is now: ${count + 1}`)
-	  }
-	}
-
 	const [activeTabKey, setActiveTabKey] = useState(0)
 
 	const onMenuButtonClick = (key) => {
@@ -53,8 +42,7 @@ function App() {
 					//backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
-				}}>
-					<p>Привет, {launchParams.tgWebAppData?.chat?.username}</p>
+				}}>					
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
 					{activeTabKey === 2 && (<AllWinesPage />)}
