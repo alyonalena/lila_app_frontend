@@ -6,6 +6,7 @@
     "@ant-design/icons": "^6.0.0",
     "@fontsource/mulish": "^5.2.6",
     "@telegram-apps/sdk": "^3.11.4",
+    "@telegram-apps/sdk-react": "^3.3.6",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",

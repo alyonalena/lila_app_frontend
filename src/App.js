@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { MainButton, useLaunchParams } from '@telegram-apps/sdk-react'
 
 import { Layout, Button, ConfigProvider } from 'antd'
 
@@ -16,6 +17,16 @@ const { Footer, Content } = Layout
 function App() {
 
 	///const user = window.Telegram.WebApp.initDataUnsafe.user
+	const launchParams = useLaunchParams()
+	const [count, setCount] = useState(0)
+  
+	const handleButtonClick = () => {
+	  setCount(count + 1)
+	  // Example: Show an alert using Telegram's WebApp API
+	  if (window.Telegram?.WebApp) {
+		window.Telegram.WebApp.showAlert(`Count is now: ${count + 1}`)
+	  }
+	}
 
 	console.info(window.Telegram)
 	console.info(window.Telegram.WebApp)
@@ -47,6 +58,12 @@ function App() {
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
 				}}>
+					<div>
+						<h1>Telegram Mini App with React</h1>
+						<p>Start Parameter: {launchParams.startParam}</p>
+						<p>Count: {count}</p>
+						<MainButton text="Increment Count" onClick={handleButtonClick} />
+					</div>
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
 					{activeTabKey === 2 && (<AllWinesPage />)}

@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App'
-import { SDKProvider } from '@telegram-apps/sdk/react'
+import { WebAppProvider } from '@telegram-apps/sdk-react'
 
 import { init, miniApp } from '@telegram-apps/sdk'
 
@@ -24,8 +24,8 @@ initializeTelegramSDK()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SDKProvider>
+    <WebAppProvider>
       <App />
-    </SDKProvider>    
+    </WebAppProvider>
   </StrictMode>,
 )
