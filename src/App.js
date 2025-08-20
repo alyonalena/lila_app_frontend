@@ -16,7 +16,6 @@ const { Footer, Content } = Layout
 
 function App() {
 
-	///const user = window.Telegram.WebApp.initDataUnsafe.user
 	const launchParams = useLaunchParams()
 	const [count, setCount] = useState(0)
   
@@ -28,10 +27,6 @@ function App() {
 	  }
 	}
 
-	console.info(window.Telegram)
-	console.info(window.Telegram.WebApp)
-	console.info(window.Telegram.WebApp.initDataUnsafe)
-	// /console.info(user)
 	const [activeTabKey, setActiveTabKey] = useState(0)
 
 	const onMenuButtonClick = (key) => {
