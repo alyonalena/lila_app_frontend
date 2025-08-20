@@ -16,6 +16,8 @@ const { Footer, Content } = Layout
 function App() {
 
 	///const user = window.Telegram.WebApp.initDataUnsafe.user
+
+	console.info(window.Telegram)
 	console.info(window.Telegram.WebApp)
 	console.info(window.Telegram.WebApp.initDataUnsafe)
 	// /console.info(user)
