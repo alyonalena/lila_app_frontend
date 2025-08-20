@@ -35,7 +35,7 @@ function App() {
 			>
 				<AppHeader />
 				<Content style={{ 
-					padding: '72px 16px 220px 16px', 
+					padding: '72px 8px 220px 8px', 
 					display: 'flex', 
 					flexDirection: 'column',
 					//backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,

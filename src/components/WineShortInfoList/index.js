@@ -72,7 +72,7 @@ function WineShortInfoList({ wineList, readOnly }) {
                 */
                 }
                 <Image preview={false} width={'100%'} src={selectedWine?.img}/>
-                <Title>{selectedWine?.name}</Title>
+                <Title level={3}>{selectedWine?.name}</Title>
                 <Descriptions>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Страна">{selectedWine?.country || '-'}</Descriptions.Item>
