@@ -26,51 +26,23 @@ function WineShortInfoList({ wineList, readOnly }) {
         <>
             <Drawer 
                 title={''}
-                placement={"right"} 
+                placement={'right'} 
                 width={'100vw'} 
                 onClose={onClose} 
                 open={openId >= 0} 
                 extra={ 
                     <Space>
-                        <Avatar shape="square" src={<FR title="France" className="..."/>} />
+                        <Avatar src={<FR title="France" className="..."/>} />
                         <Text>CÔTE DES BAR</Text>
                     </Space>
                 }
                 footer={
                     <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
-                        <Button type='default' onClick={onClose}>{'<< В каталог'}</Button>
+                        <Button type='text' onClick={onClose}>В каталог</Button>
                         <Button type='primary'>Добавить в избранное</Button>
                     </Flex>
                 }
             >
-                {
-                /*
-                {
-                    id: 0,
-                    name: 'RESONANCE EXTRA BRUT 2016',
-                    description: 'Дополнительная информация о данном вине',
-                    img: Wine1,
-                    saved: true,
-                    category: "Игристое",
-                    sugar: "Сухое",
-                    country: "Франция",
-                    region: "Шампань",
-                    grape_variety: "Шардоне",
-                    volume: "0,75",
-                    available_number: 3,
-                    producer: "Marie-Courtin",
-                    price: "По запросу",
-                    ground_type: "известняк, глина",
-                    process: "9 месяцев в дубовой бочке", 
-                    vinification: "",
-                    wine_aging: "",
-                    vineyard: "",
-                    sulfites: "",
-                    production_area: "",
-                    description: "",
-                }
-                */
-                }
                 <Image preview={false} width={'100%'} src={selectedWine?.img}/>
                 <Title level={3}>{selectedWine?.name}</Title>
                 <Descriptions>
@@ -111,7 +83,7 @@ function WineShortInfoList({ wineList, readOnly }) {
                         ]}
                     >
                         <List.Item.Meta
-                            avatar={<Avatar size="large" style={{ backgroundColor: '#E0DDD4' }} icon={<QuestionCircleOutlined />} src={item.img} />}
+                            avatar={<Avatar shape="square" size="large" style={{ backgroundColor: '#F7EBD5' }} icon={<QuestionCircleOutlined />} src={item.img} />}
                             title={<Text>{item.name}</Text>}
                             description={item.description}
                         />                    

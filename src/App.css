@@ -41,7 +41,7 @@ body, .App, .ant-typography, .ant-layout, .ant-layout-header, .ant-layout-footer
 .App-main {
   padding-top: 80px;
   padding-bottom: 50px;
-  background-color: #eaeefa;
+  background-color: white;
   min-height: 100vh;
   box-sizing: border-box;
 }

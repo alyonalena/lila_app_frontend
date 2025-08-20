@@ -5,12 +5,12 @@ import { Typography } from 'antd'
 
 import { pastEvents } from '../../../data'
 
-const { Title } = Typography
+const { Text } = Typography
 
 function HistoryPage() {
     return (
         <>
-            <Title level={3} style={{ margin: 0, color: 'black', lineHeight: '72px' }}>История мероприятий</Title>
+            <Text>ИСТОРИЯ МЕРОПРИЯТИЙ</Text>
             {
                 pastEvents.map((event) => (<EventCard event={event} />))
             }

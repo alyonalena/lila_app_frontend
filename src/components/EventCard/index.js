@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar } from 'antd'
+import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar, Divider } from 'antd'
 import { AntDesignOutlined, UserOutlined } from '@ant-design/icons'
 import WineShortInfoList from '../WineShortInfoList'
 import { allWines } from '../../data'
 
 
-const { Title } = Typography
+const { Text } = Typography
 
 
 function EventCard({event}) {
@@ -14,15 +14,14 @@ function EventCard({event}) {
     const wineList = event.wineList.map(id => allWines.find(i => i.id === id))
 
     const getEventCard = () => (
-        <Card
-            hoverable
-            style={{ width: '100%' }}
+        <Card            
+            style={{ width: '100%', border: 'none' }}
             cover={<img alt="example" src={event.img} />}
         >
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
-                <Title level={5}>{event.name}</Title>
+                <Text>{event.name}</Text>
                 { event.inFuture && (<Button type="primary" size="large">Иду!</Button>) }
-            </Flex><br />            
+            </Flex>           
             <Tabs
                 tabPosition={'top'}
                 items={[
@@ -61,6 +60,11 @@ function EventCard({event}) {
 
     return (
         <>
+            <Divider orientation="right">
+                <Space>
+                    <Text>{`${event.date}, ${event.city}`}</Text>
+                </Space>
+            </Divider>
             {
                 event.hint ? (
                     <Space direction="vertical" size="middle" style={{ width: '100%' }}>
@@ -72,7 +76,7 @@ function EventCard({event}) {
                     getEventCard()
                 )
             }
-            <br/><br/><br/>
+            <Divider />
         </>
     )
 }

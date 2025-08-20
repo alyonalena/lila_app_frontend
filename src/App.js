@@ -23,25 +23,26 @@ function App() {
 	}
 
 	return (
-		<Layout style={{ minHeight: '100vh' }}>
+		<Layout style={{ minHeight: '100vh', backgroundColor: 'white' }}>
 			<ConfigProvider
 				theme={{
 					token: {
 						colorPrimary: '#032F17',
-						fontFamily: "Mulish",
 						borderRadius: 0,
 					}
 				}}
 			>
 				<AppHeader />
-				<Content style={{ 
-					padding: '72px 8px 220px 8px', 
-					display: 'flex', 
-					flexDirection: 'column',
-					//backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,
-					backgroundSize: 'cover',
-					backgroundPosition: 'center',
-				}}>					
+				<Content 
+					style={{ 
+						padding: '72px 8px 220px 8px', 
+						display: 'flex', 
+						flexDirection: 'column',
+						//backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,
+						backgroundSize: 'cover',
+						backgroundPosition: 'center',
+					}}
+				>					
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
 					{activeTabKey === 2 && (<AllWinesPage />)}

@@ -8,7 +8,7 @@ import Wine3 from '../pics/wine3.png'
 
 export const upcomingEvents = [
     {
-        name: 'Дегустация "Сет Мечты"',
+        name: 'ДЕГУСТАЦИЯ «СЕТ МЕЧТЫ»',
         date: '12 сентября 2025',
         city: 'Москва',
         place: 'Уточняется...',
@@ -18,13 +18,12 @@ export const upcomingEvents = [
         wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
     },
     {
-        name: 'Дегустация Marie-Courtin',
+        name: 'ДЕГУСТАЦИЯ MARIE-COURTIN»',
         date: '22 августа 2025',
         city: 'Москва',
         place: 'The Nappe Bistro (Скатерный пер., 13)',
         price: '25 000 руб.',
         available: 2,
-        hint: 'УЖЕ ЧЕРЕЗ НЕДЕЛЮ!',
         img: Img1,
         wineList: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
     }
@@ -32,7 +31,7 @@ export const upcomingEvents = [
 
 export const pastEvents = [
     {
-      name: 'Дегустация CLANDESTIN',
+      name: 'ДЕГУСТАЦИЯ CLANDESTIN',
       date: '31 июля 2025',
       city: 'Санкт-Петербург',
       place: 'Kira (Кирочная ул., 8а)',

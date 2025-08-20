@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Tabs, Card, Avatar, Descriptions, List, Typography } from 'antd'
+import { Tabs, Card, Avatar, Descriptions, List, Typography, Space, Divider } from 'antd'
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
 import { useLaunchParams } from '@telegram-apps/sdk-react'
 
@@ -8,43 +8,37 @@ import WineShortInfoList from '../../WineShortInfoList'
 import { upcomingEvents, pastEvents, allWines } from '../../../data'
 
 const { Meta } = Card
-const { Title } = Typography
+const { Title, Text } = Typography
 
 function UserAccountPage() {
 
     const myWines = allWines.filter(item => item.saved)
-    const launchParams = useLaunchParams()
+    const launchParams = /*useLaunchParams()*/ {}
 
     return (
         <>
-            <Title level={3} style={{ margin: 0, color: 'black', lineHeight: '72px' }}>Личный кабинет</Title>
-            <div 
-                style={{
-                    display: 'flex', 
-                    flexDirection: 'column',
-                    gap: '8px'
-                }}
-            >
                 <Card
-                    style={{ width: '100%' }}
-                    actions={[
+                    style={{ width: '100%', border: 'none' }}
+                    /*actions={[
                         <SettingOutlined key="setting" />,
                         <EditOutlined key="edit" />,
                         <EllipsisOutlined key="ellipsis" />
-                    ]}
+                    ]}*/
                 >
-                    <Meta
-                        avatar={<Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>}
-                        title={`${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name}` }                        
-                        description={`Настоящий ценитель (${launchParams.tgWebAppData?.user?.username})`}
-                    />
-                    <br />
+                    <Text>ЛИЧНЫЙ КАБИНЕТ</Text>
+                    <Divider orientation="right">
+                        <Space>
+                            <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
+                        </Space>
+                    </Divider>
+
                     <Descriptions>
+                        <Descriptions.Item label="Пользователь">`${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name} (${launchParams.tgWebAppData?.user?.username})`</Descriptions.Item>
+                        <Descriptions.Item label="Статус">Настоящий ценитель</Descriptions.Item>
                         <Descriptions.Item label="Посещенные мероприятия">10</Descriptions.Item>
                         <Descriptions.Item label="Предстоящие мероприятия">2</Descriptions.Item>
                     </Descriptions>
-                </Card>
-                <Card>
+                    <Divider orientation="right" />
                     <Tabs
                         tabPosition={'top'}
                         items={[
@@ -103,7 +97,8 @@ function UserAccountPage() {
                         ]}
                     />
                 </Card>
-            </div>
+
+
         </>
     )
 }
