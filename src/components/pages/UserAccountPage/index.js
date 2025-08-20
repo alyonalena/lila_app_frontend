@@ -13,7 +13,13 @@ function UserAccountPage() {
     const myWines = allWines.filter(item => item.saved)
 
     return (
-        <>
+        <div 
+            style={{
+                display: 'flex', 
+                flexDirection: 'column',
+                gap: '8px'
+            }}
+        >
             <Card
                 style={{ width: '100%' }}
                 actions={[
@@ -33,7 +39,6 @@ function UserAccountPage() {
                     <Descriptions.Item label="Предстоящие мероприятия">2</Descriptions.Item>
                 </Descriptions>
             </Card>
-            <br />
             <Card>
                 <Tabs
                     tabPosition={'top'}
@@ -93,7 +98,7 @@ function UserAccountPage() {
                     ]}
                 />
             </Card>
-        </>
+        </div>
     )
 }
 

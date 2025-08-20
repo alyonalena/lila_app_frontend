@@ -6,8 +6,6 @@ import Wine2 from '../pics/wine2.png'
 import Wine3 from '../pics/wine3.png'
 
 
-export const emotions = "Святость / Грех / Икона / Разрушение / Бархат / Золото / Тьма / Слезы / Вино / Голливудские холмы / Отчаянная красота / Увядание / Эротика / Меланхолия / Театральность"
-
 export const upcomingEvents = [
   {
     name: 'Дегустация Marie-Courtin',
@@ -18,7 +16,7 @@ export const upcomingEvents = [
     available: 2,
     hint: 'УЖЕ ЧЕРЕЗ НЕДЕЛЮ!',
     img: Img1,
-    wineList: [ 0,1,2,3,4,5,6,7 ]
+    wineList: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
   },
   {
     name: 'Дегустация "Сет Мечты!"',
@@ -28,7 +26,7 @@ export const upcomingEvents = [
     price: '45 000 руб.',
     available: 7,
     img: Img2,
-    wineList: [ 8,9,10,11,12,13,14 ]
+    wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
   }
 ]
 
@@ -40,36 +38,7 @@ export const pastEvents = [
       place: 'Kira (Кирочная ул., 8а)',
       price: '20 000 руб.',
       img: Img3,
-      wineList: [
-          {
-              id: 15, 
-              name: 'JULIEN PLELAT'
-          },
-          {
-              id: 16, 
-              name: 'BOREAL 2021'
-          },
-          {
-              id: 17, 
-              name: 'AUSTRAL 2020'
-          },
-          {
-              id: 18, 
-              name: 'REVERS 2020'
-          },
-          {
-              id: 19, 
-              name: 'GRANDE LIGNES 2019'
-          },
-          {
-              id: 20, 
-              name: 'LES PASSAGERS "FIOLE" 100% Chardonnay 2022'
-          },
-          {
-              id: 21, 
-              name: 'LES PASSAGERS "HAUT DE VAL BARMONT" 100% Chardonnay 2022'
-          },
-      ]
+      wineList: [ 15, 16, 17, 18, 19, 20, 21 ]
     },
   ]
 

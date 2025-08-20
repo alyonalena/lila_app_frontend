@@ -35,11 +35,12 @@ function App() {
 			>
 				<AppHeader />
 				<Content style={{ 
-					padding: '86px 16px 220px 16px', 
+					padding: '72px 8px 220px 8px', 
 					display: 'flex', 
 					flexDirection: 'column',
-					backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,
+					//backgroundImage: `linear-gradient(rgba(247,235,213,0.7), rgba(247,235,213,0.7)), url(${champMap})`,
 					backgroundSize: 'cover',
+					backgroundColor:'rgb(247,235,213)',
 					backgroundPosition: 'center',
 					backgroundRepeat: 'no-repeat'
 				}}>
@@ -51,6 +52,7 @@ function App() {
 				<Footer style={{
 					display: 'flex', 
 					flexDirection: 'column',
+					gap: '8px'
 				}}>
 					{ activeTabKey !== 0 && (
 						<>
@@ -61,7 +63,7 @@ function App() {
 								onClick={() => onMenuButtonClick(0)}
 							>
 								Предстоящие мероприятия
-							</Button><br/>
+							</Button>
 						</>
 					)}
 					{ activeTabKey !== 1 && (
@@ -73,7 +75,7 @@ function App() {
 								onClick={() => onMenuButtonClick(1)}
 							>
 								История мероприятий
-							</Button><br/>
+							</Button>
 						</>
 					)}
 					{ activeTabKey !== 2 && (
@@ -85,7 +87,7 @@ function App() {
 								onClick={() => onMenuButtonClick(2)}
 							>
 								Доступные вина
-							</Button><br/>
+							</Button>
 						</>
 					)}				
 					{ activeTabKey !== 3 && (
@@ -97,7 +99,7 @@ function App() {
 								onClick={() => onMenuButtonClick(3)}
 							>
 								Личный кабинет
-							</Button><br/>
+							</Button>
 						</>
 					)}		
 				</Footer>

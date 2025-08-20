@@ -20,7 +20,7 @@ function EventCard({event}) {
             cover={<img alt="example" src={event.img} />}
         >
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
-                <Title level={3}>{event.name}</Title>
+                <Title level={5}>{event.name}</Title>
                 { event.inFuture && (<Button type="primary">Иду!</Button>) }
             </Flex><br />            
             <Tabs
