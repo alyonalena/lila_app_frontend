@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MainButton, useLaunchParams } from '@telegram-apps/sdk-react'
+import { useLaunchParams } from '@telegram-apps/sdk-react'
 
 import { Layout, Button, ConfigProvider } from 'antd'
 
@@ -57,7 +57,7 @@ function App() {
 						<h1>Telegram Mini App with React</h1>
 						<p>Start Parameter: {launchParams.startParam}</p>
 						<p>Count: {count}</p>
-						<MainButton text="Increment Count" onClick={handleButtonClick} />
+						<Button text="Increment Count" onClick={handleButtonClick} />
 					</div>
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
