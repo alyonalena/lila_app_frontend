@@ -54,9 +54,7 @@ function App() {
 					backgroundPosition: 'center',
 				}}>
 					<div>
-						<h1>Telegram Mini App with React</h1>
-						<p>Start Parameter: {launchParams.startParam}</p>
-						<p>Count: {count}</p>
+						<p>Привет, {launchParams.tgWebAppData?.chat?.username}</p>
 						<Button text="Increment Count" onClick={handleButtonClick} />
 					</div>
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
