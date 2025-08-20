@@ -33,6 +33,7 @@ function App() {
 		setActiveTabKey(key)
 	}
 
+	console.info(launchParams)
 	return (
 		<Layout style={{ minHeight: '100vh' }}>
 			<ConfigProvider
@@ -53,10 +54,7 @@ function App() {
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
 				}}>
-					<div>
-						<p>Привет, {launchParams.tgWebAppData?.chat?.username}</p>
-						<Button text="Increment Count" onClick={handleButtonClick} />
-					</div>
+					<p>Привет, {launchParams.tgWebAppData?.chat?.username}</p>
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
 					{activeTabKey === 2 && (<AllWinesPage />)}
@@ -65,7 +63,8 @@ function App() {
 				<Footer style={{
 					display: 'flex', 
 					flexDirection: 'column',
-					gap: '8px'
+					gap: '8px',
+					borderTop: '1px solid rgb(3, 47, 23)',
 				}}>
 					{ activeTabKey !== 0 && (
 						<>
