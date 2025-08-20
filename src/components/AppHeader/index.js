@@ -8,7 +8,7 @@ const { Title } = Typography
 const { Header } = Layout
 
 function AppHeader() {
-    const launchParams = /*useLaunchParams()*/ {}
+    const launchParams = useLaunchParams()
 
     return (
         <Header style={{ background: '#040404', borderBottom: '1px solid rgb(3, 47, 23)', color: '#F2EFEA', textAlign: 'top', padding: '0 16px' }}>

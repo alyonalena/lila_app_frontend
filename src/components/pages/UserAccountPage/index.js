@@ -13,7 +13,7 @@ const { Title, Text } = Typography
 function UserAccountPage() {
 
     const myWines = allWines.filter(item => item.saved)
-    const launchParams = /*useLaunchParams()*/ {}
+    const launchParams = useLaunchParams()
 
     return (
         <>
