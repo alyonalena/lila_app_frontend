@@ -15,8 +15,10 @@ const { Footer, Content } = Layout
 
 function App() {
 
-	const user = window.Telegram.WebApp.initDataUnsafe.user
-console.info(user)
+	///const user = window.Telegram.WebApp.initDataUnsafe.user
+	console.info(window.Telegram.WebApp)
+	console.info(window.Telegram.WebApp.initDataUnsafe)
+	// /console.info(user)
 	const [activeTabKey, setActiveTabKey] = useState(0)
 
 	const onMenuButtonClick = (key) => {
