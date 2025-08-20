@@ -45,7 +45,7 @@ function App() {
 					{activeTabKey === 0 && (<UpcomingEventsPage />)}
 					{activeTabKey === 1 && (<HistoryPage />)}
 					{activeTabKey === 2 && (<AllWinesPage />)}
-					{/*activeTabKey === 3 && (<UserAccountPage />)*/}
+					{activeTabKey === 3 && (<UserAccountPage />)}
 				</Content>
 				<Footer style={{
 					display: 'flex', 
@@ -89,6 +89,18 @@ function App() {
 							</Button>
 						</>
 					)}				
+					{ activeTabKey !== 3 && (
+						<>
+							<Button 
+								visible={activeTabKey !== 3} 
+								size='large' 
+								type='primary'
+								onClick={() => onMenuButtonClick(3)}
+							>
+								Личный кабинет
+							</Button>
+						</>
+					)}	
 				</Footer>
 			</ConfigProvider>
 		</Layout>
