@@ -68,12 +68,14 @@ function WineShortInfoList({ wineList, readOnly }) {
                         actions={!readOnly && [
                             //<IconText icon={item.saved ? HeartFilled : HeartOutlined } text={''} key="list-vertical-star-o" />,
                             <HeartFilled
+                                color='#E2044C'
                                 onClick={(event) => {
                                     // If you don't want click extra trigger collapse, you can prevent this:
                                     event.stopPropagation()
                                 }}
                             />,
                             <EllipsisOutlined 
+                            color='#E2044C'
                                 onClick={(event) => {
                                     // If you don't want click extra trigger collapse, you can prevent this:
                                     event.stopPropagation()
@@ -94,7 +96,7 @@ function WineShortInfoList({ wineList, readOnly }) {
     )
 
     const onChange = (key) => {
-        console.log(key);
+        console.log(key)
     }
 
     const genExtra = () => (
