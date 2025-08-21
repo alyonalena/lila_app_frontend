@@ -11,7 +11,7 @@ const { Text } = Typography
 function UserAccountPage() {
 
     const myWines = allWines.filter(item => item.saved)
-    const launchParams = /*useLaunchParams()*/{}
+    const launchParams = useLaunchParams()
 
     const name = `${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name} (${launchParams.tgWebAppData?.user?.username})`
 
