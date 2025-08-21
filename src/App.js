@@ -27,7 +27,7 @@ function App() {
 			<ConfigProvider
 				theme={{
 					token: {
-						colorPrimary: '#032F17',
+						colorPrimary: '#004538',
 						borderRadius: 0,
 					}
 				}}
@@ -51,7 +51,7 @@ function App() {
 					display: 'flex', 
 					flexDirection: 'column',
 					gap: '8px',
-					borderTop: '1px solid rgb(3, 47, 23)',
+					borderTop: '1px solid rgb(0, 59, 68)',
 				}}>
 					{/* activeTabKey !== 0 && (
 						<>
