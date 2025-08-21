@@ -34,7 +34,7 @@ function EventsPage() {
 
     return (
         <>
-            <Typography.Title level={1}>События</Typography.Title>
+            <Typography.Title level={3}>События</Typography.Title>
             <Divider/>
             <div>
                 <Radio.Group
