@@ -6,8 +6,6 @@ import { useLaunchParams } from '@telegram-apps/sdk-react'
 import WineShortInfoList from '../../WineShortInfoList'
 import { upcomingEvents, pastEvents, allWines } from '../../../data'
 
-const { Text } = Typography
-
 function UserAccountPage() {
 
     const myWines = allWines.filter(item => item.saved)
@@ -19,12 +17,7 @@ function UserAccountPage() {
         <>
             <Typography.Title level={3}>Личный кабинет</Typography.Title>
             <div>                    
-                <Divider orientation="right">
-                    <Space>
-                        <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
-                    </Space>
-                </Divider>
-
+                <Divider orientation="right" />
                 <Descriptions>
                     <Descriptions.Item label="Пользователь">{name}</Descriptions.Item>
                     <Descriptions.Item label="Статус">Настоящий ценитель</Descriptions.Item>
