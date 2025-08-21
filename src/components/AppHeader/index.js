@@ -18,7 +18,7 @@ function AppHeader() {
 	}
 
     return (
-        <Header style={{ textAlign: "center", padding: "4px 16px" }}>
+        <Header style={{ textAlign: "center", padding: "4px 8px" }}>
             <Row align="center" justify="space-between">
                 <div>
                     <Flex style={{ width: '100%' }} align={'center'} gap={8}>

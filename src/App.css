@@ -47,7 +47,7 @@ input[type="text"] {
   bottom: 0;
   width: 100%;
   background: white !important;
-  padding: 15px;
+  padding: 8px;
   text-align: center;
   z-index: 100;
   border-top: 1px solid rgba(5, 5, 5, 0.06);
@@ -60,7 +60,7 @@ input[type="text"] {
   top: 0;
   width: 100%;
   background: white !important;
-  padding: 15px;
+  padding: 8px;
   text-align: center;
   z-index: 100;
   border-bottom: 1px solid rgba(5, 5, 5, 0.06);
