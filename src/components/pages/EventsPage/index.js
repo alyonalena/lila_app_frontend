@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import EventCard from '../../EventCard'
-import { Typography, Divider, Radio } from 'antd'
+import { Typography, Divider, Row, Select, Col, Space } from 'antd'
 
 import { pastEvents, upcomingEvents, inWorkEvents } from '../../../data'
 
@@ -9,8 +9,8 @@ function EventsPage() {
     
     const [ mode, setMode ] = useState('upcoming')
 
-    const onChange = e => {
-        setMode(e.target.value)
+    const onChange = (value) => {
+        setMode(value)
     }
 
     const getContent = () => {
@@ -34,24 +34,27 @@ function EventsPage() {
 
     return (
         <>
-            <Typography.Title level={3}>События</Typography.Title>
-            <Divider/>
-            <div>
-                <Radio.Group
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: 8,
-                    }}
-                    onChange={onChange}
+            <Row width={'100%'} align="center" justify="space-between">
+                <Col>
+                    <Typography.Title level={3}>События</Typography.Title>
+                </Col>
+                <Col>
+                <Space style={{ width: '100%' }}/>
+                
+                </Col>
+            </Row>
+            <Divider orientation="left">
+                <Select
                     value={mode}
+                    style={{ width: '200px' }}
+                    onChange={onChange}
                     options={[
-                        { value: 'upcoming', label: 'ПРЕДСТОЯЩИЕ СОБЫТИЯ' },
-                        { value: 'history', label: 'ИСТОРИЯ СОБЫТИЙ' },
-                        { value: 'in_work', label: 'СОБЫТИЯ В РАЗРАБОТКЕ' }
+                        { value: 'upcoming', label: 'Предстоящие' },
+                        { value: 'history', label: 'История' },
+                        { value: 'in_work', label: 'В разработке' }
                     ]}
-                />            
-            </div>
+                />
+            </Divider>
             {getContent()}
         </>
     )

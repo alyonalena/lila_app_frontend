@@ -59,7 +59,6 @@ function WineShortInfoList({ wineList, readOnly }) {
                     <Descriptions.Item label="Сульфиты">{selectedWine?.sulfites || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Зона производства">{selectedWine?.production_area || '-'}</Descriptions.Item>
                 </Descriptions>
-
             </Drawer>
             <List
                 dataSource={wineList}
@@ -75,7 +74,7 @@ function WineShortInfoList({ wineList, readOnly }) {
                                 }}
                             />,
                             <EllipsisOutlined 
-                            color='#E2044C'
+                                color='#E2044C'
                                 onClick={(event) => {
                                     // If you don't want click extra trigger collapse, you can prevent this:
                                     event.stopPropagation()
