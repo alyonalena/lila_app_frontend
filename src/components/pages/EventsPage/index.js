@@ -48,7 +48,7 @@ function EventsPage() {
                     onChange={onChange}
                     value={mode}
                     options={[
-                        { value: 'upcoming', label: 'ПРЕДСТОЯЩИЕ МЕРОПРИЯТИЙ' },
+                        { value: 'upcoming', label: 'ПРЕДСТОЯЩИЕ МЕРОПРИЯТИЯ' },
                         { value: 'history', label: 'ИСТОРИЯ МЕРОПРИЯТИЙ' },
                         { value: 'in_work', label: 'МЕРОПРИЯТИЯ В РАЗРАБОТКЕ' }
                     ]}
