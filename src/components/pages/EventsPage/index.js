@@ -5,7 +5,6 @@ import { Typography, Divider, Radio } from 'antd'
 
 import { pastEvents, upcomingEvents, inWorkEvents } from '../../../data'
 
-const { Text } = Typography
 
 function EventsPage() {
     
@@ -36,7 +35,7 @@ function EventsPage() {
 
     return (
         <>
-            <Text>МЕРОПРИЯТИЯ</Text>
+            <Typography.Title level={3}>События</Typography.Title>
             <Divider/>
             <div>
                 <Radio.Group
@@ -48,9 +47,9 @@ function EventsPage() {
                     onChange={onChange}
                     value={mode}
                     options={[
-                        { value: 'upcoming', label: 'ПРЕДСТОЯЩИЕ МЕРОПРИЯТИЯ' },
-                        { value: 'history', label: 'ИСТОРИЯ МЕРОПРИЯТИЙ' },
-                        { value: 'in_work', label: 'МЕРОПРИЯТИЯ В РАЗРАБОТКЕ' }
+                        { value: 'upcoming', label: 'ПРЕДСТОЯЩИЕ СОБЫТИЯ' },
+                        { value: 'history', label: 'ИСТОРИЯ СОБЫТИЙ' },
+                        { value: 'in_work', label: 'СОБЫТИЯ В РАЗРАБОТКЕ' }
                     ]}
                 />            
             </div>

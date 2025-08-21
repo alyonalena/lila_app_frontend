@@ -17,7 +17,7 @@ function UserAccountPage() {
 
     return (
         <>
-            <Text>ЛИЧНЫЙ КАБИНЕТ</Text>
+            <Typography.Title level={3}>Личный кабинет</Typography.Title>
             <div>                    
                 <Divider orientation="right">
                     <Space>

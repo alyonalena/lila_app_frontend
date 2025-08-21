@@ -19,7 +19,7 @@ function AppHeader() {
 
     return (
         <Header style={{ textAlign: 'top', padding: '0 16px' }}>
-            <Row align="top" justify="space-between" style={{ height: '72px' }}>
+            <Row align="top" justify="space-between">
                 <Col flex="auto" style={{ textAlign: 'left' }}>
                     <Title level={1} style={{ margin: 0, color: '#E2044C', lineHeight: '72px' }}>SX Wine</Title>
                 </Col>

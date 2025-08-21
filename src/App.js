@@ -35,7 +35,7 @@ function App() {
 				<AppHeader />
 				<Content 
 					style={{ 
-						padding: '72px 8px 220px 8px', 
+						padding: '72px 16px 220px 16px', 
 						display: 'flex', 
 						flexDirection: 'column',
 						backgroundSize: 'cover',
@@ -68,7 +68,7 @@ function App() {
 						type={ activeTab === 1 ? 'default' : 'primary' }
 						onClick={() => onMenuButtonClick(1)}
 					>
-						МЕРОПРИЯТИЯ
+						СОБЫТИЯ
 					</Button>
 					<Button
 						size='large' 

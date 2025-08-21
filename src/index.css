@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +10,29 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Ensure Ant Design Typography components use Mulish */
+.ant-typography {
+  font-family: 'Mulish', sans-serif !important;
+}
+
+.ant-typography h3,
+.ant-typography h4,
+.ant-typography h5,
+.ant-typography h6,
+.ant-typography p,
+.ant-typography span {
+  font-family: 'Mulish', sans-serif !important;
+}
+
+.ant-typography h3 {
+  font-family: 'Mulish', sans-serif !important;
+  font-weight: 100 !important;
+}
+
+.ant-typography h1 {
+  font-family: 'Mulish', sans-serif !important;
+  font-weight: 100 !important;
+  font-size: 38px !important;
 }

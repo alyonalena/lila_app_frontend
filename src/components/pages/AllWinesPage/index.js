@@ -11,7 +11,7 @@ function AllWinesPage() {
 
     return (
         <>
-            <Text>КАТАЛОГ ВИН</Text>
+            <Typography.Title level={3}>Каталог вин</Typography.Title>
             <div>
                 
                 <Divider orientation="right">
