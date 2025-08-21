@@ -28,7 +28,7 @@ function App() {
 				theme={{
 					token: {
 						colorPrimary: 'black',
-						borderRadius: 0,
+						borderRadius: 5,
 					}
 				}}
 			>

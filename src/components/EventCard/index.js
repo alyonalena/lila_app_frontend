@@ -68,7 +68,7 @@ function EventCard({event}) {
             {
                 event.hint ? (
                     <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-                        <Badge.Ribbon text={event.hint} color="red">
+                        <Badge.Ribbon text={event.hint} color="#E2044C">
                             {getEventCard()}
                         </Badge.Ribbon>
                     </Space>
