@@ -32,7 +32,7 @@ function WineShortInfoList({ wineList, readOnly }) {
                 open={openId >= 0} 
                 extra={ 
                     <Space>
-                        <Avatar src={<FR title="France" className="..."/>} />
+                        <Avatar shape="square" src={<FR title="France" className="..."/>} />
                         <Text>CÔTE DES BAR</Text>
                     </Space>
                 }

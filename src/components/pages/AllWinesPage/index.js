@@ -10,25 +10,28 @@ const { Text, Title } = Typography
 function AllWinesPage() {
 
     return (
-        <Card>
-            <Text>КАТАЛОГ</Text>
-            <Divider orientation="right">
-                <Space>
-                    <Avatar shape="square" src={<FR title="France" className="..."/>} />
-                    <Text>CÔTE DES BAR</Text>
-                </Space>
-            </Divider>
-           
-            <WineShortInfoList wineList={allWines} readOnly={false}/>
-            <Divider>
-                <Avatar shape="square" src={<IT title="Italy" className="..."/>} />
-            </Divider>
-            <Text>Данные не загружены</Text>
-            <Divider>
-                <Avatar shape="square" src={<ES title="Spane" className="..."/>} />
-            </Divider>
-            <Text>Данные не загружены</Text>
-        </Card>
+        <>
+            <Text>КАТАЛОГ ВИН</Text>
+            <div>
+                
+                <Divider orientation="right">
+                    <Space>
+                        <Avatar shape="square" src={<FR title="France"/>} />
+                        <Text>CÔTE DES BAR</Text>
+                    </Space>
+                </Divider>
+            
+                <WineShortInfoList wineList={allWines} readOnly={false}/>
+                <Divider orientation="right">
+                    <Avatar shape="square"  src={<IT title="Italy"/>} />
+                </Divider>
+                <Text>Данные не загружены</Text>
+                <Divider orientation="right">
+                    <Avatar shape="square" src={<ES title="Spane"/>} />
+                </Divider>
+                <Text>Данные не загружены</Text>
+            </div>
+        </>
     )
 }
 
