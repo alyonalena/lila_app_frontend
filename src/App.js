@@ -27,7 +27,7 @@ function App() {
 			<ConfigProvider
 				theme={{
 					token: {
-						colorPrimary: '#032F17',
+						colorPrimary: 'black',
 						borderRadius: 0,
 					}
 				}}
@@ -49,8 +49,7 @@ function App() {
 				<Footer style={{
 					display: 'flex', 
 					flexDirection: 'column',
-					gap: '8px',
-					borderTop: '1px solid #032F17',
+					gap: '8px'
 				}}>
 					{/* activeTabKey !== 0 && (
 						<>

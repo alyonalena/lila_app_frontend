@@ -61,10 +61,11 @@ input[type="text"] {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: rgb(3, 47, 23, 0.4) !important;
+  background: white !important;
   padding: 15px;
   text-align: center;
   z-index: 100;
+  border-top: 1px solid #C4C4C4;
 }
 
 .ant-layout-header {
@@ -72,9 +73,10 @@ input[type="text"] {
   left: 0;
   top: 0;
   width: 100%;
-  background: rgb(3, 47, 23, 0.4) !important;
+  background: white !important;
   padding: 15px;
   text-align: center;
   z-index: 100;
+  border-bottom: 1px solid #C4C4C4;
 }
 

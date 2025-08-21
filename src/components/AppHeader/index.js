@@ -18,10 +18,10 @@ function AppHeader() {
 	}
 
     return (
-        <Header style={{ borderBottom: '1px solid #032F17', textAlign: 'top', padding: '0 16px' }}>
+        <Header style={{ textAlign: 'top', padding: '0 16px' }}>
             <Row align="top" justify="space-between" style={{ height: '72px' }}>
                 <Col flex="auto" style={{ textAlign: 'left' }}>
-                    <Title level={1} style={{ margin: 0, color: '#032F17', lineHeight: '72px' }}>SX Wine</Title>
+                    <Title level={1} style={{ margin: 0, color: '#E2044C', lineHeight: '72px' }}>SX Wine</Title>
                 </Col>
                 <Col flex="auto" style={{ textAlign: 'right' }}>
                 <div                
@@ -29,7 +29,7 @@ function AppHeader() {
                     >
                     <Avatar
                         size="large" 
-                        style={{ backgroundColor: '#032F17' }} 
+                        style={{ backgroundColor: 'white', color: 'black' }} 
                         icon={<UserOutlined />}                   
                     />
                 </div>
