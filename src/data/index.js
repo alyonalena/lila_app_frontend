@@ -31,16 +31,22 @@ export const upcomingEvents = [
 
 export const pastEvents = [
     {
-      name: 'ДЕГУСТАЦИЯ CLANDESTIN',
-      date: '31 июля 2025',
-      city: 'Санкт-Петербург',
-      place: 'Kira (Кирочная ул., 8а)',
-      price: '20 000 руб.',
-      img: Img3,
-      wineList: [ 15, 16, 17, 18, 19, 20, 21 ]
+        name: 'ДЕГУСТАЦИЯ CLANDESTIN',
+        date: '31 июля 2025',
+        city: 'Санкт-Петербург',
+        place: 'Kira (Кирочная ул., 8а)',
+        price: '20 000 руб.',
+        img: Img3,
+        wineList: [ 15, 16, 17, 18, 19, 20, 21 ]
     },
   ]
 
+export const inWorkEvents = [
+    {
+        name: 'ДЕГУСТАЦИЯ ROSES DE JEANNE (СЕДРИК БУШАР)',
+        wineList: []
+    },
+]
 
 export const allWines = [
     {

@@ -2,12 +2,12 @@ import React, { useState, useCallback, createContext } from 'react'
 
 const AppContext = createContext(null)
 
-export const useCreateAppContext = function(props) {
-    const [ activeTab, setActiveTab ] = useState(0)
+export const useCreateAppContext = function() {
+    const [ activeTab, setActiveTab ] = useState(1)
    
     const toggleTab = useCallback((value) => {
         setActiveTab(value)
-    });
+    }, []);
   
     return {
         activeTab, 

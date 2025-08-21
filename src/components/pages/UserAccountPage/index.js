@@ -1,22 +1,19 @@
-import React, { createContext, useContext } from 'react'
+import React from 'react'
 
-import { Tabs, Card, Avatar, Descriptions, List, Typography, Space, Divider } from 'antd'
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
+import { Tabs, Avatar, Descriptions, List, Typography, Space, Divider } from 'antd'
 import { useLaunchParams } from '@telegram-apps/sdk-react'
 
 import WineShortInfoList from '../../WineShortInfoList'
 import { upcomingEvents, pastEvents, allWines } from '../../../data'
 
-const { Meta } = Card
-const { Title, Text } = Typography
+const { Text } = Typography
 
 function UserAccountPage() {
 
     const myWines = allWines.filter(item => item.saved)
-    const launchParams = useLaunchParams()
+    const launchParams = /*useLaunchParams()*/{}
 
     const name = `${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name} (${launchParams.tgWebAppData?.user?.username})`
-
 
     return (
         <>

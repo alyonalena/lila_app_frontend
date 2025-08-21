@@ -3,16 +3,19 @@ import React from 'react'
 import { Row, Col, Avatar, Typography, Layout } from 'antd'
 import { UserOutlined } from '@ant-design/icons'
 
-import { useCreateAppContext } from '../../context'
+import { useAppContext } from '../../context'
 
 const { Title } = Typography
 const { Header } = Layout
 
 function AppHeader() {
 
-    const { toggleTab } = useCreateAppContext()
+	const { activeTab, toggleTab } = useAppContext()
 
-	const onMenuButtonClick = () => {
+	console.info(activeTab)
+
+	const onMenuButtonClick = (key) => {
+		console.info('hi')
 		toggleTab(3)
 	}
 
@@ -22,12 +25,16 @@ function AppHeader() {
                 <Col flex="auto" style={{ textAlign: 'left' }}>
                     <Title level={1} style={{ margin: 0, color: '#032F17', lineHeight: '72px' }}>SX Wine</Title>
                 </Col>
-                <Col onClick={onMenuButtonClick} flex="auto" style={{ textAlign: 'right' }}>
+                <Col flex="auto" style={{ textAlign: 'right' }}>
+                <div                
+                    onClick={onMenuButtonClick}
+                    >
                     <Avatar
                         size="large" 
                         style={{ color: '#F5F5F5', backgroundColor: '#032f17' }} 
-                        icon={<UserOutlined />}                        
+                        icon={<UserOutlined />}                   
                     />
+                </div>
                 </Col>
             </Row>
         </Header>

@@ -4,6 +4,7 @@ import './index.css'
 import App from './App'
 
 import { init, miniApp } from '@telegram-apps/sdk'
+import { AppContextProvider } from './context'
 /*
 const initializeTelegramSDK = async () => {
   try {
@@ -23,6 +24,8 @@ initializeTelegramSDK()
 */
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
   </StrictMode>,
 )

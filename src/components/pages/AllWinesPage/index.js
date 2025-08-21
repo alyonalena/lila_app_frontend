@@ -1,11 +1,11 @@
 import React from 'react'
-import { Card, Avatar, Divider, Typography, Space } from 'antd'
+import { Avatar, Divider, Typography, Space } from 'antd'
 import { FR, IT, ES } from 'country-flag-icons/react/3x2'
 
 import WineShortInfoList from '../../WineShortInfoList'
 import { allWines } from '../../../data'
 
-const { Text, Title } = Typography
+const { Text } = Typography
 
 function AllWinesPage() {
 
