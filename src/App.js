@@ -35,7 +35,7 @@ function App() {
 				<AppHeader />
 				<Content 
 					style={{ 
-						padding: '72px 16px 220px 16px', 
+						padding: '80px 16px 220px 16px', 
 						display: 'flex', 
 						flexDirection: 'column',
 						backgroundSize: 'cover',

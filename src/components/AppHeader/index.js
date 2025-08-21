@@ -5,7 +5,7 @@ import { UserOutlined } from '@ant-design/icons'
 
 import { useAppContext } from '../../context'
 
-const { Title } = Typography
+const { Text, Title } = Typography
 const { Header } = Layout
 
 function AppHeader() {
@@ -18,10 +18,11 @@ function AppHeader() {
 	}
 
     return (
-        <Header style={{ textAlign: 'top', padding: '0 16px' }}>
+        <Header style={{ textAlign: 'top', padding: '4px 16px'}}>
             <Row align="top" justify="space-between">
                 <Col flex="auto" style={{ textAlign: 'left' }}>
-                    <Title level={1} style={{ margin: 0, color: '#E2044C', lineHeight: '72px' }}>SX Wine</Title>
+                    <Title level={2} style={{ margin: 0, color: '#E2044C'}}>SX Wine</Title>
+                    <Text>Champagne Academy</Text>
                 </Col>
                 <Col flex="auto" style={{ textAlign: 'right' }}>
                 <div                
