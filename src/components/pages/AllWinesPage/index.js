@@ -24,7 +24,6 @@ function AllWinesPage() {
             <Typography.Title level={3}>Каталог вин</Typography.Title>
             <Divider orientation="left">
                 <Space>
-                    <Avatar shape="square" src={<FR title="France"/>} />
                     <Select
                         value={country}
                         style={{ width: '150px' }}
@@ -38,8 +37,7 @@ function AllWinesPage() {
                     <Button type='primary' onClick={onOpen}>Поиск</Button>
                 </Space>
             </Divider>
-            <div>                
-    
+            <div>
                 <WineShortInfoList wineList={allWines} readOnly={false}/>
                 <Divider orientation="right">
                     <Avatar shape="square"  src={<IT title="Italy"/>} />
@@ -67,8 +65,7 @@ function AllWinesPage() {
                         <Button type='primary'>Найти вино</Button>
                     </Flex>
                 }
-            >
-            </Drawer>
+            />
         </>
     )
 }

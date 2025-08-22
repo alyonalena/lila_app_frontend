@@ -11,6 +11,7 @@ export const upcomingEvents = [
         name: 'ДЕГУСТАЦИЯ «СЕТ МЕЧТЫ»',
         date: '12 сентября 2025',
         city: 'Москва',
+        week_day: 'ПТ',
         place: 'Уточняется...',
         price: '45 000 руб.',
         available: 7,
@@ -18,8 +19,9 @@ export const upcomingEvents = [
         wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
     },
     {
-        name: 'ДЕГУСТАЦИЯ MARIE-COURTIN»',
+        name: 'ДЕГУСТАЦИЯ «MARIE-COURTIN»',
         date: '22 августа 2025',
+        week_day: 'ПТ',
         city: 'Москва',
         place: 'The Nappe Bistro (Скатерный пер., 13)',
         price: '25 000 руб.',
@@ -31,7 +33,7 @@ export const upcomingEvents = [
 
 export const pastEvents = [
     {
-        name: 'ДЕГУСТАЦИЯ CLANDESTIN',
+        name: 'ДЕГУСТАЦИЯ «CLANDESTIN»',
         date: '31 июля 2025',
         city: 'Санкт-Петербург',
         place: 'Kira (Кирочная ул., 8а)',

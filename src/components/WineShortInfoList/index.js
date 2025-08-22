@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { FR } from 'country-flag-icons/react/3x2'
 
+import WineImg from '../../pics/bottle.png'
+
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Image } from 'antd'
-import { HeartFilled, HeartOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined } from '@ant-design/icons'
+import { RightOutlined, HeartOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined } from '@ant-design/icons'
 
 const { Text, Title } = Typography
 
@@ -64,29 +66,30 @@ function WineShortInfoList({ wineList, readOnly }) {
                 dataSource={wineList}
                 renderItem={(item) => (
                     <List.Item
-                        actions={!readOnly && [
-                            //<IconText icon={item.saved ? HeartFilled : HeartOutlined } text={''} key="list-vertical-star-o" />,
-                            <HeartFilled
-                                color='#E2044C'
-                                onClick={(event) => {
-                                    // If you don't want click extra trigger collapse, you can prevent this:
-                                    event.stopPropagation()
-                                }}
-                            />,
-                            <EllipsisOutlined 
-                                color='#E2044C'
-                                onClick={(event) => {
-                                    // If you don't want click extra trigger collapse, you can prevent this:
-                                    event.stopPropagation()
-                                    setOpenId(item.id)
-                                }}
-                            />,
-                        ]}
+                        actions={[
+                            <RightOutlined 
+                                color='black'
+                            />
+                        ]}  
+                        onClick={(event) => {
+                            // If you don't want click extra trigger collapse, you can prevent this:
+                            event.stopPropagation()
+                            setOpenId(item.id)
+                        }}
                     >
                         <List.Item.Meta
-                            avatar={<Avatar size="large" style={{ backgroundColor: '#F7EBD5' }} icon={<QuestionCircleOutlined />} src={item.img} />}
+                            avatar={
+                                <Avatar.Group>
+                                    <Avatar size="large" src={WineImg} />
+                                </Avatar.Group>
+                            }
                             title={<Text>{item.name}</Text>}
-                            description={item.description}
+                            description={
+                                <>
+                                    <div>{`${item.country}, ${item.region}, ${item.sugar}`}</div>
+                                    <div>{`${item.volume} л.`}</div>
+                                </>
+                            }
                         />                  
                     </List.Item>
                 )}

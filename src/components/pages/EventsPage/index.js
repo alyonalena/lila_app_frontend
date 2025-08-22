@@ -17,7 +17,7 @@ function EventsPage() {
         switch(mode) {
             case 'upcoming':
                 return <>
-                    { upcomingEvents.map((event) => (<EventCard event={event} />)) }
+                    { upcomingEvents.map((event) => (<EventCard event={{ ...event, inFuture: true}} />)) }
                 </>
             case 'history':
                 return <>
