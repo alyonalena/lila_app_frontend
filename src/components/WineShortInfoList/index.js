@@ -3,7 +3,7 @@ import { FR } from 'country-flag-icons/react/3x2'
 
 import WineImg from '../../pics/bottle.png'
 
-import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Image } from 'antd'
+import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Image, Divider } from 'antd'
 import { RightOutlined, LeftOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined } from '@ant-design/icons'
 
 const { Text, Title } = Typography
@@ -46,6 +46,18 @@ function WineShortInfoList({ wineList, readOnly }) {
                 }
             >
                 <Title level={3}>{selectedWine?.name}</Title>
+                <Space>
+                    <Avatar size="large" src={WineImg} />
+                    <Title level={3}>{selectedWine?.name}</Title>
+                </Space>
+                <Divider orientation='right'>
+                    <Tag color="#55acee">
+                        Цена по запросу
+                    </Tag>
+                </Divider>
+                    Мнение эксперта:
+                    
+                <Divider />
                 <Descriptions>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Страна">{selectedWine?.country || '-'}</Descriptions.Item>
