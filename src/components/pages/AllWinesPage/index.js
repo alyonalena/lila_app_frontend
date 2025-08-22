@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Avatar, Divider, Typography, Space, Button, Select } from 'antd'
+import { Avatar, Divider, Typography, Space, Button, Select, Drawer, Flex } from 'antd'
 import { FR, IT, ES } from 'country-flag-icons/react/3x2'
 import { FilterFilled } from '@ant-design/icons'
 
@@ -9,6 +9,11 @@ import { allWines } from '../../../data'
 const { Text } = Typography
 
 function AllWinesPage() {
+
+    const [filter, setFilter] = useState(false)
+
+    const onClose = () => setFilter(false)
+    const onOpen = () => setFilter(true)
 
     const [ country, setCountry ] = useState('fr')
     const [ region, setRegion ] = useState(null)
@@ -30,7 +35,7 @@ function AllWinesPage() {
                             { value: 'pr', label: 'Португалия' }*/
                         ]}
                     />
-                    <Button type='primary'>Поиск</Button>
+                    <Button type='primary' onClick={onOpen}>Поиск</Button>
                 </Space>
             </Divider>
             <div>                
@@ -45,6 +50,25 @@ function AllWinesPage() {
                 </Divider>
                 <Text>Данные не загружены</Text>
             </div>
+            <Drawer 
+                title={''}
+                placement={'right'} 
+                width={'100vw'} 
+                onClose={onClose} 
+                open={filter} 
+                extra={
+                    <Space>
+                        <Text>Параметры для поиска</Text>
+                    </Space>
+                }
+                footer={
+                    <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+                        <Button type='text' onClick={onClose}>Закрыть</Button>
+                        <Button type='primary'>Найти вино</Button>
+                    </Flex>
+                }
+            >
+            </Drawer>
         </>
     )
 }
