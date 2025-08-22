@@ -4,7 +4,7 @@ import { FR } from 'country-flag-icons/react/3x2'
 import WineImg from '../../pics/bottle.png'
 
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider } from 'antd'
-import { RightOutlined, LeftOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined } from '@ant-design/icons'
+import { RightOutlined, LeftOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons'
 
 const { Text, Title } = Typography
 
@@ -45,10 +45,10 @@ function WineShortInfoList({ wineList, readOnly }) {
                     </Flex>
                 }
             >
-                <Space>
+                <Flex style={{ width: '100%' }} gap={8} align={'flex-start'}>
                     <Avatar size="large" src={WineImg} />
                     <Title level={3}>{selectedWine?.name}</Title>
-                </Space>
+                </Flex>
                 <Divider orientation='right'>
                     <Title level={3}>
                         <Tag color="error">
@@ -56,8 +56,12 @@ function WineShortInfoList({ wineList, readOnly }) {
                         </Tag>
                     </Title>
                 </Divider>
-                    Мнение эксперта:
-
+                    <Flex><Avatar src={UserOutlined}/><Typography.Text>Описание:</Typography.Text></Flex>
+                    <Typography.Text italic>
+                        - Редкие по стилю, сложные как формулы в математике для получения степени
+                        Дикие в аромате или чисты, но с низких газом
+                        Без фильтрации
+                    </Typography.Text>
                 <Divider />
                 <Descriptions>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>

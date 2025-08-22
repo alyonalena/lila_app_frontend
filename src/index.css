@@ -34,3 +34,7 @@ code {
 .ant-card-body {
   padding: 0 !important; 
 }
+
+.ant-drawer-body {
+  padding: 16 !important; 
+}
