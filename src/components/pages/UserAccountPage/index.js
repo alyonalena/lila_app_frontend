@@ -70,7 +70,7 @@ function UserAccountPage() {
                                         renderItem={(item, index) => (
                                             <List.Item>
                                                 <List.Item.Meta
-                                                    avatar={<Avatar size="large" src={item.img} />}
+                                                    avatar={<Avatar size="large" shape="square" src={item.img} />}
                                                     title={item.name}
                                                     description={`${item.city}, ${item.date}`}
                                                 />

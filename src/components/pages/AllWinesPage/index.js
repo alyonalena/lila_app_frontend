@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Avatar, Divider, Typography, Space, Button, Select, Drawer, Flex } from 'antd'
 import { FR, IT, ES } from 'country-flag-icons/react/3x2'
-import { FilterFilled } from '@ant-design/icons'
+import { LeftOutlined } from '@ant-design/icons'
 
 import WineShortInfoList from '../../WineShortInfoList'
 import { allWines } from '../../../data'
@@ -40,7 +40,7 @@ function AllWinesPage() {
             <div>
                 <WineShortInfoList wineList={allWines} readOnly={false}/>
                 <Divider orientation="right">
-                    <Avatar shape="square"  src={<IT title="Italy"/>} />
+                    <Avatar shape="square" src={<IT title="Italy"/>} />
                 </Divider>
                 <Text>Данные не загружены</Text>
                 <Divider orientation="right">
@@ -61,7 +61,7 @@ function AllWinesPage() {
                 }
                 footer={
                     <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
-                        <Button type='text' onClick={onClose}>Закрыть</Button>
+                        <Button type='text' icon={<LeftOutlined />} onClick={onClose}>Назад</Button>
                         <Button type='primary'>Найти вино</Button>
                     </Flex>
                 }

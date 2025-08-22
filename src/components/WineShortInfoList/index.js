@@ -4,7 +4,7 @@ import { FR } from 'country-flag-icons/react/3x2'
 import WineImg from '../../pics/bottle.png'
 
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Image } from 'antd'
-import { RightOutlined, HeartOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined } from '@ant-design/icons'
+import { RightOutlined, LeftOutlined, EllipsisOutlined , QuestionCircleOutlined, SettingOutlined } from '@ant-design/icons'
 
 const { Text, Title } = Typography
 
@@ -40,12 +40,11 @@ function WineShortInfoList({ wineList, readOnly }) {
                 }
                 footer={
                     <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
-                        <Button type='text' onClick={onClose}>В каталог</Button>
+                        <Button type='text' icon={<LeftOutlined />} onClick={onClose}>Назад</Button>
                         <Button type='primary'>Добавить в избранное</Button>
                     </Flex>
                 }
             >
-                <Image preview={false} width={'100%'} src={selectedWine?.img}/>
                 <Title level={3}>{selectedWine?.name}</Title>
                 <Descriptions>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>

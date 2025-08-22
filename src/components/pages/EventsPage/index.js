@@ -36,7 +36,7 @@ function EventsPage() {
         <>
             <Row width={'100%'} align="center" justify="space-between">
                 <Col>
-                    <Typography.Title level={3}>События</Typography.Title>
+                    <Typography.Title level={3}>События клуба</Typography.Title>
                 </Col>
             </Row>
             <Divider orientation="left">

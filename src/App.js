@@ -1,5 +1,4 @@
 import React from 'react'
-import { useLaunchParams } from '@telegram-apps/sdk-react'
 
 import { Layout, Button, ConfigProvider, Space } from 'antd'
 
@@ -51,31 +50,19 @@ function App() {
 					flexDirection: 'column',
 					gap: '8px'
 				}}>
-					{/* activeTabKey !== 0 && (
-						<>
-							<Button 
-								visible={activeTabKey !== 0} 
-								size='large' 
-								type='primary'
-								onClick={() => onMenuButtonClick(0)}
-							>
-								Предстоящие мероприятия
-							</Button>
-						</>
-					)*/}
 					<Button
 						size='large' 
 						type={ activeTab === 1 ? 'default' : 'primary' }
 						onClick={() => onMenuButtonClick(1)}
 					>
-						СОБЫТИЯ
+						События клуба
 					</Button>
 					<Button
 						size='large' 
 						type={ activeTab === 2 ? 'default' : 'primary' }
 						onClick={() => onMenuButtonClick(2)}
 					>
-						КАТАЛОГ ВИН
+						Каталог вин
 					</Button>
 				</Footer>
 			</ConfigProvider>
