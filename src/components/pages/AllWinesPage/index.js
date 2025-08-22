@@ -22,7 +22,7 @@ function AllWinesPage() {
                     <Avatar shape="square" src={<FR title="France"/>} />
                     <Select
                         value={country}
-                        style={{ width: '200px' }}
+                        style={{ width: '150px' }}
                         onChange={setCountry}
                         options={[
                             { value: 'fr', label: 'Франция' },
@@ -30,18 +30,11 @@ function AllWinesPage() {
                             { value: 'pr', label: 'Португалия' }*/
                         ]}
                     />
-                    <Select
-                        value={region}
-                        style={{ width: '200px' }}
-                        onChange={setRegion}
-                        options={[
-                            { value: '1', label: 'CÔTE DES BAR' },
-                        ]}
-                    />
+                    <Button type='primary'>Поиск</Button>
                 </Space>
             </Divider>
             <div>                
-     
+    
                 <WineShortInfoList wineList={allWines} readOnly={false}/>
                 <Divider orientation="right">
                     <Avatar shape="square"  src={<IT title="Italy"/>} />

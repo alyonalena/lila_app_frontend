@@ -5,7 +5,7 @@ import { useLaunchParams } from '@telegram-apps/sdk-react'
 import { HeartFilled } from '@ant-design/icons'
 
 import { useAppContext } from '../../context'
-import Logo from '../../pics/logo2.jpg'
+import Logo from '../../pics/logo.png'
 
 const { Text, Title } = Typography
 const { Header } = Layout
@@ -28,10 +28,10 @@ function AppHeader() {
         <Header style={{ textAlign: "center", padding: "4px 8px" }}>
             <Row align="center" justify="space-between">
                 <Flex align={"center"} gap={8}>
-                    <img alt="example" src={Logo} style={{ width: "52px", height: "52px" }} />
+                    <Avatar alt="SX" shape="square" src={Logo} style={{ width: "52px", height: "52px" }} />
                     <Col flex="auto" style={{ textAlign: "left" }}>
                         <Title level={2} style={{ margin: 0, color: "black"}}>SX Wine</Title>
-                        <Text>Wine Lovers Club</Text>
+                        <Text>Wine Lovers Community</Text>
                     </Col>
                 </Flex>
                 <Flex align={"center"} gap={8}
