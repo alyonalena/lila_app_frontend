@@ -29,7 +29,7 @@ function UserAccountPage() {
                     tabPosition={'top'}
                     items={[
                         {
-                            label: 'Ваши мероприятия',
+                            label: 'События',
                             key: 1,
                             children: (
                                 <div>
@@ -60,7 +60,7 @@ function UserAccountPage() {
                             ),
                         },
                         {
-                            label: `Ваша история`,
+                            label: `История`,
                             key: 3,
                             children: (
                                 <div>
