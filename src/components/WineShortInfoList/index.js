@@ -84,10 +84,10 @@ function WineShortInfoList({ wineList, readOnly }) {
                         ]}
                     >
                         <List.Item.Meta
-                            avatar={<Avatar shape="square" size="large" style={{ backgroundColor: '#F7EBD5' }} icon={<QuestionCircleOutlined />} src={item.img} />}
+                            avatar={<Avatar size="large" style={{ backgroundColor: '#F7EBD5' }} icon={<QuestionCircleOutlined />} src={item.img} />}
                             title={<Text>{item.name}</Text>}
                             description={item.description}
-                        />                    
+                        />                  
                     </List.Item>
                 )}
             />

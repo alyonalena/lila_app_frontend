@@ -1,6 +1,7 @@
-import React from 'react'
-import { Avatar, Divider, Typography, Space } from 'antd'
+import React, { useState } from 'react'
+import { Avatar, Divider, Typography, Space, Button, Select } from 'antd'
 import { FR, IT, ES } from 'country-flag-icons/react/3x2'
+import { FilterFilled } from '@ant-design/icons'
 
 import WineShortInfoList from '../../WineShortInfoList'
 import { allWines } from '../../../data'
@@ -9,18 +10,41 @@ const { Text } = Typography
 
 function AllWinesPage() {
 
+    const [ country, setCountry ] = useState('fr')
+    const [ region, setRegion ] = useState(null)
+    const [ price, setPrice ] = useState('fr')
+
     return (
         <>
             <Typography.Title level={3}>Каталог вин</Typography.Title>
-            <div>
-                
+            <Divider orientation="left">
+                <Space>
+                    <Select
+                        value={country}
+                        style={{ width: '200px' }}
+                        onChange={setCountry}
+                        options={[
+                            { value: 'fr', label: 'Франция' },
+                            /*{ value: 'sp', label: 'Испания' },
+                            { value: 'pr', label: 'Португалия' }*/
+                        ]}
+                    />
+                    <Select
+                        value={region}
+                        style={{ width: '200px' }}
+                        onChange={setRegion}
+                        options={[
+                            { value: '1', label: 'CÔTE DES BAR' },
+                        ]}
+                    />
+                </Space>
+            </Divider>
+            <div>                
                 <Divider orientation="right">
                     <Space>
                         <Avatar shape="square" src={<FR title="France"/>} />
-                        <Text>CÔTE DES BAR</Text>
                     </Space>
-                </Divider>
-            
+                </Divider>            
                 <WineShortInfoList wineList={allWines} readOnly={false}/>
                 <Divider orientation="right">
                     <Avatar shape="square"  src={<IT title="Italy"/>} />

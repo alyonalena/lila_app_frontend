@@ -38,10 +38,6 @@ function EventsPage() {
                 <Col>
                     <Typography.Title level={3}>События</Typography.Title>
                 </Col>
-                <Col>
-                <Space style={{ width: '100%' }}/>
-                
-                </Col>
             </Row>
             <Divider orientation="left">
                 <Select
