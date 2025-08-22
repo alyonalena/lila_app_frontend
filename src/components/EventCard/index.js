@@ -32,10 +32,10 @@ function EventCard({ event }) {
                         children: (
                             <Descriptions>
                                 <Descriptions.Item label="Осталось мест">{event.available}</Descriptions.Item>
+                                <Descriptions.Item label="Стоимость">{event.price}</Descriptions.Item>
+                                <Descriptions.Item label="Место">{event.place}</Descriptions.Item>
                                 <Descriptions.Item label="Дата">{event.date}</Descriptions.Item>
                                 <Descriptions.Item label="Город">{event.city}</Descriptions.Item>
-                                <Descriptions.Item label="Место">{event.place}</Descriptions.Item>
-                                <Descriptions.Item label="Стоимость">{event.price}</Descriptions.Item>
                                 
                                 {/*<Descriptions.Item label="Участники">
                                     <Avatar.Group>
