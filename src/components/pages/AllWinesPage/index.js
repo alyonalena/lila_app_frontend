@@ -19,6 +19,7 @@ function AllWinesPage() {
             <Typography.Title level={3}>Каталог вин</Typography.Title>
             <Divider orientation="left">
                 <Space>
+                    <Avatar shape="square" src={<FR title="France"/>} />
                     <Select
                         value={country}
                         style={{ width: '200px' }}
@@ -40,11 +41,7 @@ function AllWinesPage() {
                 </Space>
             </Divider>
             <div>                
-                <Divider orientation="right">
-                    <Space>
-                        <Avatar shape="square" src={<FR title="France"/>} />
-                    </Space>
-                </Divider>            
+     
                 <WineShortInfoList wineList={allWines} readOnly={false}/>
                 <Divider orientation="right">
                     <Avatar shape="square"  src={<IT title="Italy"/>} />
