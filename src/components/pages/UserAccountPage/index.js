@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Tabs, Avatar, Descriptions, List, Typography, Space, Divider } from 'antd'
+import { Tabs, Avatar, Descriptions, List, Typography, Divider } from 'antd'
 import { useLaunchParams } from '@telegram-apps/sdk-react'
 
 import WineShortInfoList from '../../WineShortInfoList'
@@ -9,7 +9,7 @@ import { upcomingEvents, pastEvents, allWines } from '../../../data'
 function UserAccountPage() {
 
     const myWines = allWines.filter(item => item.saved)
-    const launchParams = /*useLaunchParams()*/{}
+    const launchParams = useLaunchParams()
 
     const name = `${launchParams.tgWebAppData?.user?.first_name} ${launchParams.tgWebAppData?.user?.last_name} (${launchParams.tgWebAppData?.user?.username})`
 

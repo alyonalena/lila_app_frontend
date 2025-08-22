@@ -41,19 +41,20 @@ function WineShortInfoList({ wineList, readOnly }) {
                 footer={
                     <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
                         <Button type='text' icon={<LeftOutlined />} onClick={onClose}>Назад</Button>
-                        <Button type='primary'>Добавить в избранное</Button>
+                        <Button type="primary" danger>Добавить в избранное</Button>
                     </Flex>
                 }
             >
-                <Title level={3}>{selectedWine?.name}</Title>
                 <Space>
                     <Avatar size="large" src={WineImg} />
                     <Title level={3}>{selectedWine?.name}</Title>
                 </Space>
                 <Divider orientation='right'>
-                    <Tag color="#55acee">
-                        Цена по запросу
-                    </Tag>
+                    <Title level={3}>
+                        <Tag color="error">
+                            Цена по запросу
+                        </Tag>
+                    </Title>
                 </Divider>
                     Мнение эксперта:
 

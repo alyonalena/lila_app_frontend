@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar, Divider } from 'antd'
-import { AntDesignOutlined, UserOutlined } from '@ant-design/icons'
+
 import WineShortInfoList from '../WineShortInfoList'
 import { allWines } from '../../data'
 
 
-const { Text, Title } = Typography
+const { Title } = Typography
 
 
 function EventCard({ event }) {
@@ -19,7 +19,7 @@ function EventCard({ event }) {
         >
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
                 <Avatar alt="SX" shape="square" src={event.img} style={{ width: "62px", height: "62px" }} />
-                { event.inFuture && (<Button type="primary" size="small" color="pink">{'Иду!'}!</Button>) }
+                { event.inFuture && (<Button type="primary" danger color="pink">{'Иду!'}!</Button>) }
             </Flex>
             <br />
             <Title level={3}>{event.name}</Title>
