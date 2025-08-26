@@ -39,7 +39,11 @@ function AppHeader() {
                     onClick={/*onMenuButtonClick*/ () => {}}
                 >
                     <Avatar.Group>
-                        <Avatar size="large" style={{ backgroundColor: "white" }} icon={<HeartFilled style={{ backgroundColor: "none", color: "#E7014C" }}  />} />
+                        {
+                            /*
+                            <Avatar size="large" style={{ backgroundColor: "white" }} icon={<HeartFilled style={{ backgroundColor: "none", color: "#E7014C" }}  />} />
+                            */
+                        }
                         <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
                     </Avatar.Group>
                 </Flex>
