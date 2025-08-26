@@ -20,11 +20,6 @@ function AppHeader() {
 		toggleTab(3)
 	}
 
-    <Avatar.Group>
-        <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
-        <Avatar size="large" style={{ backgroundColor: 'white' }} icon={<HeartFilled style />} />
-    </Avatar.Group>
-
     return (
         <Header style={{ textAlign: "center", padding: "4px 8px" }}>
             <Row align="center" justify="space-between">
