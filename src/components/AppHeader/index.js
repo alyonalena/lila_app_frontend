@@ -2,8 +2,6 @@ import React from 'react'
 
 import { Row, Col, Avatar, Typography, Layout, Flex } from 'antd'
 import { useLaunchParams } from '@telegram-apps/sdk-react'
-import { HeartFilled } from '@ant-design/icons'
-
 import { useAppContext } from '../../context'
 import Logo from '../../pics/logo.png'
 
