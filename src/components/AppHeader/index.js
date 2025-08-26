@@ -32,11 +32,11 @@ function AppHeader() {
                     <Avatar alt="SX" shape="square" src={Logo} style={{ width: "52px", height: "52px" }} />
                     <Col flex="auto" style={{ textAlign: "left" }}>
                         <Title level={2} style={{ margin: 0, color: "black"}}>SX Wine</Title>
-                        <Text>Wine Lovers Club</Text>
+                        <Text>Champagne Lovers Club</Text>
                     </Col>
                 </Flex>
                 <Flex align={"center"} gap={8}
-                    onClick={onMenuButtonClick}
+                    onClick={/*onMenuButtonClick*/ () => {}}
                 >
                     <Avatar.Group>
                         <Avatar size="large" style={{ backgroundColor: "white" }} icon={<HeartFilled style={{ backgroundColor: "none", color: "#E7014C" }}  />} />

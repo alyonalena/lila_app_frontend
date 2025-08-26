@@ -17,7 +17,10 @@ export const upcomingEvents = [
         available: 7,
         img: Img2,
         wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
-    },
+    }
+]
+
+export const pastEvents = [
     {
         name: 'Дегустация «MARIE-COURTIN»',
         date: '22 августа 2025',
@@ -28,10 +31,7 @@ export const upcomingEvents = [
         available: 2,
         img: Img1,
         wineList: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
-    }
-]
-
-export const pastEvents = [
+    },
     {
         name: 'Дегустация «CLANDESTIN»',
         date: '31 июля 2025',
@@ -39,6 +39,7 @@ export const pastEvents = [
         place: 'Kira (Кирочная ул., 8а)',
         price: '20 000 руб.',
         img: Img3,
+        week_day: 'ЧТ',
         wineList: [ 15, 16, 17, 18, 19, 20, 21 ]
     },
   ]

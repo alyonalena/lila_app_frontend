@@ -19,7 +19,7 @@ function EventCard({ event }) {
         >
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
                 <Avatar alt="SX" shape="square" src={event.img} style={{ width: "62px", height: "62px" }} />
-                { event.inFuture && (<Button type="primary" danger color="pink">{'Иду!'}!</Button>) }
+                { event.inFuture && (<Button type="primary" danger color="pink">{'Хочу участвовать!'}</Button>) }
             </Flex>
             <br />
             <Title level={3}>{event.name}</Title>
@@ -36,15 +36,16 @@ function EventCard({ event }) {
                                 <Descriptions.Item label="Место">{event.place}</Descriptions.Item>
                                 <Descriptions.Item label="Дата">{event.date}</Descriptions.Item>
                                 <Descriptions.Item label="Город">{event.city}</Descriptions.Item>
-                                
-                                {/*<Descriptions.Item label="Участники">
+                                {/*
+                                    <Descriptions.Item label="Участники">
                                     <Avatar.Group>
                                         <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
                                         <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-                                        <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
-                                        <Avatar style={{ backgroundColor: '#1677ff' }} icon={<AntDesignOutlined />} />
+                                        <Avatar style={{ backgroundColor: '#87d068' }}>I</Avatar>
+                                        <Avatar style={{ backgroundColor: '#1677ff' }}>G</Avatar>
                                     </Avatar.Group>
-                                </Descriptions.Item>*/}
+                                </Descriptions.Item>
+                                */}
                             </Descriptions>
                         ),
                     },

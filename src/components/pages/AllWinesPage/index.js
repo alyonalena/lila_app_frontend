@@ -15,9 +15,7 @@ function AllWinesPage() {
     const onClose = () => setFilter(false)
     const onOpen = () => setFilter(true)
 
-    const [ country, setCountry ] = useState('fr')
-    const [ region, setRegion ] = useState(null)
-    const [ price, setPrice ] = useState('fr')
+    const [ country, setCountry ] = useState('all')
 
     return (
         <>
@@ -26,9 +24,10 @@ function AllWinesPage() {
                 <Space>
                     <Select
                         value={country}
-                        style={{ width: '150px' }}
+                        style={{ width: '200px' }}
                         onChange={setCountry}
                         options={[
+                            { value: 'all', label: 'Все страны' },
                             { value: 'fr', label: 'Франция' },
                             /*{ value: 'sp', label: 'Испания' },
                             { value: 'pr', label: 'Португалия' }*/
