@@ -19,7 +19,7 @@ function EventCard({ event }) {
         >
             <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
                 <Avatar alt="SX" shape="square" src={event.img} style={{ width: "62px", height: "62px" }} />
-                { event.inFuture && (<Button type="primary" danger color="pink">{'Хочу участвовать!'}</Button>) }
+                { event.inFuture && (<Button type="primary" color="pink">{'Хочу участвовать!'}</Button>) }
             </Flex>
             <br />
             <Title level={3}>{event.name}</Title>

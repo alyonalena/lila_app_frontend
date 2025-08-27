@@ -41,7 +41,7 @@ function WineShortInfoList({ wineList, readOnly }) {
                 footer={
                     <Flex style={{ width: "100%" }} justify={"space-between"} align={"flex-start"}>
                         <Button type="text" icon={<LeftOutlined />} onClick={onClose}>Назад</Button>
-                        <Button type="primary" danger>Добавить в избранное</Button>
+                        <Button type="primary">Добавить в избранное</Button>
                     </Flex>
                 }
             >
@@ -100,10 +100,10 @@ function WineShortInfoList({ wineList, readOnly }) {
                                     <Avatar size="large" src={WineImg} />
                                 </Avatar.Group>
                             }
-                            title={<Text>{item.name}, {item.producer}</Text>}
+                            title={<Text>{item.name}, {item.producer}, {item.sugar}</Text>}                            
                             description={
                                 <>
-                                    <div>{`${item.country}, ${item.region}, ${item.sugar}`}</div>
+                                    <div>{`${item.country}, ${item.region}, ${item.wine_aging}`}</div>
                                 </>
                             }
                         />                  

@@ -41,6 +41,10 @@ code {
 
 .ant-tag {
   padding-inline: 15px !important;
-  border-radius: 1.0em;
+  border-radius: 1.2em !important;
   color: black !important;
+}
+
+.ant-btn {
+  border-radius: 1.2em !important;
 }
