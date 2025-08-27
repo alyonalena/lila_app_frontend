@@ -254,30 +254,37 @@ export const allWines = [
     },
     {
         id: 15, 
-        name: 'JULIEN PLELAT'
+        name: 'JULIEN PLELAT',
+        producer: "Clandestin"
     },
     {
         id: 16, 
-        name: 'BOREAL 2021'
+        name: 'BOREAL 2021',
+        producer: "Clandestin"
     },
     {
         id: 17, 
-        name: 'AUSTRAL 2020'
+        name: 'AUSTRAL 2020',
+        producer: "Clandestin"
     },
     {
         id: 18, 
-        name: 'REVERS 2020'
+        name: 'REVERS 2020',
+        producer: "Clandestin"
     },
     {
         id: 19, 
-        name: 'GRANDE LIGNES 2019'
+        name: 'GRANDE LIGNES 2019',
+        producer: "Clandestin"
     },
     {
         id: 20, 
-        name: 'LES PASSAGERS "FIOLE" 100% Chardonnay 2022'
+        name: 'LES PASSAGERS "FIOLE" 100% Chardonnay 2022',
+        producer: "Clandestin"
     },
     {
         id: 21, 
-        name: 'LES PASSAGERS "HAUT DE VAL BARMONT" 100% Chardonnay 2022'
+        name: 'LES PASSAGERS "HAUT DE VAL BARMONT" 100% Chardonnay 2022',
+        producer: "Clandestin"
     },
 ]
