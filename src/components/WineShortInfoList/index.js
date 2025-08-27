@@ -6,6 +6,8 @@ import WineImg from '../../pics/bottle.png'
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert } from 'antd'
 import { RightOutlined, LeftOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons'
 
+import { producers } from '../../data'
+
 const { Text, Title } = Typography
 
 function WineShortInfoList({ wineList }) {
@@ -47,7 +49,7 @@ function WineShortInfoList({ wineList }) {
                 <Flex style={{ width: "100%" }} gap={8} align={"flex-start"}>
                     <Avatar size="large" src={WineImg} />
                     <div>
-                        <Title level={3}>{selectedWine?.name}, {selectedWine?.producer}</Title>
+                        <Title level={3}>{selectedWine?.name}, {selectedWine && producers.find(({id}) => id === selectedWine.producerId)?.name}</Title>
                         <Text >{selectedWine?.sugar}, {selectedWine?.wine_aging}</Text>
                     </div>
                 </Flex>
@@ -70,8 +72,9 @@ function WineShortInfoList({ wineList }) {
                 <Alert 
                     message="О производителе"
                     type="danger"
-                    description={'Marie Courtin — это история о том, как один человек с огромной преданностью своему делу создает невероятно честные, аутентичные и глубокие вина, которые являются эталоном натурального шампанского. '}
+                    description={selectedWine && producers.find(({id}) => id == selectedWine.producerId)?.shortInfo}
                 />
+                <br/>
                 <Descriptions bordered>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Страна"><Avatar shape="square" src={<FR title="France" className="..."/>} />&nbsp;{selectedWine?.country || '-'}</Descriptions.Item>
@@ -104,7 +107,7 @@ function WineShortInfoList({ wineList }) {
                                     <Avatar size="large" src={WineImg} />
                                 </Avatar.Group>
                             }
-                            title={<Text>{item.name}, {item.producer}, {item.sugar}</Text>}                            
+                            title={<Text>{item.name}, {producers.find(({id}) => id == item.producerId)?.name}, {item.sugar}</Text>}                            
                             description={
                                 <>
                                     <div>{`${item.country}, ${item.region}, ${item.wine_aging}`}</div>

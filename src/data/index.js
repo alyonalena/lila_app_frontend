@@ -65,7 +65,7 @@ export const allWines = [
         grape_variety: [ {name: 'Пино нуар', pers: 100 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -87,7 +87,7 @@ export const allWines = [
         grape_variety: [ {name: 'Пино нуар', pers: 100 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -107,7 +107,7 @@ export const allWines = [
         grape_variety: [ { name: 'Шардоне', pers: 65 }, { name: 'Пино блан', pers: 35 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -126,7 +126,7 @@ export const allWines = [
         grape_variety:  [ {name: 'Пино нуар', pers: 100 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -145,7 +145,7 @@ export const allWines = [
         grape_variety:  [ {name: 'Пино нуар', pers: 100 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -164,7 +164,7 @@ export const allWines = [
         grape_variety:  [ {name: 'Пино нуар', pers: 100 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -183,7 +183,7 @@ export const allWines = [
         grape_variety:  [ {name: 'шардоне', pers: 80 }, {name: 'пино блан', pers: 15 }, {name: 'арбан', pers: 5 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -202,7 +202,7 @@ export const allWines = [
         grape_variety:  [ {name: 'Пино нуар', pers: 100 } ],
         volume: "0.75",
         /*available_number: 3,*/
-        producer: "Marie Courtin",
+        producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
@@ -213,78 +213,89 @@ export const allWines = [
     {
         id: 8, 
         name: 'Cuvee № 747', 
-        producer: "Jacquesson", 
-        description: 'Дополнительная информация о данном вине'
+        producerId: 2,
     },
     {
         id: 9, 
         name: 'Cuvee № 743',  
-        producer: "Jacquesson", 
-        description: 'Дополнительная информация о данном вине'
+        producerId: 2,
     },
     {
         id: 10, 
         name: 'Dizy Terres Rouges 2015',  
-        producer: "Jacquesson", 
-        description: 'Дополнительная информация о данном вине'
+        producerId: 2,
     },
     {
         id: 11, 
         name: 'Avize Champ Terme 2009',  
-        producer: "Jacquesson", 
-        description: 'Дополнительная информация о данном вине'
+        producerId: 2,
     },
     {
         id: 12, 
         name: '"Ay" Vauzelle Terme 2009',  
-        producer: "Jacquesson", 
-        description: 'Дополнительная информация о данном вине'
+        producerId: 2,
     },
     {
         id: 13, 
         name: 'Dizy Corne Bautray 2004',  
-        producer: "Jacquesson", 
-        description: 'Дополнительная информация о данном вине'
+        producerId: 2,
     },
     {
         id: 14, 
         name: 'Millesime Degorgement Tardif 2002',  
-        producer: "Jacquesson", 
-        description: 'Дополнительная информация о данном вине'
+        producerId: 2, 
     },
     {
         id: 15, 
         name: 'JULIEN PLELAT',
-        producer: "Clandestin"
+        producerId: 1,
     },
     {
         id: 16, 
         name: 'BOREAL 2021',
-        producer: "Clandestin"
+        producerId: 1,
     },
     {
         id: 17, 
         name: 'AUSTRAL 2020',
-        producer: "Clandestin"
+        producerId: 1,
     },
     {
         id: 18, 
         name: 'REVERS 2020',
-        producer: "Clandestin"
+        producerId: 1,
     },
     {
         id: 19, 
         name: 'GRANDE LIGNES 2019',
-        producer: "Clandestin"
+        producerId: 1,
     },
     {
         id: 20, 
         name: 'LES PASSAGERS "FIOLE" 100% Chardonnay 2022',
-        producer: "Clandestin"
+        producerId: 1,
     },
     {
         id: 21, 
         name: 'LES PASSAGERS "HAUT DE VAL BARMONT" 100% Chardonnay 2022',
-        producer: "Clandestin"
+        producerId: 1,
+    },
+]
+
+export const producers = [
+    {
+        id: 0,
+        name: "Marie Courtin",
+        shortInfo: "Marie Courtin — это история о том, как один человек с огромной преданностью своему делу создает невероятно честные, аутентичные и глубокие вина, которые являются эталоном натурального шампанского. ",
+    },
+    {
+        id: 1,
+        name: "Clandestin",
+        shortInfo: "Clandestin — это дух Французских Альп, разлитый в бутылке. Это хрустальная чистота и свежесть горного воздуха. ",
+    },
+    {
+        id: 2,
+        name: "Jacquesson",
+        shortInfo: "Champagne Jacquesson — это дом-философ, дом-бунтарь. Он отказался от коммерческой логики в пользу чистого искусства виноделия. Их вина — для тех, кто ищет не просто шампанское, а глубокое, терруарное выражение, интеллектуальную глубину и элегантность.",
     },
 ]
