@@ -6,7 +6,7 @@ import WineShortInfoList from '../WineShortInfoList'
 import { allWines } from '../../data'
 
 
-const { Title } = Typography
+const { Title, Text } = Typography
 
 
 function EventCard({ event }) {
@@ -34,11 +34,11 @@ function EventCard({ event }) {
                         key: 1,
                         children: (
                             <Descriptions>
-                                <Descriptions.Item label="Осталось мест">{event.available}</Descriptions.Item>
-                                <Descriptions.Item label="Стоимость">{event.price}</Descriptions.Item>
-                                <Descriptions.Item label="Место">{event.place}</Descriptions.Item>
-                                <Descriptions.Item label="Дата">{event.date}</Descriptions.Item>
-                                <Descriptions.Item label="Город">{event.city}</Descriptions.Item>
+                                {event.available && (<Descriptions.Item label="Осталось мест">{event.available}</Descriptions.Item>)}
+                                {event.price && (<Descriptions.Item label="Стоимость">{event.price}</Descriptions.Item>)}
+                                {event.place && (<Descriptions.Item label="Место">{event.place}</Descriptions.Item>)}
+                                {event.date && (<Descriptions.Item label="Дата">{event.date}</Descriptions.Item>)}
+                                {event.city && <Descriptions.Item label="Город">{event.city}</Descriptions.Item>}                                
                                 {/*
                                     <Descriptions.Item label="Участники">
                                     <Avatar.Group>
@@ -66,11 +66,16 @@ function EventCard({ event }) {
         </Card>
     )
 
+    const data = []
+    if (event.city) data.push(event.city)
+    if (event.date) data.push(event.date)
+    if (event.week_day) data.push(event.week_day)
+
     return (
         <>
             <Divider orientation="right">
                 <Space>
-                    <Title level={5}>{`${event.city}, ${event.date} (${event.week_day})`}</Title>
+                    <Text>{data.length > 0 && data.join(', ')}</Text>
                 </Space>
             </Divider>
             {

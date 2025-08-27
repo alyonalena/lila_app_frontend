@@ -36,7 +36,7 @@ function WineShortInfoList({ wineList }) {
                 open={openId >= 0} 
                 footer={
                     <Flex style={{ width: "100%" }} justify={"space-between"} align={"flex-start"}>
-                        <Button type="text" icon={<LeftOutlined />} onClick={onClose}>Назад</Button>
+                        <Button type="default" onClick={onClose}>Каталог вин</Button>
                         <Button type="primary" size="large" warning>Добавить в избранное</Button>
                     </Flex>
                 }

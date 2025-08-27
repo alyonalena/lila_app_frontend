@@ -46,7 +46,7 @@ export const pastEvents = [
 
 export const inWorkEvents = [
     {
-        name: 'ДЕГУСТАЦИЯ ROSES DE JEANNE (СЕДРИК БУШАР)',
+        name: 'Дегустация «Roses de Jeanne»',
         wineList: []
     },
 ]
