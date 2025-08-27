@@ -74,11 +74,15 @@ function EventCard({ event }) {
     return (
         <>
             <Divider orientation="right">
-                    <Text>
-                        <Tag color="error">
-                            {data.length > 0 && data.join(', ')}
-                        </Tag>
-                    </Text>
+                {
+                    data.length > 0 && (
+                        <Text>
+                            <Tag color="error">
+                                {data.join(', ')}
+                            </Tag>
+                        </Text>
+                    )
+                }
                 </Divider>
             {
                 event.hint ? (
