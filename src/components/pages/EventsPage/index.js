@@ -52,7 +52,7 @@ function EventsPage() {
                             { value: 'history', label: 'История' },
                             { value: 'in_work', label: 'В разработке' }
                         ]}
-                    />                        
+                    />
                 </div>
             </Flex>
             {getContent()}
