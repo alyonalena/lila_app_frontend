@@ -3,7 +3,7 @@ import { FR } from 'country-flag-icons/react/3x2'
 
 import WineImg from '../../pics/bottle.png'
 
-import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider } from 'antd'
+import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert } from 'antd'
 import { RightOutlined, LeftOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons'
 
 const { Text, Title } = Typography
@@ -36,14 +36,14 @@ function WineShortInfoList({ wineList }) {
                 open={openId >= 0} 
                 footer={
                     <Flex style={{ width: "100%" }} justify={"space-between"} align={"flex-start"}>
-                        <Button type="default" onClick={onClose}>Каталог вин</Button>
-                        <Button type="primary" size="large" warning>Добавить в избранное</Button>
+                        <div></div>
+                        <Button type="default" size="large" onClick={onClose}>Закрыть</Button>
                     </Flex>
                 }
             >
-                <Flex style={{ width: "100%" }} gap={8} align={"flex-start"} justify={"flex-end"}>
+                {/*<Flex style={{ width: "100%" }} gap={8} align={"flex-start"} justify={"flex-end"}>
                     <Avatar shape="square" src={<FR title="France" className="..."/>} />
-                </Flex>
+                </Flex>*/}
                 <Flex style={{ width: "100%" }} gap={8} align={"flex-start"}>
                     <Avatar size="large" src={WineImg} />
                     <div>
@@ -67,15 +67,20 @@ function WineShortInfoList({ wineList }) {
                         <Divider />
                     </>
                 )}
-                <Descriptions>
+                <Alert 
+                    message="О производителе"
+                    type="danger"
+                    description={'Marie Courtin — это история о том, как один человек с огромной преданностью своему делу создает невероятно честные, аутентичные и глубокие вина, которые являются эталоном натурального шампанского. '}
+                />
+                <Descriptions bordered>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Страна">{selectedWine?.country || '-'}</Descriptions.Item>
+                    <Descriptions.Item label="Страна"><Avatar shape="square" src={<FR title="France" className="..."/>} />&nbsp;{selectedWine?.country || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Регион производства">{selectedWine?.region || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Выдержка">{selectedWine?.wine_aging || '-'} год</Descriptions.Item>
                     <Descriptions.Item label="Сорт винограда"><div>{selectedWine?.grape_variety?.map(({ name, pers }) => (<div>{`${pers}% ${name}`}</div>))}</div></Descriptions.Item>
                     <Descriptions.Item label="Объём">{selectedWine?.volume || '-'} л.</Descriptions.Item>
-                    <Descriptions.Item label="Винификация">{selectedWine?.process || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Виноградник">{selectedWine?.vineyard || '-'}</Descriptions.Item>
+                    {/*<Descriptions.Item label="Винификация">{selectedWine?.process || '-'}</Descriptions.Item>
+                    <Descriptions.Item label="Виноградник">{selectedWine?.vineyard || '-'}</Descriptions.Item>*/}
                 </Descriptions>
             </Drawer>
             <List

@@ -49,3 +49,10 @@ code {
   padding: 8px !important; 
 }
 
+.ant-alert {
+  padding: 8px !important; 
+}
+
+.ant-divider {
+  margin: 4px 0px !important; 
+}

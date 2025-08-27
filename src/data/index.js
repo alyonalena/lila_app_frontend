@@ -14,7 +14,7 @@ export const upcomingEvents = [
         week_day: 'ПТ',
         place: 'Уточняется...',
         price: '45 000 руб.',
-        available: 7,
+        available: 0,
         img: Img2,
         wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
     }
@@ -28,7 +28,7 @@ export const pastEvents = [
         city: 'Москва',
         place: 'The Nappe Bistro (Скатерный пер., 13)',
         price: '25 000 руб.',
-        available: 2,
+        available: 0,
         img: Img1,
         wineList: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
     },
@@ -213,36 +213,43 @@ export const allWines = [
     {
         id: 8, 
         name: 'Cuvee № 747', 
+        producer: "Jacquesson", 
         description: 'Дополнительная информация о данном вине'
     },
     {
         id: 9, 
-        name: 'Cuvee № 743', 
+        name: 'Cuvee № 743',  
+        producer: "Jacquesson", 
         description: 'Дополнительная информация о данном вине'
     },
     {
         id: 10, 
-        name: 'Dizy Terres Rouges 2015', 
+        name: 'Dizy Terres Rouges 2015',  
+        producer: "Jacquesson", 
         description: 'Дополнительная информация о данном вине'
     },
     {
         id: 11, 
-        name: 'Avize Champ Terme 2009', 
+        name: 'Avize Champ Terme 2009',  
+        producer: "Jacquesson", 
         description: 'Дополнительная информация о данном вине'
     },
     {
         id: 12, 
-        name: '"Ay" Vauzelle Terme 2009', 
+        name: '"Ay" Vauzelle Terme 2009',  
+        producer: "Jacquesson", 
         description: 'Дополнительная информация о данном вине'
     },
     {
         id: 13, 
-        name: 'Dizy Corne Bautray 2004', 
+        name: 'Dizy Corne Bautray 2004',  
+        producer: "Jacquesson", 
         description: 'Дополнительная информация о данном вине'
     },
     {
         id: 14, 
-        name: 'Millesime Degorgement Tardif 2002', 
+        name: 'Millesime Degorgement Tardif 2002',  
+        producer: "Jacquesson", 
         description: 'Дополнительная информация о данном вине'
     },
     {

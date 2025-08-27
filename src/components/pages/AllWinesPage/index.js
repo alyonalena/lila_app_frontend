@@ -15,7 +15,7 @@ function AllWinesPage() {
     const onClose = () => setFilter(false)
     const onOpen = () => setFilter(true)
 
-    const [ country, setCountry ] = useState('all')
+    const [ country, setCountry ] = useState('fr')
 
     return (
         <>
@@ -33,19 +33,11 @@ function AllWinesPage() {
                             { value: 'pr', label: 'Португалия' }*/
                         ]}
                     />
-                    <Button type='primary' onClick={onOpen}>Поиск</Button>
+                    {/*<Button type='primary' onClick={onOpen}>Поиск</Button>*/}
                 </Space>
             </Divider>
             <div>
                 <WineShortInfoList wineList={allWines} readOnly={false}/>
-                <Divider orientation="right">
-                    <Avatar shape="square" src={<IT title="Italy"/>} />
-                </Divider>
-                <Text>Данные не загружены</Text>
-                <Divider orientation="right">
-                    <Avatar shape="square" src={<ES title="Spane"/>} />
-                </Divider>
-                <Text>Данные не загружены</Text>
             </div>
             <Drawer 
                 title={''}

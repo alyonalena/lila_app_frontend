@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar, Divider } from 'antd'
+import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar, Divider, Tag } from 'antd'
 
 import WineShortInfoList from '../WineShortInfoList'
 import { allWines } from '../../data'
@@ -74,10 +74,12 @@ function EventCard({ event }) {
     return (
         <>
             <Divider orientation="right">
-                <Space>
-                    <Text>{data.length > 0 && data.join(', ')}</Text>
-                </Space>
-            </Divider>
+                    <Text>
+                        <Tag color="error">
+                            {data.length > 0 && data.join(', ')}
+                        </Tag>
+                    </Text>
+                </Divider>
             {
                 event.hint ? (
                     <Space direction="vertical" size="middle" style={{ width: '100%' }}>
