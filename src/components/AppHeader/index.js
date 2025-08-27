@@ -12,7 +12,7 @@ function AppHeader() {
 
 	const { activeTab, toggleTab } = useAppContext()
 
-    const launchParams = /*useLaunchParams()*/ {}
+    const launchParams = useLaunchParams()
 
 
 	const onMenuButtonClick = (key) => {
@@ -26,7 +26,7 @@ function AppHeader() {
                     <Avatar alt="SX" shape="square" src={Logo} style={{ width: "52px", height: "52px" }} />
                     <Col flex="auto" style={{ textAlign: "left" }}>
                         <Title level={2} style={{ margin: 0, color: "black"}}>SX Wine</Title>
-                        <Text>Champagne Lovers Club</Text>
+                        <Text style={{ fontSize: '0.8em'}}>Champagne Lovers Club</Text>
                     </Col>
                 </Flex>
                 <Flex align={"center"} gap={8}

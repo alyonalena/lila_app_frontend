@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 import EventCard from '../../EventCard'
-import { Typography, Divider, Row, Select, Col, Space, Radio, Flex } from 'antd'
+import { Typography, Radio, Flex } from 'antd'
 
-import { pastEvents, upcomingEvents, inWorkEvents } from '../../../data'
+import { pastEvents, upcomingEvents, } from '../../../data'
 
 function EventsPage() {
     
@@ -22,10 +22,6 @@ function EventsPage() {
             case 'history':
                 return <>
                     { pastEvents.map((event) => (<EventCard event={event} />)) }
-                </>
-            case 'in_work':
-                return <>
-                    { inWorkEvents.map((event) => (<EventCard event={event} />)) }
                 </>
             default:
                 return <></>
@@ -50,7 +46,6 @@ function EventsPage() {
                         options={[
                             { value: 'upcoming', label: 'Предстоящие' },
                             { value: 'history', label: 'История' },
-                            { value: 'in_work', label: 'В разработке' }
                         ]}
                     />
                 </div>

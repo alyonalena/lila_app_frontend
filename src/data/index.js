@@ -12,12 +12,17 @@ export const upcomingEvents = [
         date: '12 сентября 2025',
         city: 'Москва',
         week_day: 'ПТ',
-        place: 'Уточняется...',
+        place: 'Место уточняется...',
         price: '45 000 руб.',
-        available: 0,
+        available: 0,        
+        producerId: 2,
         img: Img2,
         wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
-    }
+    },
+    {
+        name: 'Дегустация «Roses de Jeanne»',
+        wineList: []
+    },
 ]
 
 export const pastEvents = [
@@ -26,7 +31,9 @@ export const pastEvents = [
         date: '22 августа 2025',
         week_day: 'ПТ',
         city: 'Москва',
-        place: 'The Nappe Bistro (Скатерный пер., 13)',
+        producerId: 0,
+        place: 'The Nappe Bistro ',
+        address: 'Скатерный пер., 13',
         price: '25 000 руб.',
         available: 0,
         img: Img1,
@@ -34,9 +41,11 @@ export const pastEvents = [
     },
     {
         name: 'Дегустация «Clandestin»',
+        producerId: 1,
         date: '31 июля 2025',
         city: 'Санкт-Петербург',
-        place: 'Kira (Кирочная ул., 8а)',
+        place: 'Kira',        
+        address: 'Кирочная ул., 8а',
         price: '20 000 руб.',
         img: Img3,
         week_day: 'ЧТ',
@@ -44,12 +53,6 @@ export const pastEvents = [
     },
   ]
 
-export const inWorkEvents = [
-    {
-        name: 'Дегустация «Roses de Jeanne»',
-        wineList: []
-    },
-]
 
 export const allWines = [
     {

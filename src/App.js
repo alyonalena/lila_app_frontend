@@ -55,7 +55,7 @@ function App() {
 					<Button
 						style={{ flex: 1 }}
 						size='large' 
-						type={ activeTab === 1 ? 'default' : 'primary' }
+						disabled={activeTab === 1}
 						onClick={() => onMenuButtonClick(1)}
 					>
 						События клуба
@@ -63,7 +63,7 @@ function App() {
 					<Button
 						style={{ flex: 1 }}
 						size='large' 
-						type={ activeTab === 2 ? 'default' : 'primary' }
+						disabled={activeTab === 2}
 						onClick={() => onMenuButtonClick(2)}
 					>
 						Каталог вин
