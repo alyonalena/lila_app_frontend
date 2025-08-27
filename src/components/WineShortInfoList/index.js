@@ -28,54 +28,55 @@ function WineShortInfoList({ wineList, readOnly }) {
         <>
             <Drawer 
                 title={''}
-                placement={'right'} 
-                width={'100vw'} 
+                placement={"right"} 
+                width={"100vw"} 
                 onClose={onClose} 
                 open={openId >= 0} 
                 extra={
                     <Space>
                         <Avatar shape="square" src={<FR title="France" className="..."/>} />
-                        <Text>CÔTE DES BAR</Text>
+                        <Text>{/*CÔTE DES BAR*/}</Text>
                     </Space>
                 }
                 footer={
-                    <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
-                        <Button type='text' icon={<LeftOutlined />} onClick={onClose}>Назад</Button>
+                    <Flex style={{ width: "100%" }} justify={"space-between"} align={"flex-start"}>
+                        <Button type="text" icon={<LeftOutlined />} onClick={onClose}>Назад</Button>
                         <Button type="primary" danger>Добавить в избранное</Button>
                     </Flex>
                 }
             >
-                <Flex style={{ width: '100%' }} gap={8} align={'flex-start'}>
+                <Flex style={{ width: "100%" }} gap={8} align={"flex-start"}>
                     <Avatar size="large" src={WineImg} />
-                    <Title level={3}>{selectedWine?.name}</Title>
+                    <div>
+                        <Title level={3}>{selectedWine?.name}, {selectedWine?.producer}</Title>
+                        <Text >{selectedWine?.sugar}, {selectedWine?.wine_aging}</Text>
+                    </div>
                 </Flex>
-                <Divider orientation='right'>
+                <Divider orientation="right">
                     <Title level={3}>
                         <Tag color="error">
                             Цена по запросу
                         </Tag>
                     </Title>
                 </Divider>
-                    <Flex><Avatar src={UserOutlined}/><Typography.Text>Описание:</Typography.Text></Flex>
-                    <Typography.Text italic>
-                        - Редкие по стилю, сложные как формулы в математике для получения степени
-                        Дикие в аромате или чисты, но с низких газом
-                        Без фильтрации
-                    </Typography.Text>
-                <Divider />
+                {selectedWine?.description && (
+                    <>
+                        <Flex><Avatar src={UserOutlined}/><Typography.Text>Мнение эксперта:</Typography.Text></Flex>
+                        <Typography.Text italic>
+                            {selectedWine.description}
+                        </Typography.Text>
+                        <Divider />
+                    </>
+                )}
                 <Descriptions>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Страна">{selectedWine?.country || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Регион производства">{selectedWine?.country || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Сорт винограда">{selectedWine?.grape_variety || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Объём">{selectedWine?.volume || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Количество в наличии">{selectedWine?.available_number || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Тип почвы">{selectedWine?.ground_type || '-'}</Descriptions.Item>
+                    <Descriptions.Item label="Регион производства">{selectedWine?.region || '-'}</Descriptions.Item>
+                    <Descriptions.Item label="Выдержка">{selectedWine?.wine_aging || '-'} год</Descriptions.Item>
+                    <Descriptions.Item label="Сорт винограда">{selectedWine?.grape_variety?.map(({ name, pers }) => `${pers}% ${name}`).join(', ')}</Descriptions.Item>
+                    <Descriptions.Item label="Объём">{selectedWine?.volume || '-'} л.</Descriptions.Item>
                     <Descriptions.Item label="Винификация">{selectedWine?.process || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Выдержка">{selectedWine?.wine_aging || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Виноградник">{selectedWine?.vineyard || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Сульфиты">{selectedWine?.sulfites || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Зона производства">{selectedWine?.production_area || '-'}</Descriptions.Item>
                 </Descriptions>
             </Drawer>
             <List
@@ -99,11 +100,10 @@ function WineShortInfoList({ wineList, readOnly }) {
                                     <Avatar size="large" src={WineImg} />
                                 </Avatar.Group>
                             }
-                            title={<Text>{item.name}</Text>}
+                            title={<Text>{item.name}, {item.producer}</Text>}
                             description={
                                 <>
                                     <div>{`${item.country}, ${item.region}, ${item.sugar}`}</div>
-                                    <div>{`${item.volume} л.`}</div>
                                 </>
                             }
                         />                  

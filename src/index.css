@@ -38,3 +38,9 @@ code {
 .ant-drawer-body {
   padding: 16 !important; 
 }
+
+.ant-tag {
+  padding-inline: 15px !important;
+  border-radius: 1.0em;
+  color: black !important;
+}

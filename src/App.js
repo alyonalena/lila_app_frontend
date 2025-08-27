@@ -28,7 +28,7 @@ function App() {
 					token: {
 						colorPrimary: '#212121',
 						colorError: '#E7014C',
-						borderRadius: 5,
+						borderRadius: '5px',
 					}
 				}}
 			>
