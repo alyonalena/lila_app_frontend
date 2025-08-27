@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import EventCard from '../../EventCard'
-import { Typography, Divider, Row, Select, Col, Space } from 'antd'
+import { Typography, Divider, Row, Select, Col, Space, Radio, Flex } from 'antd'
 
 import { pastEvents, upcomingEvents, inWorkEvents } from '../../../data'
 
@@ -9,8 +9,8 @@ function EventsPage() {
     
     const [ mode, setMode ] = useState('upcoming')
 
-    const onChange = (value) => {
-        setMode(value)
+    const onChange = (e) => {
+        setMode(e.target.value)
     }
 
     const getContent = () => {
@@ -34,23 +34,27 @@ function EventsPage() {
 
     return (
         <>
-            <Row width={'100%'} align="center" justify="space-between">
-                <Col>
+            <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+                <div>
                     <Typography.Title level={3}>События клуба</Typography.Title>
-                </Col>
-            </Row>
-            <Divider orientation="left">
-                <Select
-                    value={mode}
-                    style={{ width: '200px' }}
-                    onChange={onChange}
-                    options={[
-                        { value: 'upcoming', label: 'Предстоящие' },
-                        { value: 'history', label: 'История' },
-                        { value: 'in_work', label: 'В разработке' }
-                    ]}
-                />
-            </Divider>
+                </div>
+                <div>
+                    <Radio.Group 
+                        value={mode}
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 4,
+                        }}
+                        onChange={onChange}
+                        options={[
+                            { value: 'upcoming', label: 'Предстоящие' },
+                            { value: 'history', label: 'История' },
+                            { value: 'in_work', label: 'В разработке' }
+                        ]}
+                    />                        
+                </div>
+            </Flex>
             {getContent()}
         </>
     )

@@ -17,12 +17,15 @@ function EventCard({ event }) {
         <Card            
             style={{ width: '100%', border: 'none' }}
         >
-            <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+            <Flex style={{ width: '100%' }} align={'flex-start'} gap={16}>
                 <Avatar alt="SX" shape="square" src={event.img} style={{ width: "62px", height: "62px" }} />
-                { event.inFuture && (<Button type="primary" color="pink">{'Хочу участвовать!'}</Button>) }
+                <div>
+                    <Title level={5}>{event.name}</Title>
+                    { event.inFuture && (<Button type="primary" color="pink">{'Хочу участвовать!'}</Button>) }
+                </div>                
             </Flex>
             <br />
-            <Title level={3}>{event.name}</Title>
+            
             <Tabs
                 tabPosition={'top'}
                 items={[

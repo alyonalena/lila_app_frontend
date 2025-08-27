@@ -35,10 +35,6 @@ code {
   padding: 0 !important; 
 }
 
-.ant-drawer-body {
-  padding: 16 !important; 
-}
-
 .ant-tag {
   padding-inline: 15px !important;
   border-radius: 1.2em !important;
@@ -48,3 +44,8 @@ code {
 .ant-btn {
   border-radius: 1.2em !important;
 }
+
+.ant-drawer-body {
+  padding: 8px !important; 
+}
+

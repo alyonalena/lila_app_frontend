@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Layout, Button, ConfigProvider, Space } from 'antd'
+import { Layout, Button, ConfigProvider, Space, Divider, Tabs, Segmented } from 'antd'
+import { AppstoreOutlined, BarsOutlined } from '@ant-design/icons'
 
 import { useAppContext } from './context'
 import AppHeader from './components/AppHeader'
