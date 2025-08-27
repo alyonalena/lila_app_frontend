@@ -48,10 +48,11 @@ function App() {
 				</Content>
 				<Footer style={{
 					display: 'flex', 
-					flexDirection: 'column',
+					flexDirection: 'row',
 					gap: '8px'
 				}}>
 					<Button
+						style={{ flex: 1 }}
 						size='large' 
 						type={ activeTab === 1 ? 'default' : 'primary' }
 						onClick={() => onMenuButtonClick(1)}
@@ -59,6 +60,7 @@ function App() {
 						События клуба
 					</Button>
 					<Button
+						style={{ flex: 1 }}
 						size='large' 
 						type={ activeTab === 2 ? 'default' : 'primary' }
 						onClick={() => onMenuButtonClick(2)}
