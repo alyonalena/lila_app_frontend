@@ -54,11 +54,11 @@ function WineShortInfoList({ wineList }) {
                     </div>
                 </Flex>
                 <Divider orientation="right">
-                    <Title level={3}>
+                    <Text>
                         <Tag color="error">
                             Цена по запросу
                         </Tag>
-                    </Title>
+                    </Text>
                 </Divider>
                 {selectedWine?.description && (
                     <>
@@ -123,15 +123,6 @@ function WineShortInfoList({ wineList }) {
     const onChange = (key) => {
         console.log(key)
     }
-
-    const genExtra = () => (
-        <SettingOutlined
-            onClick={(event) => {
-                // If you don't want click extra trigger collapse, you can prevent this:
-                event.stopPropagation()
-            }}
-        />
-    )
 
     return getWineShortCardList()
 }
