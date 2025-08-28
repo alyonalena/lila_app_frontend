@@ -74,12 +74,10 @@ export const allWines = [
         vinification: "-",
         wine_aging: "2016",
         vineyard: "-",
-        description: null,
     },
     {
         id: 1, 
         name: "Efflorescence",
-        description: 'Дополнительная информация о данном вине',
         img: Wine2,
         saved: true,
         category: "Шампанское",
@@ -147,14 +145,18 @@ export const allWines = [
         region: "Шампань",
         grape_variety:  [ {name: 'Пино нуар', pers: 100 } ],
         volume: "0.75",
-        /*available_number: 3,*/
         producerId: 0,
         price: "По запросу",
         process: "-",
         vinification: "-",
         wine_aging: "2016",
-        vineyard: "-",
-        description: null,
+        vineyard: "-",        
+        description: [
+            'Можно сказать, что базовое вино от Доминик Моро.',
+            'Но скорее всего это кюве будет другое по стилю и названию.',
+            'Пино Нуар со всех участков (2.5 Га).',
+            'Яркое, открытое и что удивляет! Вино 2016, при этом вино будет спокойно жить ещё 5 лет.',
+        ]
     },
     {
         id: 5, 

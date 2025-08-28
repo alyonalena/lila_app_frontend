@@ -40,7 +40,7 @@ function EventsPage() {
                         onChange={onChange}
                         options={[
                             { value: 'upcoming', label: 'Предстоящие' },
-                            { value: 'history', label: 'История' },
+                            { value: 'history', label: 'Прошедшие' },
                         ]}
                     />
                 </Divider>

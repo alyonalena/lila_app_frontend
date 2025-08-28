@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { FR } from 'country-flag-icons/react/3x2'
 
 import WineImg from '../../pics/bottle.png'
+import Expert from '../../pics/Expert.png'
 
-import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert } from 'antd'
+import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert, Card } from 'antd'
 import { RightOutlined, LeftOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons'
 
 import { producers } from '../../data'
@@ -60,26 +61,22 @@ function WineShortInfoList({ wineList }) {
                         </Tag>
                     </Text>
                 </Divider>
+
                 {selectedWine?.description && (
-                    <>
-                        <Flex><Avatar src={UserOutlined}/><Typography.Text>Мнение эксперта:</Typography.Text></Flex>
-                        <Typography.Text italic>
-                            {selectedWine.description}
-                        </Typography.Text>
-                        <Divider />
+                    <>                   
+                            <Card style={{ padding: '16px' }}>
+                                <Card.Meta
+                                    avatar={<Avatar size="large" src={Expert} />}
+                                    title={"Мнение эксперта"}
+                                    description={"Данил, организатор клуба"}
+                                />
+                                <br/><br/>
+                                {selectedWine.description.map(item => <p>{item}</p>)}
+                            </Card>
+                        <br/><br/>
                     </>
                 )}
-                <Alert 
-                    message="О производителе"
-                    type="danger"
-                    description={selectedWine && producers.find(({id}) => id == selectedWine.producerId)?.shortInfo}
-                />
-                <br/>
-
-                <Flex style={{ width: '100%' }} justify={'flex-end'}>
-                    
-                </Flex><br/>
-
+                <br />
                 <Descriptions bordered>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Страна"><Avatar shape="square" src={<FR title="France" className="..."/>} />&nbsp;{selectedWine?.country || '-'}</Descriptions.Item>
@@ -88,6 +85,13 @@ function WineShortInfoList({ wineList }) {
                     <Descriptions.Item label="Сорт винограда"><div>{selectedWine?.grape_variety?.map(({ name, pers }) => (<div>{`${pers}% ${name}`}</div>))}</div></Descriptions.Item>
                     <Descriptions.Item label="Объём">{selectedWine?.volume || '-'} л.</Descriptions.Item>
                 </Descriptions>
+                <br />
+                <Alert 
+                    message="О производителе"
+                    type="danger"
+                    description={selectedWine && producers.find(({id}) => id == selectedWine.producerId)?.shortInfo}
+                />
+                <br />
             </Drawer>
             <List
                 dataSource={wineList}
