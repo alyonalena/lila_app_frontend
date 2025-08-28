@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Typography, Button, Card, Descriptions, Tabs, Flex, Space, Badge, Avatar, Divider, Tag } from 'antd'
+import { Typography, Button, Card, Tabs, Flex, Space, Avatar, Divider, Tag } from 'antd'
 
 import WineShortInfoList from '../WineShortInfoList'
 import { allWines, producers } from '../../data'
-import { EnvironmentOutlined, WalletOutlined } from '@ant-design/icons'
+import { EnvironmentOutlined, WalletOutlined, MessageOutlined } from '@ant-design/icons'
 
 
 const { Title, Text } = Typography
@@ -16,51 +16,33 @@ function EventCard({ event }) {
 
     const producerInfo = producers.find(({ id }) => id === event.producerId)?.shortInfo || "Информация уточняется..."
 
-    {/*<Descriptions>
-        {event.available && (<Descriptions.Item label="Осталось мест">{event.available}</Descriptions.Item>)}
-        {event.price && (<Descriptions.Item label="Стоимость">{event.price}</Descriptions.Item>)}
-        {event.place && (<Descriptions.Item label="Место">{event.place}</Descriptions.Item>)}
-        {event.date && (<Descriptions.Item label="Дата">{event.date}</Descriptions.Item>)}
-        {event.city && <Descriptions.Item label="Город">{event.city}</Descriptions.Item>}                                
-        {
-            <Descriptions.Item label="Участники">
-            <Avatar.Group>
-                <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-                <Avatar style={{ backgroundColor: '#f56a00' }}>K</Avatar>
-                <Avatar style={{ backgroundColor: '#87d068' }}>I</Avatar>
-                <Avatar style={{ backgroundColor: '#1677ff' }}>G</Avatar>
-            </Avatar.Group>
-        </Descriptions.Item>
-        }
-    </Descriptions>*/}
 
     const getEventCard = () => (
         <Card            
-            style={{ width: '100%', border: 'none' }}
+            style={{ width: '100%', border: 'none', margin: "0 0 16px 0" }}
         >
+            <Title level={5}>{event.name}</Title> 
             <Flex style={{ width: '100%' }} align={'flex-start'} gap={16}>
                 <Avatar alt="SX" shape="square" src={event.img} style={{ width: "110px", height: "140px" }} />
                 <Flex 
                     vertical
-                    style={{ height: '100%' }}
-                    justify={'flex-between'}
-                    gap={30}
+                    style={{ height: '100%', width: '70%' }}
                 >
-                    <div>
-                        <Title level={5}>{event.name}</Title>                    
+                    <div>                         
+                        <Flex style={{ width: '100%' }} justify={'flex-end'}>
+                            { event.inFuture && (<Button size="large" type="primary" color="pink">{'Хочу!'}</Button>) }
+                        </Flex><br/><br/>     
                         { event.place && (<Space gap={8}><EnvironmentOutlined style={{ color: '#B8B8B8'}}/>{ event.place }</Space>)}
                         <br/>
                         { event.price && (<Space><WalletOutlined style={{ color: '#B8B8B8'}}/>{ event.price }</Space>)}
                     </div>
 
-                    { event.inFuture && (<Button type="primary" color="pink">{'Хочу участвовать!'}</Button>) }
+
                 </Flex> 
             </Flex>
-            <br />
-            
+           
             <Tabs
                 tabPosition={'top'}
-                type="card"
                 items={[
                     {
                         label: 'О дегустации',
@@ -100,17 +82,7 @@ function EventCard({ event }) {
                     )
                 }
             </Divider><br />
-            {
-                event.hint ? (
-                    <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-                        <Badge.Ribbon text={event.hint} color="#E2044C">
-                            {getEventCard()}
-                        </Badge.Ribbon>
-                    </Space>
-                ) : (
-                    getEventCard()
-                )
-            }
+            { getEventCard() }
             <Divider/><br />
         </>
     )

@@ -39,13 +39,13 @@ function WineShortInfoList({ wineList }) {
                 footer={
                     <Flex style={{ width: "100%" }} justify={"space-between"} align={"flex-start"}>
                         <div></div>
-                        <Button type="default" size="large" onClick={onClose}>Закрыть</Button>
+                        <Space gap={8}>
+                            <Button size="large" type="primary" color="pink">{'Хочу!'}</Button>
+                            <Button type="default" size="large" onClick={onClose}>Закрыть</Button>
+                        </Space>
                     </Flex>
                 }
             >
-                {/*<Flex style={{ width: "100%" }} gap={8} align={"flex-start"} justify={"flex-end"}>
-                    <Avatar shape="square" src={<FR title="France" className="..."/>} />
-                </Flex>*/}
                 <Flex style={{ width: "100%" }} gap={8} align={"flex-start"}>
                     <Avatar size="large" src={WineImg} />
                     <div>
@@ -75,6 +75,11 @@ function WineShortInfoList({ wineList }) {
                     description={selectedWine && producers.find(({id}) => id == selectedWine.producerId)?.shortInfo}
                 />
                 <br/>
+
+                <Flex style={{ width: '100%' }} justify={'flex-end'}>
+                    
+                </Flex><br/>
+
                 <Descriptions bordered>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>
                     <Descriptions.Item label="Страна"><Avatar shape="square" src={<FR title="France" className="..."/>} />&nbsp;{selectedWine?.country || '-'}</Descriptions.Item>
@@ -82,8 +87,6 @@ function WineShortInfoList({ wineList }) {
                     <Descriptions.Item label="Выдержка">{selectedWine?.wine_aging || '-'} год</Descriptions.Item>
                     <Descriptions.Item label="Сорт винограда"><div>{selectedWine?.grape_variety?.map(({ name, pers }) => (<div>{`${pers}% ${name}`}</div>))}</div></Descriptions.Item>
                     <Descriptions.Item label="Объём">{selectedWine?.volume || '-'} л.</Descriptions.Item>
-                    {/*<Descriptions.Item label="Винификация">{selectedWine?.process || '-'}</Descriptions.Item>
-                    <Descriptions.Item label="Виноградник">{selectedWine?.vineyard || '-'}</Descriptions.Item>*/}
                 </Descriptions>
             </Drawer>
             <List

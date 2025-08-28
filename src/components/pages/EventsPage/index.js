@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 import EventCard from '../../EventCard'
-import { Typography, Radio, Flex } from 'antd'
+import { Typography, Radio, Flex, Divider } from 'antd'
 
-import { pastEvents, upcomingEvents, } from '../../../data'
+import { pastEvents, upcomingEvents } from '../../../data'
 
 function EventsPage() {
     
@@ -30,27 +30,23 @@ function EventsPage() {
 
     return (
         <>
-            <Flex style={{ width: '100%' }} justify={'space-between'} align={'flex-start'}>
+            <Flex style={{ width: '100%' }} vertical align={'flex-start'}>
                 <div>
                     <Typography.Title level={3}>События клуба</Typography.Title>
                 </div>
-                <div>
+                <Divider orientation='center'>
                     <Radio.Group 
-                        value={mode}
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 4,
-                        }}
+                        value={mode}                        
                         onChange={onChange}
                         options={[
                             { value: 'upcoming', label: 'Предстоящие' },
                             { value: 'history', label: 'История' },
                         ]}
                     />
-                </div>
+                </Divider>
             </Flex>
-            {getContent()}
+            <br/><br/>
+            { getContent() }
         </>
     )
 }

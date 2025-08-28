@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Avatar, Divider, Typography, Space, Button, Select, Drawer, Flex } from 'antd'
-import { FR, IT, ES } from 'country-flag-icons/react/3x2'
+import { Divider, Typography, Space, Button, Select, Drawer, Flex } from 'antd'
 import { LeftOutlined } from '@ant-design/icons'
 
 import WineShortInfoList from '../../WineShortInfoList'
@@ -20,7 +19,7 @@ function AllWinesPage() {
     return (
         <>
             <Typography.Title level={3}>Каталог вин</Typography.Title>
-            <Divider orientation="left">
+            <Divider orientation="center">
                 <Space>
                     <Select
                         value={country}
@@ -29,11 +28,8 @@ function AllWinesPage() {
                         options={[
                             { value: 'all', label: 'Все страны' },
                             { value: 'fr', label: 'Франция' },
-                            /*{ value: 'sp', label: 'Испания' },
-                            { value: 'pr', label: 'Португалия' }*/
                         ]}
                     />
-                    {/*<Button type='primary' onClick={onOpen}>Поиск</Button>*/}
                 </Space>
             </Divider>
             <div>
