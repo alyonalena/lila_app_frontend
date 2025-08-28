@@ -63,17 +63,18 @@ function WineShortInfoList({ wineList }) {
                 </Divider>
 
                 {selectedWine?.description && (
-                    <>                   
-                            <Card style={{ padding: '16px' }}>
-                                <Card.Meta
-                                    avatar={<Avatar size="large" src={Expert} />}
-                                    title={"Мнение эксперта"}
-                                    description={"Данил, организатор клуба"}
-                                />
-                                <br/><br/>
-                                {selectedWine.description.map(item => <p>{item}</p>)}
-                            </Card>
-                        <br/><br/>
+                    <>    
+                        <br/>              
+                        <Card style={{ padding: '16px', borderRadius: '1.2em', backgroundColor: 'rgba(0,0,0,0.02)' }}>
+                            <Card.Meta
+                                avatar={<Avatar size="large" src={Expert} />}
+                                title={"Мнение эксперта"}
+                                description={"Данил, организатор клуба"}
+                            />
+                            <br/>
+                            {selectedWine.description.map(item => <p>{item}</p>)}
+                        </Card>
+                        <br/>
                     </>
                 )}
                 <br />
