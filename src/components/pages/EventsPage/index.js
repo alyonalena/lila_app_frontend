@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import EventCard from '../../EventCard'
-import { Typography, Radio, Flex, Divider } from 'antd'
+import { Typography, Radio, Flex, Divider, Segmented, Button } from 'antd'
 
 import { pastEvents, upcomingEvents } from '../../../data'
 
@@ -9,8 +9,8 @@ function EventsPage() {
     
     const [ mode, setMode ] = useState('upcoming')
 
-    const onChange = (e) => {
-        setMode(e.target.value)
+    const onChange = (value) => {
+        setMode(value)
     }
 
     const getContent = () => {
@@ -30,20 +30,17 @@ function EventsPage() {
 
     return (
         <>
-            <Flex style={{ width: '100%' }} vertical align={'flex-start'}>
+            <Flex style={{ width: '100%' }} vertical align={'center'}>
                 <div>
                     <Typography.Title level={3}>События клуба</Typography.Title>
                 </div>
-                <Divider orientation='center'>
-                    <Radio.Group 
-                        value={mode}                        
-                        onChange={onChange}
-                        options={[
-                            { value: 'upcoming', label: 'Предстоящие' },
-                            { value: 'history', label: 'Прошедшие' },
-                        ]}
-                    />
-                </Divider>
+                <div>
+                    <Button type='link' onClick={() => onChange('upcoming')} style={ mode === 'history' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Предстоящие</Button>
+                        |
+                    <Button type='link' onClick={() => onChange('history')} style={ mode === 'upcoming' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Прошедшие</Button>
+                    {/*<Segmented options={['Предстоящие', 'Прошедшие']} />*/}
+
+                </div>
             </Flex>
             <br/><br/>
             { getContent() }

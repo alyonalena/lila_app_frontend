@@ -18,20 +18,25 @@ function AllWinesPage() {
 
     return (
         <>
-            <Typography.Title level={3}>Каталог вин</Typography.Title>
-            <Divider orientation="center">
-                <Space>
-                    <Select
-                        value={country}
-                        style={{ width: '200px' }}
-                        onChange={setCountry}
-                        options={[
-                            { value: 'all', label: 'Все страны' },
-                            { value: 'fr', label: 'Франция' },
-                        ]}
-                    />
-                </Space>
-            </Divider>
+            <Flex style={{ width: '100%' }} vertical align={'center'}>
+                <div>
+                    <Typography.Title level={3}>Каталог вин</Typography.Title>
+                </div>
+                <Divider orientation="center">
+                    <Space>
+                        <Select
+                            value={country}
+                            style={{ width: '200px' }}
+                            onChange={setCountry}
+                            options={[
+                                { value: 'all', label: 'Все страны' },
+                                { value: 'fr', label: 'Франция' },
+                            ]}
+                        />
+                    </Space>
+                </Divider>
+            </Flex>
+            <br/><br/>
             <div>
                 <WineShortInfoList wineList={allWines} readOnly={false}/>
             </div>

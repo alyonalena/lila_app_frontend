@@ -27,7 +27,7 @@ function App() {
 			<ConfigProvider
 				theme={{
 					token: {
-						colorPrimary: '#E7014C',
+						colorPrimary: 'black',
 						colorError: '#F1C6D7',
 						borderRadius: '2px',
 					}
@@ -36,8 +36,8 @@ function App() {
 				<AppHeader />
 				<Content 
 					style={{ 
-						padding: '90px 8px 220px 8px', 
-						display: 'flex', 
+						padding: '90px 8px 220px 8px',
+						display: 'flex',
 						flexDirection: 'column',
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',

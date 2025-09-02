@@ -19,9 +19,9 @@ function EventCard({ event }) {
 
     const getEventCard = () => (
         <Card            
-            style={{ width: '100%', border: 'none', margin: "0 0 16px 0" }}
+            style={{ width: '100%', border: 'none', margin: "0 0 16px 0", padding: '16px', backgroundColor: "rgba(0, 0, 0, 0.03)" }}
         >
-            <Title level={5}>{event.name}</Title> 
+            <Title level={4}>{event.name}</Title><br />
             <Flex style={{ width: '100%' }} align={'flex-start'} gap={16}>
                 <Avatar alt="SX" shape="square" src={event.img} style={{ width: "110px", height: "140px" }} />
                 <Flex 
@@ -83,7 +83,7 @@ function EventCard({ event }) {
                 }
             </Divider><br />
             { getEventCard() }
-            <Divider/><br />
+            <br />
         </>
     )
 }
