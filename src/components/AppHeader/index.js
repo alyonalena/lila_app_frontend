@@ -20,25 +20,24 @@ function AppHeader({ children }) {
 
     return (
         <>
-        <Header style={{ textAlign: "center", padding: "4px 8px" }}>
-            <Row align="center" justify="space-between">
-                <Flex align={"center"} gap={8}>
-                    <Avatar alt="SX" shape="square" src={Logo} style={{ width: "52px", height: "52px" }} />
-                    <Col flex="auto" style={{ textAlign: "left" }}>
-                        <Title level={2} style={{ margin: 0, color: "black"}}>SX Wine</Title>
-                        <Text style={{ fontSize: '0.8em'}}>Champagne Lovers Club</Text>
-                    </Col>
-                </Flex>
-                <Flex align={"center"} gap={8}
-                    onClick={/*onMenuButtonClick*/ () => {}}
-                >
-                    <Avatar.Group>
-                        <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
-                    </Avatar.Group>
-                </Flex>
-            </Row>
-        </Header>
-
+            <Header style={{ textAlign: "center", padding: "4px 8px" }}>
+                <Row align="center" justify="space-between">
+                    <Flex align={"center"} gap={8}>
+                        <Avatar alt="SX" shape="square" src={Logo} style={{ width: "52px", height: "52px" }} />
+                        <Col flex="auto" style={{ textAlign: "left" }}>
+                            <Title level={2} style={{ margin: 0, color: "black"}}>SX Wine</Title>
+                            <Text style={{ fontSize: '0.8em'}}>Champagne Lovers Club</Text>
+                        </Col>
+                    </Flex>
+                    <Flex align={"center"} gap={8}
+                        onClick={/*onMenuButtonClick*/ () => {}}
+                    >
+                        <Avatar.Group>
+                            <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
+                        </Avatar.Group>
+                    </Flex>
+                </Row>
+            </Header>
         </>
     )
 }

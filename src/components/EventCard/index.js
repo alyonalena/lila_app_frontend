@@ -14,7 +14,7 @@ function EventCard({ event }) {
 
     const wineList = event.wineList.map(id => allWines.find(i => i.id === id))
 
-    const producerInfo = producers.find(({ id }) => id === event.producerId)?.shortInfo || "Информация уточняется..."
+    const producerInfo = producers.find(({ id }) => id === event.producerId)?.shortInfo || ["Информация уточняется..."]
 
 
     const getEventCard = () => (
@@ -47,7 +47,7 @@ function EventCard({ event }) {
                     {
                         label: 'О дегустации',
                         key: 1,
-                        children: (<div>{producerInfo}</div>)
+                        children: (<div>{producerInfo.map(item => <div>{item}</div>)}</div>)
 
                     },
                     {

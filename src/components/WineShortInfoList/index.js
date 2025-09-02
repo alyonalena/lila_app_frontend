@@ -98,7 +98,7 @@ function WineShortInfoList({ wineList }) {
                 <Alert 
                     message="О производителе"
                     type="danger"
-                    description={selectedWine && producers.find(({id}) => id == selectedWine.producerId)?.shortInfo}
+                    description={selectedWine && producers.find(({id}) => id == selectedWine.producerId)?.shortInfo.map(item => <div>{item}</div>)}
                 />
                 <br />
             </Drawer>
