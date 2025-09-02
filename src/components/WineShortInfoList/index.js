@@ -63,20 +63,28 @@ function WineShortInfoList({ wineList }) {
                 </Divider>
 
                 {selectedWine?.description && (
-                    <>    
-                        <br/>              
-                        <Card style={{ padding: '16px', borderRadius: '1.2em', backgroundColor: 'rgba(0,0,0,0.02)' }}>
-                            <Card.Meta
-                                avatar={<Avatar size="large" src={Expert} />}
-                                title={"Мнение эксперта"}
-                                description={"Данил, организатор клуба"}
-                            />
-                            <br/>
-                            {selectedWine.description.map(item => <p>{item}</p>)}
-                        </Card>
+                    <>               
+                        <Alert 
+                            message="Мнение эксперта"
+                            type="danger"
+                            description={
+                                <>
+                                    <Divider orientation='left'>
+                                        <Flex align='center' gap={8}>                                            
+                                            <Avatar size="large" src={Expert} />
+                                            <Flex align='flex-start' vertical>
+                                                <Text strong>Данил</Text>
+                                                <Text type='secondary'>Организатор клуба</Text>
+                                            </Flex></Flex>
+                                    </Divider><br />
+                                    {selectedWine.description.map(item => <p>{item}</p>)}
+                                </>
+
+                            }
+                        />
                         <br/>
                     </>
-                )}
+                )}                
                 <br />
                 <Descriptions bordered>
                     <Descriptions.Item label="Категория">{selectedWine?.category || '-'}</Descriptions.Item>

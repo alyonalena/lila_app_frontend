@@ -1,6 +1,7 @@
 import Img1 from '../pics/image1.png'
 import Img2 from '../pics/image2.png'
 import Img3 from '../pics/image3.png'
+import Img4 from '../pics/image4.png'
 import Wine1 from '../pics/wine1.png'
 import Wine2 from '../pics/wine2.png'
 import Wine3 from '../pics/wine3.png'
@@ -14,10 +15,22 @@ export const upcomingEvents = [
         week_day: 'ПТ',
         place: 'Место уточняется...',
         price: '45 000 руб.',
-        available: 0,        
+        available: 0,
         producerId: 2,
         img: Img2,
         wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
+    },
+    {
+        name: 'Дегустация «Ruppert-Leroy»',
+        date: '18 сентября 2025',
+        city: 'Санкт-Петербург',
+        week_day: 'ЧТ',
+        place: 'Teya Neo',
+        price: '20 000 руб.',
+        available: 0,        
+        producerId: 3,
+        img: Img4,
+        wineList: [ 22, 23, 24, 25, 26, 27 ]
     },
     {
         name: 'Дегустация «Roses de Jeanne»',
@@ -363,9 +376,69 @@ export const allWines = [
         name: 'LES PASSAGERS «HAUT DE VAL BARMONT»',
         producerId: 1,
         country: "Франция",
-        region: "Шампань",        
+        region: "Шампань",
         wine_aging: "2022",
         grape_variety:  [ {name: 'шардоне', pers: 100 } ]
+    },
+    {
+        id: 22, 
+        name: 'Fosse-Grely',
+        producerId: 3,
+        country: "Франция",
+        region: "Шампань",
+        sugar: "Brut Nature",
+        wine_aging: "2022",
+        grape_variety:  []
+    },
+    {
+        id: 23, 
+        name: 'Pazzle',
+        producerId: 3,
+        country: "Франция",
+        region: "Шампань",
+        sugar: "Brut Nature",
+        wine_aging: "2021",
+        grape_variety:  []
+    },
+    {
+        id: 24, 
+        name: 'Les cognaux',
+        producerId: 3,
+        country: "Франция",
+        region: "Шампань",
+        sugar: "Brut Nature",
+        wine_aging: "2022",
+        grape_variety:  []
+    },
+    {
+        id: 25, 
+        name: 'Pappilon',
+        producerId: 3,
+        country: "Франция",
+        region: "Шампань",
+        sugar: "Brut Nature",
+        wine_aging: "2020",
+        grape_variety:  []
+    },
+    {
+        id: 26, 
+        name: '11, 12, 13 ...',
+        producerId: 3,
+        country: "Франция",
+        region: "Шампань",
+        sugar: "Brut Nature",
+        wine_aging: "2022",
+        grape_variety:  []
+    },
+    {
+        id: 27, 
+        name: 'Marie Fontaine BdB',
+        producerId: 3,
+        country: "Франция",
+        region: "Шампань",
+        sugar: "Brut Nature",
+        wine_aging: "2020",
+        grape_variety:  []
     },
 ]
 
@@ -385,4 +458,9 @@ export const producers = [
         name: "Jacquesson",
         shortInfo: "Champagne Jacquesson — это дом-философ, дом-бунтарь. Он отказался от коммерческой логики в пользу чистого искусства виноделия. Их вина — для тех, кто ищет не просто шампанское, а глубокое, терруарное выражение, интеллектуальную глубину и элегантность.",
     },
+    {
+        id: 3,
+        name: "Ruppert-Leroy",
+        shortInfo: "Ruperts Leroy — это не просто винодел, это икона стиля и философии. Его вина — это максимальное выражение терруара Луары, доведенное до абсолюта через фанатичный перфекционизм и отказ от любых компромиссов. Попробовать вино Rupert Leroy — это редкая удача и событие. Это опыт, который демонстрирует, насколько глубоким, сложным и живым может быть вино, когда его создатель верит в природу больше, чем в науку."
+    }
 ]

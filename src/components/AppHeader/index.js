@@ -14,7 +14,6 @@ function AppHeader() {
 
     const launchParams = useLaunchParams()
 
-
 	const onMenuButtonClick = (key) => {
 		toggleTab(3)
 	}
