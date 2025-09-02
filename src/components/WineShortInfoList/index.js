@@ -103,6 +103,7 @@ function WineShortInfoList({ wineList }) {
                 <br />
             </Drawer>
             <List
+                style={{ background: 'white'}}
                 dataSource={wineList}
                 renderItem={(item) => (
                     <List.Item

@@ -32,10 +32,10 @@ export const upcomingEvents = [
         img: Img4,
         wineList: [ 22, 23, 24, 25, 26, 27 ]
     },
-    {
+    /*{
         name: 'Дегустация «Roses de Jeanne»',
         wineList: []
-    },
+    },*/
 ]
 
 export const pastEvents = [

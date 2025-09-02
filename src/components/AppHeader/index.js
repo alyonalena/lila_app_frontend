@@ -8,17 +8,18 @@ import Logo from '../../pics/logo.png'
 const { Text, Title } = Typography
 const { Header } = Layout
 
-function AppHeader() {
+function AppHeader({ children }) {
 
 	const { activeTab, toggleTab } = useAppContext()
 
-    const launchParams = useLaunchParams()
+    const launchParams = /*useLaunchParams()*/ {}
 
 	const onMenuButtonClick = (key) => {
 		toggleTab(3)
 	}
 
     return (
+        <>
         <Header style={{ textAlign: "center", padding: "4px 8px" }}>
             <Row align="center" justify="space-between">
                 <Flex align={"center"} gap={8}>
@@ -37,6 +38,8 @@ function AppHeader() {
                 </Flex>
             </Row>
         </Header>
+
+        </>
     )
 }
 

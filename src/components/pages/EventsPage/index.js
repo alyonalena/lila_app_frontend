@@ -30,18 +30,30 @@ function EventsPage() {
 
     return (
         <>
-            <Flex style={{ width: '100%' }} vertical align={'center'}>
-                <div>
-                    <Typography.Title level={3}>События клуба</Typography.Title>
-                </div>
-                <div>
-                    <Button type='link' onClick={() => onChange('upcoming')} style={ mode === 'history' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Предстоящие</Button>
-                        |
-                    <Button type='link' onClick={() => onChange('history')} style={ mode === 'upcoming' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Прошедшие</Button>
-                    {/*<Segmented options={['Предстоящие', 'Прошедшие']} />*/}
+            <div
+                style={{
+                    position: 'fixed',
+                    left: '0',
+                    top: '67px',
+                    width: '100%',
+                    background: 'white',
+                    zIndex: '100',
+                    paddingTop: '16px'
+                }}
+            >
+                <Flex style={{ width: '100%' }} vertical align={'center'}>
+                    <div>
+                        <Typography.Title level={3}>События клуба</Typography.Title>
+                    </div>
+                    <div>
+                        <Button type='link' onClick={() => onChange('upcoming')} style={ mode === 'history' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Предстоящие</Button>
+                            |
+                        <Button type='link' onClick={() => onChange('history')} style={ mode === 'upcoming' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Прошедшие</Button>
+                        {/*<Segmented options={['Предстоящие', 'Прошедшие']} />*/}
 
-                </div>
-            </Flex>
+                    </div>
+                </Flex>
+            </div>
             <br/><br/>
             { getContent() }
         </>
