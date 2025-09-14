@@ -24,14 +24,14 @@ function AllWinesPage() {
                     left: '0',
                     top: '67px',
                     width: '100%',
-                    background: 'white',
-                    zIndex: '99',
-                    paddingTop: '16px'
+                    background: '#F6F7F8',
+                    zIndex: '99',                    
+                    padding: '24px 0'
                 }}
             >
                 <Flex style={{ width: '100%' }} vertical align={'center'}>
                     <div>
-                        <Typography.Title level={3}>Каталог вин</Typography.Title>
+                        <Typography.Title level={4}>Каталог</Typography.Title>
                     </div>
                     <Divider orientation="center">
                         <Space>

@@ -36,14 +36,14 @@ function EventsPage() {
                     left: '0',
                     top: '67px',
                     width: '100%',
-                    background: 'white',
+                    background: '#F6F7F8',
                     zIndex: '99',
-                    paddingTop: '16px'
+                    padding: '24px 0'
                 }}
             >
                 <Flex style={{ width: '100%' }} vertical align={'center'}>
                     <div>
-                        <Typography.Title level={3}>События клуба</Typography.Title>
+                        <Typography.Title level={4}>События клуба</Typography.Title>
                     </div>
                     <div>
                         <Button type='link' onClick={() => onChange('upcoming')} style={ mode === 'history' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Предстоящие</Button>

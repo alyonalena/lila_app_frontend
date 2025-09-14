@@ -27,7 +27,7 @@ function App() {
 			<ConfigProvider
 				theme={{
 					token: {
-						colorPrimary: 'black',
+						colorPrimary: '#E7014C',
 						colorError: '#F1C6D7',
 						borderRadius: '2px',
 					}
@@ -36,11 +36,12 @@ function App() {
 				<AppHeader />
 				<Content 
 					style={{ 
-						padding: '140px 8px 220px 8px',
+						padding: '165px 8px 220px 8px',
 						display: 'flex',
 						flexDirection: 'column',
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
+						backgroundColor: '#F6F7F8'
 					}}
 				>				
 					{activeTab === 1 && (<EventsPage />)}
@@ -66,7 +67,7 @@ function App() {
 						disabled={activeTab === 2}
 						onClick={() => onMenuButtonClick(2)}
 					>
-						Каталог вин
+						Каталог
 					</Button>
 				</Footer>
 			</ConfigProvider>
