@@ -6,6 +6,7 @@
     "@ant-design/icons": "^6.0.0",
     "@fontsource/montserrat": "^5.2.6",
     "@fontsource/mulish": "^5.2.6",
+    "@reduxjs/toolkit": "^2.9.0",
     "@telegram-apps/sdk": "^3.11.4",
     "@telegram-apps/sdk-react": "^3.3.6",
     "@testing-library/dom": "^10.4.0",
@@ -17,6 +18,7 @@
     "d3": "^7.9.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
     "react-scripts": "5.0.1",
     "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"

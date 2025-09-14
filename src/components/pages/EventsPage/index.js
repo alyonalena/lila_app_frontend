@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import EventCard from '../../EventCard'
-import { Typography, Radio, Flex, Divider, Segmented, Button } from 'antd'
+import { Typography, Flex, Button } from 'antd'
 
 import { pastEvents, upcomingEvents } from '../../../data'
 
@@ -37,7 +37,7 @@ function EventsPage() {
                     top: '67px',
                     width: '100%',
                     background: 'white',
-                    zIndex: '100',
+                    zIndex: '99',
                     paddingTop: '16px'
                 }}
             >
@@ -49,7 +49,6 @@ function EventsPage() {
                         <Button type='link' onClick={() => onChange('upcoming')} style={ mode === 'history' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Предстоящие</Button>
                             |
                         <Button type='link' onClick={() => onChange('history')} style={ mode === 'upcoming' ? { color: 'rgba(0,0,0,0.3)' } : { color: 'black' } }>Прошедшие</Button>
-                        {/*<Segmented options={['Предстоящие', 'Прошедшие']} />*/}
 
                     </div>
                 </Flex>

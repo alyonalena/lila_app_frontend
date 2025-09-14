@@ -1,14 +1,13 @@
 import React from 'react'
 
-import { Typography, Button, Card, Tabs, Flex, Space, Avatar, Divider, Tag } from 'antd'
+import { Typography, Button, Card, Tabs, Flex, Space, Avatar, Divider, Tag, Collapse  } from 'antd'
 
 import WineShortInfoList from '../WineShortInfoList'
 import { allWines, producers } from '../../data'
-import { EnvironmentOutlined, WalletOutlined, MessageOutlined } from '@ant-design/icons'
-
+import { EnvironmentOutlined, WalletOutlined } from '@ant-design/icons'
 
 const { Title, Text } = Typography
-
+const { Panel } = Collapse
 
 function EventCard({ event }) {
 
@@ -18,8 +17,9 @@ function EventCard({ event }) {
 
 
     const getEventCard = () => (
-        <Card            
-            style={{ width: '100%', border: 'none', margin: "0 0 16px 0", padding: '16px', backgroundColor: "rgba(0, 0, 0, 0.03)" }}
+        <Card
+            hoverable        
+            style={{ width: '100%', margin: "0 0 16px 0", padding: '16px', borderRadius: "10px", boxShadow: "2px 2px 2px 2px rgba(0, 0, 0, 0.1)"}}
         >
             <Title level={4}>{event.name}</Title><br />
             <Flex style={{ width: '100%' }} align={'flex-start'} gap={16}>
@@ -36,31 +36,20 @@ function EventCard({ event }) {
                         <br/>
                         { event.price && (<Space><WalletOutlined style={{ color: '#B8B8B8'}}/>{ event.price }</Space>)}
                     </div>
-
-
                 </Flex> 
-            </Flex>
-           
-            <Tabs
-                tabPosition={'top'}
-                items={[
-                    {
-                        label: 'О дегустации',
-                        key: 1,
-                        children: (<div>{producerInfo.map(item => <div>{item}</div>)}</div>)
-
-                    },
-                    {
-                        label: `Винный сет`,
-                        key: 2,
-                        children: (
-                            <div>
-                                <WineShortInfoList wineList={wineList} readOnly={true}/>
-                            </div>
-                        ),
-                    }
-                ]}
-            />
+            </Flex><br/>
+            <Collapse ghost>
+                <Panel header="О производителе" key="1">
+                    <div>{producerInfo.map(item => <div>{item}</div>)}</div>
+                </Panel>
+                </Collapse>
+                <Collapse ghost>
+                <Panel header="Винный сет" key="2">
+                    <div>
+                        <WineShortInfoList wineList={wineList} readOnly={true}/>
+                    </div>
+                </Panel>
+            </Collapse>
         </Card>
     )
 

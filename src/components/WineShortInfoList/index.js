@@ -5,7 +5,7 @@ import WineImg from '../../pics/bottle.png'
 import Expert from '../../pics/Expert.png'
 
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert, Card } from 'antd'
-import { RightOutlined, LeftOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons'
+import { RightOutlined } from '@ant-design/icons'
 
 import { producers } from '../../data'
 
