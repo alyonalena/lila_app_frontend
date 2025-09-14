@@ -28,7 +28,7 @@ function EventCard({ event }) {
         >
             <Flex style={{ width: '100%' }} vertical align={'center'}>
                 <div>
-                    <Typography.Title level={4}>{event.name}</Typography.Title>
+                    <Typography.Title level={3}>{event.name}</Typography.Title>
                 </div>
             </Flex><br/>
             <Flex style={{ width: '100%' }} align={'flex-start'} gap={16}>
@@ -50,14 +50,15 @@ function EventCard({ event }) {
                         { event.place && (<Space gap={8}><EnvironmentOutlined style={{ color: '#B8B8B8'}}/>{ event.place }</Space>)}
                         <br/>
                         { event.price && (<Space><WalletOutlined style={{ color: '#B8B8B8'}}/>{ event.price }</Space>)}
-                        <br />
-                        
-                        <Flex style={{ width: '100%' }} justify={'flex-end'}>
-                            { event.inFuture && (<Button size="large" type="primary" color="pink">{'Хочу!'}</Button>) }
-                        </Flex><br/><br/>     
+                        <br />  
                     </div>
                 </Flex> 
             </Flex>
+            <Flex style={{ width: '100%' }} vertical align={'center'}>
+                <div>
+                { event.inFuture && (<Button size="large" type="primary" color="pink">{' Хочу! '}</Button>) }
+                </div>
+            </Flex><br/>
             <Divider />
             <Collapse expandIconPosition='end' ghost>
                 <Panel header={<Text>О производителе</Text>} key="1">
