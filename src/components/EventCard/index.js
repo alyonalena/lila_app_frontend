@@ -26,7 +26,11 @@ function EventCard({ event }) {
                 boxShadow: '0px 0px 14px -2px rgba(34, 60, 80, 0.24)'
             }}
         >
-            <Title level={3}>{event.name}</Title><br/>
+            <Flex style={{ width: '100%' }} vertical align={'center'}>
+                <div>
+                    <Typography.Title level={4}>{event.name}</Typography.Title>
+                </div>
+            </Flex><br/>
             <Flex style={{ width: '100%' }} align={'flex-start'} gap={16}>
                 <Avatar alt="SX" shape="square" src={event.img} style={{ width: "130px", height: "170px" }} />
                 <Flex 
