@@ -54,7 +54,7 @@ function App() {
 						flexDirection: 'column',
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
-						backgroundColor: '#0C2121'
+						backgroundColor: '#2C2C2E'
 					}}
 				>			
 					{activeTab === 1 && (<EventsPage />)}

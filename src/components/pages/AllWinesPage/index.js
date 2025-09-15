@@ -24,7 +24,7 @@ function AllWinesPage() {
                     left: '8px',
                     top: '60px',
                     width: '100%',
-                    background: '#0C2121',
+                    background: '#2C2C2E',
                     zIndex: '99',                    
                     padding: '24px 0'
                 }}
