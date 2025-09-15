@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Drugs;
+  src: url("../public/font/Drugs.otf") format("opentype");
+}
+
 body {
   margin: 0;
   font-family: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,7 +19,7 @@ code {
 
 /* Ensure Ant Design Typography components use Mulish */
 .ant-typography {
-  font-family: 'Mulish', sans-serif !important;
+  font-family: 'Drugs', sans-serif !important;
 }
 
 .ant-typography h3,
@@ -23,12 +28,12 @@ code {
 .ant-typography h6,
 .ant-typography p,
 .ant-typography span {
-  font-family: 'Mulish', sans-serif !important;
+  font-family: 'Drugs', sans-serif !important;
 }
 
 .ant-typography h3 {
-  font-family: 'Mulish', sans-serif !important;
-  font-weight: 100 !important;
+  font-family: 'Drugs', sans-serif !important;
+  font-weight: 300 !important;
 }
 
 .ant-card-body {
@@ -43,6 +48,7 @@ code {
 
 .ant-btn {
   border-radius: 1.5em !important;
+  font-family: 'Drugs', sans-serif !important;
 }
 
 

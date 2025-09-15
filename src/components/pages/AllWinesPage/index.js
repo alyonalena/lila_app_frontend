@@ -21,31 +21,18 @@ function AllWinesPage() {
             <div
                 style={{
                     position: 'fixed',
-                    left: '0',
-                    top: '67px',
+                    left: '8px',
+                    top: '60px',
                     width: '100%',
-                    background: '#F6F7F8',
+                    background: '#0C2121',
                     zIndex: '99',                    
                     padding: '24px 0'
                 }}
             >
-                <Flex style={{ width: '100%' }} vertical align={'center'}>
+                <Flex style={{ width: '100%', color: 'white'}} vertical align={'center'}>
                     <div>
-                        <Typography.Title level={4}>Каталог</Typography.Title>
+                        <Typography.Title level={4} style={{ color: 'rgba(255, 255, 255, 0.6)'}}>Каталог</Typography.Title>
                     </div>
-                    <Divider orientation="center">
-                        <Space>
-                            <Select
-                                value={country}
-                                style={{ width: '200px' }}
-                                onChange={setCountry}
-                                options={[
-                                    { value: 'all', label: 'Все страны' },
-                                    { value: 'fr', label: 'Франция' },
-                                ]}
-                            />
-                        </Space>
-                    </Divider>
                 </Flex>
             </div>
             <br/><br/>

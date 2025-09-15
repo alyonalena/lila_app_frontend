@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Layout, Button, ConfigProvider, Space, Divider, Tabs, Segmented } from 'antd'
+import { Layout, Button, ConfigProvider, Carousel , Divider, Tabs, Segmented } from 'antd'
 import { AppstoreOutlined, BarsOutlined } from '@ant-design/icons'
 
 import { useAppContext } from './context'
@@ -18,8 +18,21 @@ function App() {
 
 	const { activeTab, toggleTab } = useAppContext()
 
+	const contentStyle = {
+		margin: 0,
+		height: '160px',
+		color: '#fff',
+		lineHeight: '160px',
+		textAlign: 'center',
+		background: '#364d79',
+	}
+
 	const onMenuButtonClick = (key) => {
 		toggleTab(key)
+	}
+
+	const onChange = currentSlide => {
+		console.log(currentSlide);
 	}
 
 	return (
@@ -36,14 +49,14 @@ function App() {
 				<AppHeader />
 				<Content 
 					style={{ 
-						padding: '165px 8px 220px 8px',
+						padding: '145px 8px 220px 8px',
 						display: 'flex',
 						flexDirection: 'column',
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
-						backgroundColor: '#F6F7F8'
+						backgroundColor: '#0C2121'
 					}}
-				>				
+				>			
 					{activeTab === 1 && (<EventsPage />)}
 					{activeTab === 2 && (<AllWinesPage />)}
 					{activeTab === 3 && (<UserAccountPage />)}

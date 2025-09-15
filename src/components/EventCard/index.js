@@ -56,7 +56,7 @@ function EventCard({ event }) {
             </Flex>
             <Flex style={{ width: '100%' }} vertical align={'center'}>
                 <div>
-                { event.inFuture && (<Button size="large" type="primary" color="pink">{' Хочу! '}</Button>) }
+                { event.inFuture && (<Button size="large" type="primary" color="pink">{' Хочу '}</Button>) }
                 </div>
             </Flex><br/>
             <Divider />
