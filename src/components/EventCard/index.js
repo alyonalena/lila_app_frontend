@@ -14,20 +14,15 @@ function EventCard({ event }) {
     const wineList = event.wineList.map(id => allWines.find(i => i.id === id))
 
     const producerInfo = producers.find(({ id }) => id === event.producerId)?.shortInfo || ["Информация уточняется..."]
-    
-    const data = []
-    if (event.city) data.push(event.city)
-    if (event.date) data.push(event.date)
-    if (event.week_day) data.push(event.week_day)
 
     const getEventCard = () => (
-        <Card        
-        hoverable
+        <Card     
+        
             style={{ 
                 width: '100%', 
                 margin: "0 0 16px 0", 
                 padding: '16px 8px',
-                backgroundColor: 'rgba(255,255,255, 0.95)',
+                backgroundColor: 'rgba(255,255,255, 0.9)',
                 boxShadow: '0px 0px 14px -2px rgba(34, 60, 80, 0.24)'
             }}
         >

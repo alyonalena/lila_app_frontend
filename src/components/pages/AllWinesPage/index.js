@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Divider, Typography, Space, Button, Select, Drawer, Flex } from 'antd'
+import { Divider, Typography, Space, Button, Tabs, Drawer, Flex } from 'antd'
 import { LeftOutlined } from '@ant-design/icons'
 
 import WineShortInfoList from '../../WineShortInfoList'
+import ProducersShortInfoList from '../../ProducersShortInfoList'
 import { allWines } from '../../../data'
 
 const { Text } = Typography
@@ -14,11 +15,31 @@ function AllWinesPage() {
     const onClose = () => setFilter(false)
     const onOpen = () => setFilter(true)
 
-    const [ country, setCountry ] = useState('fr')
-    const [ mode, setMode ] = useState('upcoming')
+    const [ mode, setMode ] = useState('wines')
 
     const onChange = (value) => {
         setMode(value)
+    }
+
+    const getContent = () => {
+        switch(mode) {
+            case 'wines':
+                return (
+                    <div>
+                        <br/><br/><br/>
+                        <WineShortInfoList wineList={allWines} readOnly={false}/>
+                    </div>
+                )
+            case 'producers':
+                return (
+                    <div>
+                        <br/><br/><br/>
+                        <ProducersShortInfoList/>
+                    </div>
+                )
+            default:
+                return <></>
+        }
     }
 
     return (
@@ -33,31 +54,30 @@ function AllWinesPage() {
                     padding: '24px 0',
                 }}
             >
-                <Flex style={{ width: '100%', color: 'white'}} vertical align={'center'}>
+                <Flex style={{ width: '100%', color: 'rgba(255, 255, 255, 0.5)'}} vertical align={'center'}>
                     <div>
                         <Typography.Title level={4} style={{ color: 'rgba(255, 255, 255, 0.8)'}}>Каталог</Typography.Title>
                     </div>
-                    {/*<div>
-                        <Button type='link' 
-                            onClick={() => onChange('upcoming')} 
-                            style={ mode === 'history' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
+                    <div>
+                    <Button type='link' 
+                            onClick={() => onChange('wines')} 
+                            style={ mode === 'producers' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
                         >
-                            Вина
+                            Каталог вин
                         </Button>
                             |
                         <Button type='link' 
-                            onClick={() => onChange('history')} 
-                            style={ mode === 'upcoming' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
+                            onClick={() => onChange('producers')} 
+                            style={ mode === 'wines' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
                         >
                             Производители
                         </Button>
-                    </div>*/}
+                    </div>
                 </Flex>
             </div>
+            {getContent()}
             <br/><br/>
-            <div>
-                <WineShortInfoList wineList={allWines} readOnly={false}/>
-            </div>
+
             <Drawer 
                 title={''}
                 placement={'right'} 

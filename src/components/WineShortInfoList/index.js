@@ -122,10 +122,15 @@ function WineShortInfoList({ wineList }) {
                             avatar={
                                     <Avatar size="large" src={WineImg} />
                             }
-                            title={<div>{item.name}, {producers.find(({id}) => id == item.producerId)?.name}<br/> <em>{item.sugar}, {item.wine_aging}</em></div>}                            
+                            title={(
+                                <div style={{ lineHeight: 0}}>
+                                    <Title level={3}>{item.name}</Title> 
+                                    <br/><em>{item.sugar}, {item.wine_aging}</em><br/><br/>
+                                </div>
+                            )}                            
                             description={
                                 <>
-                                    <div>{`${item.country}, ${item.region}`}</div>
+                                    <div>{producers.find(({id}) => id == item.producerId)?.name},{` ${item.country}, ${item.region}`}</div>
                                 </>
                             }
                         />                  
