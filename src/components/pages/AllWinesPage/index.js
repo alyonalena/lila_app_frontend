@@ -24,9 +24,10 @@ function AllWinesPage() {
                     left: '8px',
                     top: '60px',
                     width: '100%',
-                    background: '#2C2C2E',
+                    background: 'rgba(0, 0, 0, 0.6)',
                     zIndex: '99',                    
-                    padding: '24px 0'
+                    padding: '24px 0',
+                    boxShadow: '0px 0px 14px -2px rgba(25,25,25, 0.9)'
                 }}
             >
                 <Flex style={{ width: '100%', color: 'white'}} vertical align={'center'}>

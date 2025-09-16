@@ -56,7 +56,7 @@ function EventsPage() {
                     left: '0',
                     top: '60px',
                     width: '100%',
-                    background: "#2C2C2E",
+                    background: "black",
                     color: 'rgba(255, 255, 255, 0.5)',
                     zIndex: '99',
                     padding: '24px 0',

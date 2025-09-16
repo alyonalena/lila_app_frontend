@@ -8,6 +8,7 @@ import AppHeader from './components/AppHeader'
 import EventsPage from './components/pages/EventsPage'
 import AllWinesPage from './components/pages/AllWinesPage'
 import UserAccountPage from './components/pages/UserAccountPage'
+import Back from './pics/back.jpg'
 
 import 'antd/dist/reset.css'
 import './App.css'
@@ -49,12 +50,13 @@ function App() {
 				<AppHeader />
 				<Content 
 					style={{ 
-						padding: '145px 8px 220px 8px',
+						padding: '160px 8px 220px 8px',
 						display: 'flex',
 						flexDirection: 'column',
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
-						backgroundColor: '#2C2C2E'
+						backgroundColor: 'black',
+						backgroundImage: `url(${Back})`
 					}}
 				>			
 					{activeTab === 1 && (<EventsPage />)}
