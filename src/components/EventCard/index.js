@@ -26,7 +26,7 @@ function EventCard({ event }) {
             style={{ 
                 width: '100%', 
                 margin: "0 0 16px 0", 
-                padding: '8px',
+                padding: '16px 8px',
                 backgroundColor: 'rgba(255,255,255, 0.95)',
                 boxShadow: '0px 0px 14px -2px rgba(34, 60, 80, 0.24)'
             }}
@@ -34,7 +34,7 @@ function EventCard({ event }) {
             <Flex style={{ width: '100%' }} vertical align={'center'}>
                 <div>
                     <Typography.Title level={3}>{event.name}</Typography.Title>
-                </div>
+                </div><br/>
             </Flex>
             <Flex style={{ width: '100%' }} align={'flex-start'} gap={16}>
                 <Avatar 
@@ -63,7 +63,7 @@ function EventCard({ event }) {
             <Flex style={{ width: '100%' }} vertical align={'center'}>
                 <div>
                 <br />  
-                { event.inFuture && (<Button size="large" type="primary" color="pink">{' Хочу '}</Button>) }
+                { event.inFuture && (<Button size="large" type="primary" color="pink">{' Хочу на дегустацию'}</Button>) }
                 </div>
             </Flex><br/>
             <Divider />
