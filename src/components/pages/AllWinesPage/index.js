@@ -15,25 +15,43 @@ function AllWinesPage() {
     const onOpen = () => setFilter(true)
 
     const [ country, setCountry ] = useState('fr')
+    const [ mode, setMode ] = useState('upcoming')
+
+    const onChange = (value) => {
+        setMode(value)
+    }
 
     return (
         <>
             <div
                 style={{
                     position: 'fixed',
-                    left: '8px',
+                    left: '0',
                     top: '60px',
                     width: '100%',
-                    background: 'rgba(0, 0, 0, 0.6)',
                     zIndex: '99',                    
                     padding: '24px 0',
-                    boxShadow: '0px 0px 14px -2px rgba(25,25,25, 0.9)'
                 }}
             >
                 <Flex style={{ width: '100%', color: 'white'}} vertical align={'center'}>
                     <div>
-                        <Typography.Title level={4} style={{ color: 'rgba(255, 255, 255, 0.6)'}}>Каталог</Typography.Title>
+                        <Typography.Title level={4} style={{ color: 'rgba(255, 255, 255, 0.8)'}}>Каталог</Typography.Title>
                     </div>
+                    {/*<div>
+                        <Button type='link' 
+                            onClick={() => onChange('upcoming')} 
+                            style={ mode === 'history' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
+                        >
+                            Вина
+                        </Button>
+                            |
+                        <Button type='link' 
+                            onClick={() => onChange('history')} 
+                            style={ mode === 'upcoming' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
+                        >
+                            Производители
+                        </Button>
+                    </div>*/}
                 </Flex>
             </div>
             <br/><br/>

@@ -8,7 +8,7 @@ import AppHeader from './components/AppHeader'
 import EventsPage from './components/pages/EventsPage'
 import AllWinesPage from './components/pages/AllWinesPage'
 import UserAccountPage from './components/pages/UserAccountPage'
-import Back from './pics/back.jpg'
+import Back from './pics/back_3.jpg'
 
 import 'antd/dist/reset.css'
 import './App.css'
@@ -53,10 +53,11 @@ function App() {
 						padding: '160px 8px 220px 8px',
 						display: 'flex',
 						flexDirection: 'column',
-						backgroundSize: 'cover',
-						backgroundPosition: 'center',
-						backgroundColor: 'black',
-						backgroundImage: `url(${Back})`
+						backgroundPosition: 'top center, top center',
+						backgroundColor: '#4F4D40',
+						backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.85) 100%), url(${Back})`,
+						backgroundSize: 'cover, contain',
+						backgroundRepeat: 'no-repeat, no-repeat'
 					}}
 				>			
 					{activeTab === 1 && (<EventsPage />)}

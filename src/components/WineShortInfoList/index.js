@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FR } from 'country-flag-icons/react/3x2'
 
-import WineImg from '../../pics/bottle.png'
+import WineImg from '../../pics/pink.png'
 import Expert from '../../pics/Expert.png'
 
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert, Card } from 'antd'
@@ -41,7 +41,7 @@ function WineShortInfoList({ wineList }) {
                     <Flex style={{ width: "100%" }} justify={"space-between"} align={"flex-start"}>
                         <div></div>
                         <Space gap={8}>
-                            <Button size="large" type="primary" color="pink">{'Хочу!'}</Button>
+                            <Button size="large" type="primary" color="pink">{'Хочу'}</Button>
                             <Button type="default" size="large" onClick={onClose}>Закрыть</Button>
                         </Space>
                     </Flex>
@@ -103,7 +103,7 @@ function WineShortInfoList({ wineList }) {
                 <br />
             </Drawer>
             <List
-                style={{ background: 'white'}}
+                style={{ background: 'white', textAlign: 'left', borderRadius: '0.2rem', border: '1px solid rgba(244, 244, 244, 0.96)'}}
                 dataSource={wineList}
                 renderItem={(item) => (
                     <List.Item
@@ -120,14 +120,12 @@ function WineShortInfoList({ wineList }) {
                     >
                         <List.Item.Meta
                             avatar={
-                                <Avatar.Group>
                                     <Avatar size="large" src={WineImg} />
-                                </Avatar.Group>
                             }
-                            title={<Text>{item.name}, {producers.find(({id}) => id == item.producerId)?.name}, {item.sugar}</Text>}                            
+                            title={<div>{item.name}, {producers.find(({id}) => id == item.producerId)?.name}<br/> <em>{item.sugar}, {item.wine_aging}</em></div>}                            
                             description={
                                 <>
-                                    <div>{`${item.country}, ${item.region}, ${item.wine_aging}`}</div>
+                                    <div>{`${item.country}, ${item.region}`}</div>
                                 </>
                             }
                         />                  

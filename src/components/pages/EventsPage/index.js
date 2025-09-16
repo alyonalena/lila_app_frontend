@@ -16,6 +16,7 @@ function EventsPage() {
     const onChangeC = currentSlide => {
 		console.log(currentSlide);
 	}
+    
     const contentStyle = {
 		margin: '30px 0',
 		color: '#fff',
@@ -28,7 +29,7 @@ function EventsPage() {
             case 'upcoming':
                 return <>
                     <Carousel dotPosition="top" arrows infinite={false} afterChange={()=>{}} style={{color: 'black'}}>
-                    {
+                        {
                             upcomingEvents.map((event) => (
                                 <div key={event.date}>
                                     <div style={contentStyle}>
@@ -41,7 +42,17 @@ function EventsPage() {
                 </>
             case 'history':
                 return <>
-                    { pastEvents.map((event) => (<EventCard event={event} />)) }
+                    <Carousel dotPosition="top" arrows infinite={false} afterChange={()=>{}} style={{color: 'black'}}>
+                        {
+                            pastEvents.map((event) => (
+                                <div key={event.date}>
+                                    <div style={contentStyle}>
+                                        <EventCard event={{ ...event, inFuture: true}} />
+                                    </div>                                    
+                                </div>
+                            ))
+                        }
+                    </Carousel>                    
                 </>
             default:
                 return <></>
@@ -56,22 +67,29 @@ function EventsPage() {
                     left: '0',
                     top: '60px',
                     width: '100%',
-                    background: "black",
                     color: 'rgba(255, 255, 255, 0.5)',
                     zIndex: '99',
                     padding: '24px 0',
-                    boxShadow: '0px 0px 14px -2px rgba(25,25,25, 0.9)'
                 }}
             >
                 <Flex style={{ width: '100%' }} vertical align={'center'}>
                     <div>
-                        <Typography.Title level={4} style={{ color: 'rgba(255, 255, 255, 0.6)'}}>События клуба</Typography.Title>
+                        <Typography.Title level={4} style={{ color: 'rgba(255, 255, 255, 0.8)'}}>События клуба</Typography.Title>
                     </div>
                     <div>
-                        <Button type='link' onClick={() => onChange('upcoming')} style={ mode === 'history' ? { color: 'rgba(255, 255, 255, 0.2)' } : { color: 'rgba(255, 255, 255, 0.5)' } }>Предстоящие</Button>
+                        <Button type='link' 
+                            onClick={() => onChange('upcoming')} 
+                            style={ mode === 'history' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
+                        >
+                            Предстоящие
+                        </Button>
                             |
-                        <Button type='link' onClick={() => onChange('history')} style={ mode === 'upcoming' ? { color: 'rgba(255, 255, 255, 0.2' } : { color: 'rgba(255, 255, 255, 0.5)' } }>Прошедшие</Button>
-
+                        <Button type='link' 
+                            onClick={() => onChange('history')} 
+                            style={ mode === 'upcoming' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
+                        >
+                            Прошедшие
+                        </Button>
                     </div>
                 </Flex>
             </div>

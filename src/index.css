@@ -68,3 +68,7 @@ code {
 .ant-alert {
   border-radius: 1.2em !important;
 }
+
+.ant-list-item-meta-avatar {
+  padding: 8px !important;
+}

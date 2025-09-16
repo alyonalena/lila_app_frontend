@@ -1,5 +1,5 @@
 import Img1 from '../pics/image1.png'
-import Img2 from '../pics/image2.png'
+import Img2 from '../pics/image222.png'
 import Img3 from '../pics/image3.png'
 import Img4 from '../pics/image4.png'
 import Wine1 from '../pics/wine1.png'
@@ -8,18 +8,7 @@ import Wine3 from '../pics/wine3.png'
 
 
 export const upcomingEvents = [
-    {
-        name: 'Дегустация «Jacquesson»',
-        date: '12 сентября 2025',
-        city: 'Москва',
-        week_day: 'ПТ',
-        place: 'Место уточняется...',
-        price: '45 000 руб.',
-        available: 0,
-        producerId: 2,
-        img: Img2,
-        wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
-    },
+
     {
         name: 'Дегустация «Ruppert-Leroy»',
         date: '18 сентября 2025',
@@ -39,6 +28,19 @@ export const upcomingEvents = [
 ]
 
 export const pastEvents = [
+    {
+        name: 'Дегустация «Jacquesson»',
+        date: '12 сентября 2025',
+        city: 'Москва',
+        week_day: 'ПТ',
+        place: 'Unica',        
+        address: 'Благовещенский пер., 10, стр. 2',
+        price: '45 000 руб.',
+        available: 0,
+        producerId: 2,
+        img: Img2,
+        wineList: [ 8, 9, 10, 11, 12, 13, 14 ]
+    },
     {
         name: 'Дегустация «Marie Courtin»',
         date: '22 августа 2025',
