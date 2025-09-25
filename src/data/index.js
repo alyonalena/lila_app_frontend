@@ -9,6 +9,14 @@ import Wine3 from '../pics/wine3.png'
 
 export const upcomingEvents = [
 
+
+    /*{
+        name: 'Дегустация «Roses de Jeanne»',
+        wineList: []
+    },*/
+]
+
+export const pastEvents = [
     {
         name: 'Дегустация «Ruppert-Leroy»',
         date: '18 сентября 2025',
@@ -21,13 +29,6 @@ export const upcomingEvents = [
         img: Img4,
         wineList: [ 22, 23, 24, 25, 26, 27 ]
     },
-    /*{
-        name: 'Дегустация «Roses de Jeanne»',
-        wineList: []
-    },*/
-]
-
-export const pastEvents = [
     {
         name: 'Дегустация «Jacquesson»',
         date: '12 сентября 2025',
@@ -267,9 +268,88 @@ export const allWines = [
         id: 8, 
         name: 'Cuvee № 747', 
         producerId: 2,
+        category: "Шампанское",
+        sugar: "Extra Brut",
+        color: "Белое",
         country: "Франция",
         region: "Шампань",
-        grape_variety:  [],
+        grape_variety:  [{name: 'Пино Нуар', pers: 0 }, {name: 'Шардоне', pers: 0 }, {name: 'Пино Менье', pers: 0 }],
+        volume: "0.75",
+        /*available_number: 3,*/
+        price: "По запросу",
+        process: "-",
+        vinification: "-",
+        wine_aging: "2019+ резервные вина",
+        vineyard: "-",
+        description: null,
+    },
+    {
+        id: 9, 
+        name: 'Cuvee № 743',  
+        producerId: 2,
+        category: "Шампанское",
+        sugar: "Extra Brut",
+        color: "Белое",
+        country: "Франция",
+        region: "Шампань",
+        grape_variety:  [{name: 'Пино Нуар', pers: 0 }, {name: 'Шардоне', pers: 0 }, {name: 'Пино Менье', pers: 0 }],
+        volume: "0.75",
+        /*available_number: 3,*/
+        price: "По запросу",
+        process: "-",
+        vinification: "-",
+        wine_aging: "2015+ резервные вина",
+        vineyard: "-",
+        description: null,
+    },
+    {
+        id: 10, 
+        name: 'Dizy Terres Rouges',  
+        producerId: 2,
+        category: "Шампанское",
+        sugar: "Extra Brut",
+        color: "Белое",
+        country: "Франция",
+        region: "Шампань",
+        grape_variety: [ {name: 'Пино Нуар', pers: 100 } ],
+        volume: "0.75",
+        /*available_number: 3,*/
+        price: "По запросу",
+        process: "-",
+        vinification: "-",
+        wine_aging: "2015",
+        vineyard: "-",
+        description: null,
+    },
+    {
+        id: 11, 
+        name: 'Avize Champ Terme ',  
+        producerId: 2,
+        category: "Шампанское",
+        sugar: "Extra Brut",
+        color: "Белое",
+        country: "Франция",
+        region: "Шампань",        
+        grape_variety: [ {name: 'Шардоне', pers: 100 } ],
+        volume: "1.5",
+        /*available_number: 3,*/
+        price: "По запросу",
+        process: "-",
+        vinification: "-",
+        vineyard: "-",
+        description: null,
+        wine_aging: "2009",
+    },
+    {
+        id: 12, 
+        name: '"Ay" Vauzelle Terme',  
+        producerId: 2,
+        category: "Шампанское",
+        sugar: "Extra Brut",
+        color: "Белое",
+        country: "Франция",
+        region: "Шампань",        
+        grape_variety: [ {name: 'Пино Нуар', pers: 100 } ],
         volume: "0.75",
         /*available_number: 3,*/
         price: "По запросу",
@@ -278,52 +358,67 @@ export const allWines = [
         wine_aging: "-",
         vineyard: "-",
         description: null,
-    },
-    {
-        id: 9, 
-        name: 'Cuvee № 743',  
-        producerId: 2,
-        country: "Франция",
-        region: "Шампань",
-        wine_aging: "",
-    },
-    {
-        id: 10, 
-        name: 'Dizy Terres Rouges',  
-        producerId: 2,
-        country: "Франция",
-        region: "Шампань",
-        wine_aging: "2015",
-    },
-    {
-        id: 11, 
-        name: 'Avize Champ Terme ',  
-        producerId: 2,
-        country: "Франция",
-        region: "Шампань",
-        wine_aging: "2009",
-    },
-    {
-        id: 12, 
-        name: '"Ay" Vauzelle Terme',  
-        producerId: 2,
-        country: "Франция",
-        region: "Шампань",
         wine_aging: "2009",
     },
     {
         id: 13, 
         name: 'Dizy Corne Bautray',  
         producerId: 2,
+        category: "Шампанское",
+        sugar: "Extra Brut",
+        color: "Белое",
+        country: "Франция",
+        region: "Шампань",        
+        grape_variety: [ {name: 'Шардоне', pers: 100 } ],
+        volume: "0.75",
+        /*available_number: 3,*/
+        price: "По запросу",
+        process: "-",
+        vinification: "-",
+        wine_aging: "-",
+        vineyard: "-",
+        description: null,
         wine_aging: "2004",
     },
     {
         id: 14, 
         name: 'Millesime Degorgement Tardif',  
         producerId: 2, 
+        category: "Шампанское",
+        sugar: "Extra Brut",
+        color: "Белое",
         country: "Франция",
         region: "Шампань",        
+        grape_variety: [ {name: 'Пино Нуар', pers: 57}, {name: 'Шардоне', pers: 43 } ],
+        volume: "0.75",
+        /*available_number: 3,*/
+        price: "По запросу",
+        process: "-",
+        vinification: "-",
+        wine_aging: "-",
+        vineyard: "-",
+        description: null,      
         wine_aging: "2002",
+    },
+    {
+        id: 28, 
+        name: 'Avize -Crand Cru ',  
+        producerId: 2, 
+        category: "Шампанское",
+        sugar: "Brut",
+        color: "Белое",
+        country: "Франция",
+        region: "Шампань",        
+        grape_variety: [ {name: 'Шардоне', pers: 100 } ],
+        volume: "0.75",
+        /*available_number: 3,*/
+        price: "По запросу",
+        process: "-",
+        vinification: "-",
+        wine_aging: "-",
+        vineyard: "-",
+        description: null,      
+        wine_aging: "2000",
     },
     {
         id: 15, 

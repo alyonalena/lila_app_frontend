@@ -3,13 +3,16 @@ import React from 'react'
 import { Typography, Button, Card, Flex, Space, Avatar, Divider, Tag, Collapse  } from 'antd'
 
 import WineShortInfoList from '../WineShortInfoList'
-import { allWines, producers } from '../../data'
+import { useAllWines, useProducers } from '../../services/catalog'
 import { EnvironmentOutlined, WalletOutlined } from '@ant-design/icons'
 
 const { Title, Text } = Typography
 const { Panel } = Collapse
 
 function EventCard({ event }) {
+
+    const allWines = useAllWines()
+    const producers = useProducers()
 
     const wineList = event.wineList.map(id => allWines.find(i => i.id === id))
 
@@ -50,7 +53,7 @@ function EventCard({ event }) {
                         <br/>
                         <Title style={{color: '#E7014C'}} level={4}>{event.date} ({event.week_day})</Title>
 
-                        { event.price && (<Space><WalletOutlined style={{ color: '#B8B8B8'}}/><Text italic>{ event.price }</Text></Space>)}
+                        {/* event.price && (<Space><WalletOutlined style={{ color: '#B8B8B8'}}/><Text italic>{ event.price }</Text></Space>)*/}
                         <br />  
                     </div>
                 </Flex> 
@@ -58,7 +61,7 @@ function EventCard({ event }) {
             <Flex style={{ width: '100%' }} vertical align={'center'}>
                 <div>
                 <br />  
-                { event.inFuture && (<Button size="large" type="primary" color="pink">{' Хочу на дегустацию'}</Button>) }
+                { event.inFuture && (<Button size="large" type="primary" color="pink">{` Хочу на дегустацию`}</Button>) }
                 </div>
             </Flex><br/>
             <Divider />

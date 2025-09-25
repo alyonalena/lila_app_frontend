@@ -4,7 +4,7 @@ import { LeftOutlined } from '@ant-design/icons'
 
 import WineShortInfoList from '../../WineShortInfoList'
 import ProducersShortInfoList from '../../ProducersShortInfoList'
-import { allWines } from '../../../data'
+import { useAllWines } from '../../../services/catalog'
 
 const { Text } = Typography
 
@@ -21,6 +21,8 @@ function AllWinesPage() {
         setMode(value)
     }
 
+    const allWines = useAllWines()
+
     const getContent = () => {
         switch(mode) {
             case 'wines':
@@ -34,7 +36,7 @@ function AllWinesPage() {
                 return (
                     <div>
                         <br/><br/><br/>
-                        <ProducersShortInfoList/>
+                        {/*<ProducersShortInfoList/>*/}
                     </div>
                 )
             default:
@@ -63,14 +65,14 @@ function AllWinesPage() {
                             onClick={() => onChange('wines')} 
                             style={ mode === 'producers' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
                         >
-                            Каталог вин
+                            Вина
                         </Button>
                             |
                         <Button type='link' 
                             onClick={() => onChange('producers')} 
                             style={ mode === 'wines' ? {color: 'rgba(255, 255, 255, 0.6)'} : { color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline' }}
                         >
-                            Производители
+                            Сеты
                         </Button>
                     </div>
                 </Flex>

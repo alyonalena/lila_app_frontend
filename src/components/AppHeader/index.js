@@ -12,7 +12,7 @@ function AppHeader({ children }) {
 
 	const { activeTab, toggleTab } = useAppContext()
 
-    const launchParams = useLaunchParams()
+    const launchParams = /*useLaunchParams()*/ {}
 
 	const onMenuButtonClick = (key) => {
 		toggleTab(3)
@@ -29,13 +29,13 @@ function AppHeader({ children }) {
                             <Text style={{ fontSize: '0.8em'}}>Champagne Lovers Club</Text>
                         </Col>
                     </Flex>
-                    <Flex align={"center"} gap={8}
-                        onClick={/*onMenuButtonClick*/ () => {}}
+                    {/*<Flex align={"center"} gap={8}
+                        onClick={() => {}}
                     >
                         <Avatar.Group>
                             <Avatar size="large" src={launchParams.tgWebAppData?.user?.photo_url}/>
                         </Avatar.Group>
-                    </Flex>
+                    </Flex>*/}
                 </Row>
             </Header>
         </>

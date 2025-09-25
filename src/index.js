@@ -6,6 +6,8 @@ import App from './App'
 
 import { init, miniApp } from '@telegram-apps/sdk'
 import { AppContextProvider } from './context'
+import { Provider } from 'react-redux'
+import { store } from './store'
 /*
 const initializeTelegramSDK = async () => {
   try {
@@ -25,8 +27,10 @@ initializeTelegramSDK()
 */
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AppContextProvider>
-      <App />
-    </AppContextProvider>
+    <Provider store={store}>
+      <AppContextProvider>
+        <App />
+      </AppContextProvider>
+    </Provider>
   </StrictMode>,
 )

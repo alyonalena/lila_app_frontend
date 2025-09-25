@@ -7,7 +7,7 @@ import Expert from '../../pics/Expert.png'
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert, Card } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 
-import { producers } from '../../data'
+import { useProducers } from '../../services/catalog'
 
 const { Text, Title } = Typography
 
@@ -16,6 +16,7 @@ function ProducersShortInfoList() {
     const [openId, setOpenId] = useState(-1)
     const [selectedWine, setSelectedWine] = useState(null)
 
+	const producers = useProducers()
 
     const onClose = () => setOpenId(-1)
 

@@ -54,11 +54,10 @@ function App() {
 						display: 'flex',
 						flexDirection: 'column',
 						backgroundPosition: 'top center, top center',
-						backgroundImage: `url(${Back})`,
+						backgroundColor: '#4F4D40',
+						backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.85) 100%), url(${Back})`,
 						backgroundSize: 'cover, contain',
-						backgroundRepeat: 'no-repeat, no-repeat',
-						backgroundColor: 'rgba(79, 77, 64, 0.3)', /* Black overlay with 50% opacity */
-  						backgroundBlendMode: 'overlay'
+						backgroundRepeat: 'no-repeat, no-repeat'
 					}}
 				>			
 					{activeTab === 1 && (<EventsPage />)}

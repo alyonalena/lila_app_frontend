@@ -7,7 +7,7 @@ import Expert from '../../pics/Expert.png'
 import { Typography, Flex, Space, Avatar, List, Drawer, Button, Descriptions, Tag, Divider, Alert, Card } from 'antd'
 import { RightOutlined } from '@ant-design/icons'
 
-import { producers } from '../../data'
+import { useProducers } from '../../services/catalog'
 
 const { Text, Title } = Typography
 
@@ -15,6 +15,7 @@ function WineShortInfoList({ wineList }) {
 
     const [openId, setOpenId] = useState(-1)
     const [selectedWine, setSelectedWine] = useState(null)
+    const producers = useProducers()
 
     useEffect(() => {
         if (openId >= 0) {

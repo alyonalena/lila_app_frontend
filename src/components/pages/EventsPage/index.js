@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import EventCard from '../../EventCard'
 import { Typography, Flex, Button, Carousel } from 'antd'
 
-import { pastEvents, upcomingEvents } from '../../../data'
+import { usePastEvents, useUpcomingEvents } from '../../../services/catalog'
 
 function EventsPage() {
     
@@ -23,6 +23,9 @@ function EventsPage() {
 		lineHeight: '160px',
 		textAlign: 'center',
 	}
+
+    const pastEvents = usePastEvents()
+    const upcomingEvents = useUpcomingEvents()
 
     const getContent = () => {
         switch(mode) {
@@ -47,7 +50,7 @@ function EventsPage() {
                             pastEvents.map((event) => (
                                 <div key={event.date}>
                                     <div style={contentStyle}>
-                                        <EventCard event={{ ...event, inFuture: true}} />
+                                        <EventCard event={{ ...event, inFuture: false}} />
                                     </div>                                    
                                 </div>
                             ))
