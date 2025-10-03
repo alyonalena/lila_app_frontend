@@ -8,32 +8,23 @@
     "@fontsource/mulish": "^5.2.6",
     "@reduxjs/toolkit": "^2.9.0",
     "@telegram-apps/sdk": "^3.11.4",
-    "@telegram-apps/sdk-react": "^3.3.6",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "antd": "^5.26.2",
     "country-flag-icons": "^1.5.19",
-    "d3": "^7.9.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.9.2",
     "react-scripts": "5.0.1",
-    "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
