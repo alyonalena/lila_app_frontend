@@ -11,14 +11,14 @@ import { useProducers } from '../../services/catalog'
 
 const { Text, Title } = Typography
 
-const apiBaseUrl = 'http://95.213.234.228:8000';
+const apiBaseUrl = process.env.API_BASE_URL;
 
 function WineShortInfoList({ wineList }) {
 
     const [openId, setOpenId] = useState(-1)
     const [selectedWine, setSelectedWine] = useState(null)
     const producers = useProducers()
-    const launchParams = /*useLaunchParams()*/ {}
+    const launchParams = useLaunchParams()
 
     useEffect(() => {
         if (openId >= 0) {
