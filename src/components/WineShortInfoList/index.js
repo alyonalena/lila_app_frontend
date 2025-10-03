@@ -14,7 +14,7 @@ const { Text, Title } = Typography
 const apiBaseUrl = process.env.API_BASE_URL;
 
 function WineShortInfoList({ wineList }) {
-
+console.info(apiBaseUrl)
     const [openId, setOpenId] = useState(-1)
     const [selectedWine, setSelectedWine] = useState(null)
     const producers = useProducers()
@@ -35,7 +35,7 @@ function WineShortInfoList({ wineList }) {
         const producerName = producers.find(({id}) => id === selectedWine.producerId)?.name
         const wineInfo = `${selectedWine.name}, ${producerName}, ${selectedWine.sugar}, ${selectedWine.wine_aging}`
 
-        fetch(`${apiBaseUrl}/web-data`, {
+        fetch(`http://91.107.123.242:8000/web-data`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
