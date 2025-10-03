@@ -11,7 +11,7 @@ import { useProducers } from '../../services/catalog'
 
 const { Text, Title } = Typography
 
-const apiBaseUrl = process.env.API_BASE_URL;
+const apiBaseUrl = 'http://95.213.234.228:8000';
 
 function WineShortInfoList({ wineList }) {
 
