@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FR } from 'country-flag-icons/react/3x2'
-
+import { useLaunchParams } from '@telegram-apps/sdk-react'
 import WineImg from '../../pics/pink.png'
 import Expert from '../../pics/Expert.png'
 
@@ -11,11 +11,14 @@ import { useProducers } from '../../services/catalog'
 
 const { Text, Title } = Typography
 
+const apiBaseUrl = process.env.API_BASE_URL;
+
 function WineShortInfoList({ wineList }) {
 
     const [openId, setOpenId] = useState(-1)
     const [selectedWine, setSelectedWine] = useState(null)
     const producers = useProducers()
+    const launchParams = /*useLaunchParams()*/ {}
 
     useEffect(() => {
         if (openId >= 0) {
@@ -27,6 +30,22 @@ function WineShortInfoList({ wineList }) {
     }, [ openId ])
 
     const onClose = () => setOpenId(-1)
+    
+    const sendRequest = () => {
+        const producerName = producers.find(({id}) => id === selectedWine.producerId)?.name
+        const wineInfo = `${selectedWine.name}, ${producerName}, ${selectedWine.sugar}, ${selectedWine.wine_aging}`
+
+        fetch(`${apiBaseUrl}/web-data`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                userName: launchParams.tgWebAppData?.user?.username,
+                wineInfo
+            })
+        })
+    } 
 
     const getWineShortCardList = () => (
         <>
@@ -42,7 +61,7 @@ function WineShortInfoList({ wineList }) {
                     <Flex style={{ width: "100%" }} justify={"space-between"} align={"flex-start"}>
                         <div></div>
                         <Space gap={8}>
-                            <Button size="large" type="primary" color="pink">{'Хочу'}</Button>
+                            <Button size="large" type="primary" color="pink" onClick={sendRequest}>{'Хочу'}</Button>
                             <Button type="default" size="large" onClick={onClose}>Закрыть</Button>
                         </Space>
                     </Flex>
