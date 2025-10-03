@@ -8,6 +8,7 @@
     "@fontsource/mulish": "^5.2.6",
     "@reduxjs/toolkit": "^2.9.0",
     "@telegram-apps/sdk": "^3.11.4",
+    "@telegram-apps/sdk-react": "^3.3.7",
     "antd": "^5.26.2",
     "country-flag-icons": "^1.5.19",
     "react": "^19.1.0",
