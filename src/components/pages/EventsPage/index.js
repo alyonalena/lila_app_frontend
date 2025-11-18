@@ -50,7 +50,7 @@ function EventsPage() {
                             pastEvents.map((event) => (
                                 <div key={event.date}>
                                     <div style={contentStyle}>
-                                        <EventCard event={{ ...event, inFuture: false}} />
+                                        <EventCard event={{ ...event, inFuture: true}} />
                                     </div>                                    
                                 </div>
                             ))

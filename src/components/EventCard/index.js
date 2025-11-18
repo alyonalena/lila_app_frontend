@@ -18,6 +18,22 @@ function EventCard({ event }) {
 
     const producerInfo = producers.find(({ id }) => id === event.producerId)?.shortInfo || ["Информация уточняется..."]
 
+    const sendRequest = () => {
+
+        fetch(`http://localhost:8000/web-data-deg-request`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                userName: /*launchParams.tgWebAppData?.user?.username*/ "elena_flikema",
+                degInfo: event.name
+            })
+        }).then(() => {
+            alert('Спасибо, Ваш запрос принят! Администратор свяжется с Вами в ближайшее время')
+        }) 
+    } 
+
     const getEventCard = () => (
         <Card     
         
@@ -61,7 +77,7 @@ function EventCard({ event }) {
             <Flex style={{ width: '100%' }} vertical align={'center'}>
                 <div>
                 <br />  
-                { event.inFuture && (<Button size="large" type="primary" color="pink">{` Хочу на дегустацию`}</Button>) }
+                { event.inFuture && (<Button size="large" type="primary" color="pink" onClick={sendRequest}>{` Хочу на дегустацию`}</Button>) }
                 </div>
             </Flex><br/>
             <Divider />

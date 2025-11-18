@@ -18,7 +18,7 @@ console.info(apiBaseUrl)
     const [openId, setOpenId] = useState(-1)
     const [selectedWine, setSelectedWine] = useState(null)
     const producers = useProducers()
-    const launchParams = useLaunchParams()
+    const launchParams = /*useLaunchParams()*/ {}
 
     useEffect(() => {
         if (openId >= 0) {
@@ -35,16 +35,18 @@ console.info(apiBaseUrl)
         const producerName = producers.find(({id}) => id === selectedWine.producerId)?.name
         const wineInfo = `${selectedWine.name}, ${producerName}, ${selectedWine.sugar}, ${selectedWine.wine_aging}`
 
-        fetch(`http://91.107.123.242:8000/web-data`, {
+        fetch(`http://localhost:8000/web-data-wine-request`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                userName: launchParams.tgWebAppData?.user?.username,
+                userName: /*launchParams.tgWebAppData?.user?.username*/ "elena_flikema",
                 wineInfo
             })
-        })
+        }).then(() => {
+            alert('Спасибо, Ваш запрос принят! Администратор свяжется с Вами в ближайшее время')
+        }) 
     } 
 
     const getWineShortCardList = () => (

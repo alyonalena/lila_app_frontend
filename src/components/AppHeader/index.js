@@ -12,7 +12,7 @@ function AppHeader({ children }) {
 
 	const { activeTab, toggleTab } = useAppContext()
 
-    const launchParams = useLaunchParams()
+    const launchParams = /*useLaunchParams()*/ {}
 
 	const onMenuButtonClick = (key) => {
 		toggleTab(3)
